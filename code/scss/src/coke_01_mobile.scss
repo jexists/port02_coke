@@ -1,0 +1,37 @@
+// coke_01_mobile.scss
+
+/* 모바일 480px~767px (280) =============== */
+/* media screen and (max-width:767px) */
+@media screen and (max-width:767px) {
+#wrap{min-width: 150px; overflow: hidden;}
+ .box_text{font-size: 16px; font-size: 1rem;}
+// #contentBox
+// #adBox
+// #brandBox
+.box_size{padding: 25vw 0;}
+.brand_box {overflow: hidden; padding: 2vh;
+	&>li{width: 40vw; height: 70vw; margin-top:8vw;
+	 &:nth-child(1){display: none;}
+	 &:nth-child(3){display: none;}}}
+// #storyBox
+.story_link {margin-top: 15px;
+ &>li:last-child{display: none;}}
+.cs_wrap{overflow: hidden;
+ &>li{width: 250px; height: 250px;
+  &:nth-child(2){display: none;}
+  &:nth-child(3){display: none;}}}
+
+// #companyBox
+.company_area{padding: 50px 0; box-sizing:border-box;}
+.company_area>li{width: 210px; height: 120px; margin: 10px;
+ &>a{margin: auto;}}
+// #snsBox
+.sns_area{width: 1150px; height: 100%; margin: auto;
+	padding: 10px; padding-left: 40px;
+ & .sns_big{display: none;}
+ & dl{width: 150px; height: 200px; margin: 20px;
+  & dt{width: 30px; height: 30px; margin: auto;}
+  & dd{width: 150px; height: 150px;}}}
+.sns_cont{float: left;}
+// #footBox
+}  /* // media screen 모바일 */

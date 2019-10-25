@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/* 공통 =============== */
+#wrap { width: 100%; height: auto; margin: auto; }
+
+.box_size { width: 100%; height: 100vh; padding: 110px 0; box-sizing: border-box; }
+
+.box_title { width: 50%; height: auto; margin: auto; font-size: 35px; text-align: center; text-transform: uppercase; }
+
+.box_text { width: 80%; min-width: 350px; height: auto; margin: auto; font-size: 18px; font-size: 1.125rem; text-align: center; word-break: keep-all; }
+
+/* 공통 // headBox 해더박스 ================== */
+#headBox { position: fixed; z-index: 500; top: 0; left: 0; width: 100%; height: 80px; background-color: #f00; /* &:after, &::after{display: none; } &.act:after,&.act::after{content: " ";  position:absolute; top:80px; left:0; z-index: 1; width: 100vw; height: 0; border-bottom: 1px solid #fff;} */ }
+
+.head_area { width: 100%; height: 100%; min-width: 250px; margin: auto; padding: 20px 30px; box-sizing: border-box; background-color: #f00; }
+
+h1 { float: left; width: 130px; height: 40px; background: url(../../img/mobile/logo_mobile.gif) no-repeat 50% 50%/cover; }
+
+h1 > a { display: block; width: 100%; height: 100%; }
+
+.gnb { float: right; width: 45px; height: 40px; }
+
+.burgur_btn { display: block; position: relative; width: 100%; height: 100%; }
+
+.navList { position: absolute; top: 0; left: 75px; right: 0; margin: auto; background-color: #f00; width: 700px; height: auto; }
+
+.navList:before, .navList::before { content: " "; display: block; position: absolute; z-index: -1; top: 0; left: 50%; margin-left: -60vw; width: 120vw; height: 100%; background-color: inherit; }
+
+.navList:after, .navList::after { content: " "; display: block; width: 0; height: 0; clear: both; }
+
+.navList > li { float: left; width: 23%; height: auto; margin: 0 5px; }
+
+.navList > li > dl { width: auto; height: auto; }
+
+.navList > li > dl > dt { width: auto; height: auto; }
+
+.navList > li > dl > dt > a { display: block; width: 100%; height: 80px; line-height: 80px; text-align: center; font-size: 1.4rem; font-weight: bold; color: #fff; }
+
+.navList > li > dl > dt > a:hover, .navList > li > dl > dt > a:focus { color: #ff0; }
+
+.navList > li > dl > dd { display: none; width: auto; margin: 20px 0; }
+
+.navList > li > dl > dd > a { display: block; width: auto; height: 40px; text-indent: 45px; color: #fff; margin-top: 5px; line-height: 40px; }
+
+.navList > li > dl > dd > a:hover, .navList > li > dl > dd > a:focus { color: #ff0; }
+
+.gnb span { position: absolute; top: 50%; width: 100%; height: 8px; transform: translate(0, -50%); border-radius: 4px; background-color: white; }
+
+.gnb span:before, .gnb span::before, .gnb span:after, .gnb span::after { content: " "; position: absolute; width: 100%; height: 8px; border-radius: 4px; background-color: white; transition: all 800ms ease; }
+
+.gnb span:before, .gnb span::before { top: -16px; }
+
+.gnb span:after, .gnb span::after { top: 16px; }
+
+.gnb a > .act { background-color: rgba(255, 255, 255, 0); }
+
+.gnb a > .act:before, .gnb a > .act::before { top: 0; transform: rotate(45deg); }
+
+.gnb a > .act:after, .gnb a > .act::after { top: 0; transform: rotate(-45deg); }
+
+/* 공통 // adBox 광고박스 ================== */
+#contentBox { width: 100%; height: auto; background-color: #ddd; }
+
+#adBox { position: relative; width: 100%; height: 100vh; margin-top: 80px; background-color: #999; }
+
+.arrow { position: absolute; z-index: 300; top: 0; bottom: 0; margin: auto; transform: translateY(-50%); width: 80px; height: 80px; }
+
+.arrow > button { width: 100%; height: 100%; padding: 0; background-color: #fff; border-radius: 100%; }
+
+.arrow > button > i { width: 100%; height: 100%; font-size: 4rem; line-height: 80px; text-align: center; color: #999; }
+
+.next_btn { right: 10%; }
+
+.prev_btn { left: 10%; }
+
+/* 공통 // brandBox 제품소개&브랜드박스 ================== */
+#brandBox { background-color: #ddd; }
+
+.scroll { overflow: hidden; width: 100%; height: 55vh; }
+
+.brand_area { overflow-x: scroll; width: 100%; height: 55vh; margin: auto; background-color: #777; }
+
+.brand_box { width: 1500px; height: 100%; box-sizing: border-box; background-color: #555; margin-top: 60px; }
+
+.brand_box > li { float: left; width: 200px; height: 340px; margin: 0 20px; margin-top: 5%; background-color: #fff; text-align: center; line-height: 600px; }
+
+.brand_box > li:nth-child(1) { transform: scale(0.8); background-color: #fff; }
+
+.brand_box > li:last-child { transform: scale(0.8); }
+
+.brand_box > li button { display: block; width: 50px; height: 50px; margin: auto; margin-top: 270px; background-color: #777; border-radius: 10px; }
+
+.brand_more { width: 150px; height: 30px; margin: auto; margin-top: 15px; border-radius: 5px; background-color: #888; text-align: center; line-height: 29px; color: #fff; }
+
+/* 공통 // storyBox 스토리박스 ================== */
+#storyBox { background-color: #bbb; }
+
+.story_area { width: 100%; height: auto; }
+
+.story_link { width: 100%; height: auto; margin-top: 30px; background-color: #eee; text-align: center; }
+
+.story_link > li { display: inline-block; width: auto; height: auto; margin: 0 10px; }
+
+.story_link > li > a { width: 100%; height: 100px; }
+
+.cs_wrap { width: 100%; height: 80%; background-color: #666; text-align: center; padding-top: 10%; box-sizing: border-box; }
+
+.cs_wrap > li { display: inline-block; width: 300px; height: 300px; margin: 0 20px; background-color: #888; }
+
+/* 공통 // companyBox 회사정보&컴파니박스 ================== */
+#companyBox { background-color: #aaa; }
+
+.company_area { overflow: hidden; width: 100%; height: 100%; background-color: #bbb; text-align: center; }
+
+.company_area > li { display: inline-block; width: 250px; height: 250px; margin: 80px 30px; text-align: center; padding: 40px 0; box-sizing: border-box; background-color: #999; }
+
+.company_area > li > a { display: block; width: 80px; margin: 75px; padding: 10px; background-color: #ccc; }
+
+/* 공통 // snsBox SNS박스 ================== */
+#snsBox { overflow: hidden; background-color: #999; }
+
+.sns_area { width: 1150px; height: 100%; margin: auto; }
+
+.sns_area .sns_big { width: 500px; height: 600px; background-color: #eee; }
+
+.sns_area .sns_big dt { width: 60px; height: 60px; margin: auto; background-color: #ccc; }
+
+.sns_area .sns_big dd { width: 500px; height: 500px; margin: auto; background-color: #fff; }
+
+.sns_area dl { width: 250px; height: 300px; margin: 20px; }
+
+.sns_area dl dt { width: 30px; height: 30px; margin: auto; background-color: #ccc; }
+
+.sns_area dl dd { width: 250px; height: 250px; background-color: #fff; }
+
+.sns_cont { float: left; }
+
+/* 공통 // footBox 풋박스 ================== */
+#footBox { width: 100%; height: auto; padding: 40px 0; background-color: #f00; }
+
+.foot_area { width: 100%; max-width: 1200px; height: auto; margin: auto; }
+
+.link_area { width: auto; height: auto; padding-top: 10px; box-sizing: border-box; text-align: center; }
+
+.link_area > li { display: inline-block; margin-right: 15px; }
+
+.link_area > li:last-child { margin-right: 0; }
+
+.link_area > li > a { display: block; width: 100%; height: 100%; color: #fff; }
+
+.foot_ls { width: 100%; height: auto; margin-top: 20px; }
+
+.foot_ls > h3 { float: left; width: 100px; height: 30px; margin: auto; background: url(../../img/mobile/logo_mobile.gif) no-repeat 50% 50%/cover; }
+
+.sns_link { float: right; width: auto; height: auto; }
+
+.sns_link > li { float: left; width: auto; height: auto; margin-right: 20px; padding: 2px 5px; }
+
+.sns_link > li > a { display: block; overflow: hidden; width: 50px; height: 50px; background-color: #fff; border-radius: 100%; }
+
+address { width: 100%; max-width: 1200px; height: auto; margin: auto; }
+
+address > p { width: 100%; height: auto; text-align: center; color: #fff; }

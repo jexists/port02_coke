@@ -1,0 +1,46 @@
+/*sample.css*/
+
+.slideshow{
+	background-color: #ddd;	height: 465px;
+	min-width: 960px; overflow: hidden;
+	position: relative;}
+
+.slideshow_slides{position: absolute; 
+	width: 100%; height: 100%;}
+
+.slideshow_slides .slide{ display: block;
+	height: 100%; overflow: hidden;
+	position: absolute;	width: 100%;}
+.slideshow_slides .slide div{
+	left: 50%;	margin-left: -800px;
+	position: absolute; background-color: #aaa;}
+
+/*네비게이션*/ 
+.slideshow_nav a{position: absolute; top: 50%; left: 50%;
+	width: 72px; height: 72px; margin-top: -36px; 
+	background-color: #cfa;}
+.slideshow_nav a.prev {margin-left: -480px;}
+.slideshow_nav a.prev:before{margin-top: -20px;}
+.slideshow_nav a.next{margin-left: 480px;}
+.slideshow_nav a.next:before{
+	margin-left: -80px; margin-top: -20px;}
+
+.slideshow_nav a.disabled{display: none;}
+
+/*인디케이터*/
+.slideshow_indicator{position: absolute;
+	bottom: 30px; left: 0; right: 0;
+	height: 16px; 
+	text-align: center;}
+.slideshow_indicator a {display:inline-block
+	width: 16px; height: 16px; margin: 0 3px;}
+.slideshow_indicator a.active{cursor:default;}
+.slideshow_indicator a:before{margin-left: -110px}
+.slideshow-indicator a.active:before{margin-left:-130px}
+
+.no-js .slideshow {height: auto;}
+.no-js .slideshow_slides{height: auto;}
+
+.one{background-color: #ccc;}
+.two{background-color: #acf;}
+.three{background-color: #fac;}

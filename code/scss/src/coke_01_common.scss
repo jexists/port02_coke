@@ -1,0 +1,170 @@
+// coke_01_common.scss
+@import "./coke_01_var";
+@mixin linkblock(){display:block; width: 100%; height: 100%;}
+
+/* 공통 =============== */
+#wrap{width: 100%; height: auto; margin: auto;}
+ .box_size{width: 100%; height: 100vh; padding: 110px 0; box-sizing:border-box;}
+ .box_title{width: 50%; height: auto; margin: auto;
+ 	font-size: 35px; text-align: center; text-transform: uppercase;}
+ .box_text{width:80%; min-width: 350px; height: auto; margin: auto; font-size: 18px; font-size: 1.125rem; text-align: center; word-break: keep-all;}
+
+/* 공통 // headBox 해더박스 ================== */
+#headBox{position: fixed; z-index: 500; top: 0; left: 0;
+	width: 100%; height: 80px;
+	@include mc(1);
+	/* &:after, &::after{display: none; }
+	 &.act:after,&.act::after{content: " "; 
+	position:absolute; top:80px; left:0; z-index: 1;
+	 	width: 100vw; height: 0;
+	 	border-bottom: 1px solid #fff;} */}
+ .head_area{@include whp; min-width: 250px; 
+ 	margin: auto; padding: 20px 30px;
+ 	box-sizing: border-box; @include mc(1);}
+	h1{float: left; width: 130px; height: 40px;
+	background: url(../../img/mobile/logo_mobile.gif) no-repeat 50% 50% / cover;
+	 &>a{ @include linkblock(); }}
+	.gnb{float: right; width: 45px; height: 40px;}
+ .burgur_btn {display: block; position: relative;
+  width: 100%; height: 100%; } 
+ .navList{position: absolute; top: 0; left:75px; right:0; 
+ 	margin:auto; @include mc(1);
+ 	width: 700px; height: auto; 
+ 	&:before,&::before{content:" "; 
+ 		display:block; 
+ 		position:absolute; z-index: -1;
+ 		top: 0; left: 50%; margin-left: -60vw;
+ 		width: 120vw; height: 100%;
+ 		background-color: inherit;}
+ 	&:after,&::after{content:" "; display: block;
+ 		width: 0; height: 0; clear:both;}}
+ .navList>li{float: left; width:23%; height: auto;
+ 	margin: 0 5px; 
+ 	&>dl{width: auto; height: auto;
+ 	&>dt{width: auto; height: auto;
+ 	 &>a{display: block; 
+ 	 	width: 100%; height: 80px;
+ 	 	line-height: 80px; text-align: center;
+ 	 	font-size: 1.4rem; font-weight: bold;
+ 	 	color:#fff;
+ 	 &:hover,&:focus{color: #ff0;}}}
+ 	&>dd{display: none;
+ 		width: auto; margin: 20px 0;
+ 	 &>a{display: block; width: auto;
+ 	 height: 40px; text-indent: 45px; color:#fff;
+ 	 margin-top: 5px;
+ 	 line-height: 40px;
+ 	  &:hover,&:focus{color: #ff0;}}}}}
+ .gnb span{position: absolute; top: 50%; 
+ 	width: 100%; height: 8px; transform:translate(0,-50%);
+ 	border-radius: 4px; background-color: rgba(256,256,256,1);
+ 	&:before,&::before,&:after,&::after{content: " ";
+ 		position: absolute;
+ 		width: 100%; height: 8px;
+ 		border-radius: 4px; 
+ 		background-color: rgba(256,256,256,1);
+ 		transition: all 800ms ease;}
+ 	&:before,&::before{top:-16px;}
+ 	&:after,&::after{top:16px}}
+ .gnb a>.act{background-color: rgba(256,256,256,0);
+  &:before,&::before{top:0; transform:rotate(45deg);}
+	&:after,&::after{top:0; transform:rotate(-45deg);}}
+
+
+/* 공통 // adBox 광고박스 ================== */
+#contentBox{width: 100%; height: auto; @include bbg(3);}
+#adBox{position: relative; width: 100%; height: 100vh;
+	margin-top: 80px; @include bbg(7);}
+ .arrow{position: absolute; z-index: 300; top: 0; bottom: 0; 
+ 	margin: auto; transform: translateY(-50%);
+ 	width: 80px; height: 80px;
+   & > button{width: 100%; height: 100%; 
+   	padding: 0; @include bbg(1); border-radius: 100%; 
+    & > i{width: 100%; height: 100%; 
+    	font-size: 4rem; line-height: 80px; 
+    	text-align: center; color: nth($bc,7);}}}
+ .next_btn{right: 10%;}
+ .prev_btn{left: 10%;}
+
+/* 공통 // brandBox 제품소개&브랜드박스 ================== */
+#brandBox{@include bbg(3);}
+ .scroll{overflow: hidden; width:100%; height: 55vh; }
+ .brand_area{overflow-x: scroll; width: 100%; height: 55vh; margin:auto;
+ 	@include bbg(9);}
+ .brand_box{width: 1500px; height: 100%; 
+ 	 box-sizing:border-box; @include bbg(11);
+ 	 margin-top: 60px;
+  &>li{float: left;
+  	width: 200px; height: 340px;
+  	margin: 0 20px;	margin-top: 5%; @include bbg(1); text-align: center;
+  	line-height: 600px; 
+  	&:nth-child(1){transform: scale(0.8); @include bbg(1); }
+  	&:last-child{transform: scale(0.8)}
+		& button{display: block; width: 50px; height: 50px;
+			margin: auto; margin-top: 270px; 
+			@include bbg(9); border-radius: 10px;}}}
+	.brand_more{width: 150px; height: 30px; margin: auto;
+		margin-top: 15px; border-radius: 5px;
+		@include bbg(8); text-align: center;
+		line-height: 29px; color: nth($bc,1)}
+
+/* 공통 // storyBox 스토리박스 ================== */
+#storyBox{@include bbg(5);}
+ .story_area{width: 100%; height: auto;}
+ .story_link{width: 100%; height: auto; 
+ 	margin-top: 30px; @include bbg(2);
+ 	text-align: center;
+  &>li{display: inline-block; width: auto; height: auto;
+  margin: 0 10px;
+   &>a{width: 100%; height: 100px;}}}
+.cs_wrap{width: 100%; height: 80%; @include bbg(10);
+  text-align: center; padding-top: 10%;
+	box-sizing:border-box;
+  &>li{display: inline-block; 
+  	width: 300px; height: 300px;margin: 0 20px;
+  	@include bbg(8);}}
+
+/* 공통 // companyBox 회사정보&컴파니박스 ================== */
+#companyBox{@include bbg(6);}
+.company_area{overflow: hidden;
+	width: 100%; height: 100%; @include bbg(5);
+	text-align: center;
+	&>li{display:inline-block; 
+		width: 250px; height: 250px; 
+		margin: 80px 30px; text-align: center; 
+		padding: 40px 0; box-sizing: border-box;
+		@include bbg(7);
+	 &>a{display:block; 
+	 	width: 80px; margin: 75px; padding: 10px; 
+	 	@include bbg(4);}}}
+
+/* 공통 // snsBox SNS박스 ================== */
+#snsBox{overflow: hidden; @include bbg(7);}
+.sns_area{width: 1150px; height: 100%; margin: auto;
+ & .sns_big{width: 500px; height: 600px; @include bbg(2);
+  & dt{width: 60px; height: 60px; margin: auto; @include bbg(4);}
+  & dd{width: 500px; height: 500px; margin: auto; @include bbg(1);}}
+
+ & dl{width: 250px; height: 300px; margin: 20px;
+  & dt{width: 30px; height: 30px; margin: auto; @include bbg(4);}
+  & dd{width: 250px; height: 250px; @include bbg(1);}}}
+.sns_cont{float: left;}
+
+/* 공통 // footBox 풋박스 ================== */
+#footBox{width: 100%; height: auto; padding: 40px 0;@include mc(1);}
+.foot_area{width: 100%; max-width: 1200px; height: auto;margin: auto;}
+.link_area{width: auto; height: auto; padding-top: 10px; box-sizing:border-box; text-align: center;
+ &>li{display:inline-block; margin-right: 15px; 
+ 	&:last-child{margin-right: 0;}
+  &>a{display:block; width: 100%; height: 100%; color: nth($bc,1);}}}
+.foot_ls{width: 100%; height: auto; margin-top: 20px;}
+.foot_ls>h3{float: left;width: 100px; height: 30px; margin: auto;
+	background: url(../../img/mobile/logo_mobile.gif) no-repeat 50% 50% /cover;}
+.sns_link{float: right; width: auto; height: auto;
+ &>li{float:left; width: auto; height: auto; margin-right: 20px;
+ 	padding: 2px 5px;
+  &>a{display:block; overflow:hidden; width: 50px; height: 50px; @include bbg(1);
+  	border-radius: 100%;}}}
+address {width: 100%; max-width: 1200px; height: auto; 
+	margin: auto;
+&>p{width: 100%; height: auto; text-align: center; color: nth($bc,1);}}

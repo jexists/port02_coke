@@ -1,0 +1,4 @@
+/* PC 1280px~1919px (1024)=============== */
+/* media screen and (min-width: 1280px) */
+@media screen and (min-width: 1280px) { .head_area { max-width: 1024px; }
+  #brandBox > p { width: 30%; } }
