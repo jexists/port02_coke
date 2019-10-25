@@ -1,0 +1,15 @@
+// coke_01_mobile.scss
+
+/* 모바일 480px~767px (280) =============== */
+/* media screen and (max-width:767px) */
+@media screen and (max-width:767px) {
+#wrap{min-width: 280px;}
+// #contentBox
+// #adBox
+// #brandBox
+#brandBox > p {font-size: 16px; font-size: 1rem;}
+// #storyBox
+// #companyBox
+// #snsBox
+// #footBox
+}  

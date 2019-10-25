@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- main.html -->
+<html lang="ko-KR">
+<head>
+  <noscript>
+    <p>현재 접속하고 있는 사이트의 기능의 일부가 원활하게 실행되고 있지 않습니다. <br />
+    자바스크립트의 기능을 활성화 해주세요.</p>
+    <p><a href="http://enable-javascript.com/ko/" target="_blank">
+    브라우저에서 자바스크립트 활성화하는 방법</a></p>
+  </noscript>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="웹페이지 실습에 따른 목차구성">
+  <meta name="keyword" content="html, css, js, web, design, 웹디자인">
+  <meta name="author" content="jexists">
+  <meta name="generator" content="illustrator, photoshop, sublimetext">
+
+  <!-- link ===================================== -->
+   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+   <link rel="stylesheet" href="../css/base/reset.css">
+   <link rel="stylesheet" href="../css/base/common.css">
+   <link rel="stylesheet" href="../font/fontawesome/css/all.min.css">
+   <link rel="stylesheet" href="../css/main.css">
+
+   <!--[if lte IE 9]>
+      <script src="./ie/html5shiv-3.7.3/dist/html5shiv.min.js"> </script>
+      <script src="../ie/PIE-1.0.0/PIE.js"></script>
+      <script src="../ie/Respond-1.4.2/dest/respond.min.js"></script>
+
+   <![endif]-->
+
+
+  <!-- link favicon ============================= -->
+   <link rel="shortcut icon" type="image/png" href="../favicon.png">
+  <!-- link touch ============================= -->
+   <link rel="apple-touch-icon" href="../favicon.png">
+   <title>코카콜라</title>
+</head>
+<body>
+<!-- layout=================== -->
+<div id="wrap">
+ <header id="headBox">
+  <div class="head_area">
+ 	 <h1><a href="../index.html">코카콜라</a></h1>
+   <nav>
+     <h2 class="hd">네비게이션 및 검색창</h2>
+     <div class="gnb"></div>
+   </nav>
+  </div>
+ </header> <!-- // headBox 해더박스 -->
+ <main id="contentBox">
+   <h2 class="hd">코카콜라 웹사이트 콘텐츠</h2>
+   <section id="adBox">
+    <h3 class="hd">코카콜라 이벤트 및 광고보기</h3>
+    <aside class="arrow next_btn">
+     <button type="button">
+       <i class="fas fa-chevron-right"></i>
+       <span class="hd">다음 이벤트 및 광고보기</span>
+     </button>
+    </aside>
+    <aside class="arrow prev_btn">
+     <button type="button">
+       <i class="fas fa-chevron-left"></i>
+       <span class="hd">이전  이벤트 및 광고보기</span>
+     </button>
+    </aside>
+
+     
+   </section> <!-- // adBox 광고박스 -->
+
+   <section id="brandBox" class="box_size">
+    <h3 class="box_title"><span class="hd">코카콜라 회사 제품소개 및</span>brand</h3>
+    <p class="box_text">No1. 글로벌 종합 음료회사로 탄산, 스포츠음료, 생수, 주스, 차, 커피 등 보유하고 있습니다. </p>
+    <article class="brand_area">
+     <ul class="brand_box cf">
+      <li class="coke"><button type="button">+</button></li>
+      <li class="sprite"><button type="button">+</button></li>
+      <li class="fanta"><button type="button">+</button></li>
+     </ul>
+    <div class="brand_more">전체제품보기</div>
+<!--       <script>
+        let brand=['coke','sprite','fanta'];
+        for (let i=0; i<ar.length; i++){
+        let br_li = document.createElemnt("li");
+        .brand_box.appendChild(br_li);
+        }
+      </script> -->
+      
+    </article>
+   </section> <!-- // brandBox 제품소개&브랜드박스 -->
+
+
+   <article id="storyBox" class="box_size">
+    <h3 class="box_title">story</h3>
+    <p class="box_text">코카콜라와 함께하는 톡~ 쏘는 이야기!</p>
+     
+   </article> <!-- // storyBox 스토리박스 -->
+   <section id="companyBox" class="box_size">
+    <h3 class="box_title">company</h3>
+    <p class="box_text">보다 상쾌한 행복한 일상, 새로운 가치를 추구하는 기업</p>
+   </section>
+   <aside id="snsBox" class="box_size">
+    <h3 class="box_title"><abbr title="social network servuce">SNS</abbr></h3>
+    <p class="box_text">코카콜라의 더 많은 소식을 <abbr title="social network servuce">SNS</abbr>로 만나보세요!</p>
+    <!-- ul.sns_area>(li>a)*5 -->
+    <div class="sns_area">
+      <div class="sns_cont">
+      <dl>
+       <dt></dt>
+       <dd><a href="#"></a></dd>
+      </dl>
+      <dl>
+       <dt></dt>
+       <dd><a href="#"></a></dd>
+      </dl>
+      </div>
+      <div class="sns_cont">
+      <dl class="sns_big">
+       <dt></dt>
+       <dd><a href="#"></a></dd>
+      </dl>
+      </div>
+      <div class="sns_cont cf">
+      <dl>
+       <dt></dt>
+       <dd><a href="#"></a></dd>
+      </dl>
+      <dl>
+       <dt></dt>
+       <dd><a href="#"></a></dd>
+      </dl>
+      </div>
+    </div>
+     
+   </aside> <!-- //snsBox -->
+ </main> <!-- // contentBox 메인박스 -->
+ <footer id="footBox">
+ 	<h2 class="hd">코카콜라 회사 정보 및 관련 사이트</h2>
+  <div class="foot_area">
+  <ul class="link_area cf">
+   <li><a href="#">글로벌</a></li>
+   <li><a href="#">코리아</a></li>
+   <li><a href="#">이용약관</a></li>
+   <li><a href="#">개인정보처리방침</a></li>
+   <li><a href="#">고객센터</a></li>
+   <li><a href="#">사이트맵</a></li>
+ </ul>
+ <div class="foot_ls cf">
+ <h3>코카콜라</h3>
+ <ul class="sns_link">
+   <li><a href="#">페이스북</a></li>
+   <li><a href="#">인스타그램</a></li>
+   <li><a href="#">트위터</a></li>
+   <li><a href="#">유투브</a></li>
+ </ul>
+ </div>
+ </div>
+  <address>
+    <p>서울시 종로구 새문안로 68 흥국생명빌딩 10층 | TEL. 080-024-5999</p>
+    <p>2019 THE COCA-COLA COMPANY. ALL RIGHTS RESERVED</p>
+  </address>
+ </footer>
+</div>
+
+
+<!-- Script=================== -->
+<!--   <script></script> -->
+</body>
+</html>
