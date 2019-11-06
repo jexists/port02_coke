@@ -1,0 +1,212 @@
+@charset "UTF-8";
+/* main.css */
+/* 공통 =============== */
+/* line 6, scss/src/coke_01_common.scss */ #wrap { width: 100%; height: auto; margin: auto; }
+
+/* line 7, scss/src/coke_01_common.scss */ .box_size { width: 100%; height: 100vh; padding: 110px 0; box-sizing: border-box; }
+
+/* line 8, scss/src/coke_01_common.scss */ .box_title { width: 50%; height: auto; margin: auto; font-size: 35px; text-align: center; text-transform: uppercase; }
+
+/* line 10, scss/src/coke_01_common.scss */ .box_text { width: 80%; min-width: 350px; height: auto; margin: auto; font-size: 18px; font-size: 1.125rem; text-align: center; word-break: keep-all; }
+
+/* 공통 // headBox 해더박스 ================== */
+/* line 13, scss/src/coke_01_common.scss */ #headBox { position: fixed; z-index: 500; top: 0; left: 0; width: 100%; height: 80px; background-color: #f00; }
+
+/* line 16, scss/src/coke_01_common.scss */ #headBox:after, #headBox::after { display: none; }
+
+/* line 17, scss/src/coke_01_common.scss */ #headBox.act:after, #headBox.act::after { content: " "; position: absolute; top: 80px; left: 0; z-index: 1; width: 100vw; height: 0; border-bottom: 1px solid #fff; }
+
+/* line 21, scss/src/coke_01_common.scss */ .head_area { width: 100%; height: 100%; min-width: 250px; margin: auto; padding: 20px 30px; box-sizing: border-box; background-color: #f00; }
+
+/* line 24, scss/src/coke_01_common.scss */ h1 { float: left; width: 130px; height: 40px; background: url(../../img/mobile/logo_mobile.gif) no-repeat 50% 50%/cover; }
+
+/* line 26, scss/src/coke_01_common.scss */ h1 > a { display: block; width: 100%; height: 100%; }
+
+/* line 27, scss/src/coke_01_common.scss */ .gnb { float: right; width: 45px; height: 40px; }
+
+/* line 28, scss/src/coke_01_common.scss */ .burgur_btn { display: block; position: relative; width: 100%; height: 100%; }
+
+/* line 30, scss/src/coke_01_common.scss */ .navList { position: absolute; top: 0; left: 75px; right: 0; margin: auto; background-color: #f00; width: 700px; height: auto; }
+
+/* line 33, scss/src/coke_01_common.scss */ .navList:before, .navList::before { content: " "; display: block; position: absolute; z-index: -1; top: 0; left: 50%; margin-left: -60vw; width: 120vw; height: 100%; background-color: inherit; }
+
+/* line 39, scss/src/coke_01_common.scss */ .navList:after, .navList::after { content: " "; display: block; width: 0; height: 0; clear: both; }
+
+/* line 41, scss/src/coke_01_common.scss */ .navList > li { float: left; width: 23%; height: auto; margin: 0 5px; }
+
+/* line 43, scss/src/coke_01_common.scss */ .navList > li > dl { width: auto; height: auto; }
+
+/* line 44, scss/src/coke_01_common.scss */ .navList > li > dl > dt { width: auto; height: auto; }
+
+/* line 45, scss/src/coke_01_common.scss */ .navList > li > dl > dt > a { display: block; width: 100%; height: 80px; line-height: 80px; text-align: center; font-size: 1.4rem; font-weight: bold; color: #fff; }
+
+/* line 50, scss/src/coke_01_common.scss */ .navList > li > dl > dt > a:hover, .navList > li > dl > dt > a:focus { color: #ff0; }
+
+/* line 51, scss/src/coke_01_common.scss */ .navList > li > dl > dd { display: none; width: auto; margin: 20px 0; }
+
+/* line 53, scss/src/coke_01_common.scss */ .navList > li > dl > dd > a { display: block; width: auto; height: 40px; text-indent: 45px; color: #fff; margin-top: 5px; line-height: 40px; }
+
+/* line 57, scss/src/coke_01_common.scss */ .navList > li > dl > dd > a:hover, .navList > li > dl > dd > a:focus { color: #ff0; }
+
+/* line 58, scss/src/coke_01_common.scss */ .gnb span { position: absolute; top: 50%; width: 100%; height: 8px; transform: translate(0, -50%); border-radius: 4px; background-color: white; }
+
+/* line 61, scss/src/coke_01_common.scss */ .gnb span:before, .gnb span::before, .gnb span:after, .gnb span::after { content: " "; position: absolute; width: 100%; height: 8px; border-radius: 4px; background-color: white; transition: all 800ms ease; }
+
+/* line 67, scss/src/coke_01_common.scss */ .gnb span:before, .gnb span::before { top: -16px; }
+
+/* line 68, scss/src/coke_01_common.scss */ .gnb span:after, .gnb span::after { top: 16px; }
+
+/* line 69, scss/src/coke_01_common.scss */ .gnb a > .act { background-color: rgba(255, 255, 255, 0); }
+
+/* line 70, scss/src/coke_01_common.scss */ .gnb a > .act:before, .gnb a > .act::before { top: 0; transform: rotate(45deg); }
+
+/* line 71, scss/src/coke_01_common.scss */ .gnb a > .act:after, .gnb a > .act::after { top: 0; transform: rotate(-45deg); }
+
+/* 공통 // adBox 광고박스 ================== */
+/* line 75, scss/src/coke_01_common.scss */ #contentBox { width: 100%; height: auto; background-color: #ddd; }
+
+/* line 76, scss/src/coke_01_common.scss */ #adBox { position: relative; width: 100%; height: 100vh; margin-top: 80px; background-color: #999; }
+
+/* line 78, scss/src/coke_01_common.scss */ .arrow { position: absolute; z-index: 300; top: 0; bottom: 0; margin: auto; transform: translateY(-50%); width: 80px; height: 80px; }
+
+/* line 81, scss/src/coke_01_common.scss */ .arrow > button { width: 100%; height: 100%; padding: 0; background-color: #fff; border-radius: 100%; }
+
+/* line 83, scss/src/coke_01_common.scss */ .arrow > button > i { width: 100%; height: 100%; font-size: 4rem; line-height: 80px; text-align: center; color: #999; }
+
+/* line 86, scss/src/coke_01_common.scss */ .next_btn { right: 10%; }
+
+/* line 87, scss/src/coke_01_common.scss */ .prev_btn { left: 10%; }
+
+/* 공통 // brandBox 제품소개&브랜드박스 ================== */
+/* line 90, scss/src/coke_01_common.scss */ #brandBox { background-color: #ddd; }
+
+/* line 91, scss/src/coke_01_common.scss */ .scroll { overflow: hidden; width: 100%; height: 55vh; }
+
+/* line 92, scss/src/coke_01_common.scss */ .brand_area { overflow-x: scroll; width: 100%; height: 55vh; margin: auto; background-color: #777; }
+
+/* line 94, scss/src/coke_01_common.scss */ .brand_box { width: 1500px; height: 100%; box-sizing: border-box; background-color: #555; margin-top: 60px; }
+
+/* line 97, scss/src/coke_01_common.scss */ .brand_box > li { float: left; width: 200px; height: 340px; margin: 0 20px; margin-top: 5%; background-color: #fff; text-align: center; line-height: 600px; }
+
+/* line 101, scss/src/coke_01_common.scss */ .brand_box > li:nth-child(1) { transform: scale(0.8); background-color: #fff; }
+
+/* line 102, scss/src/coke_01_common.scss */ .brand_box > li:last-child { transform: scale(0.8); }
+
+/* line 103, scss/src/coke_01_common.scss */ .brand_box > li button { display: block; width: 50px; height: 50px; margin: auto; margin-top: 270px; background-color: #777; border-radius: 10px; }
+
+/* line 106, scss/src/coke_01_common.scss */ .brand_more { width: 150px; height: 30px; margin: auto; margin-top: 15px; border-radius: 5px; background-color: #888; text-align: center; line-height: 29px; color: #fff; }
+
+/* 공통 // storyBox 스토리박스 ================== */
+/* line 112, scss/src/coke_01_common.scss */ #storyBox { background-color: #bbb; }
+
+/* line 113, scss/src/coke_01_common.scss */ .story_area { width: 100%; height: auto; }
+
+/* line 114, scss/src/coke_01_common.scss */ .story_link { width: 100%; height: auto; margin-top: 30px; background-color: #eee; text-align: center; }
+
+/* line 117, scss/src/coke_01_common.scss */ .story_link > li { display: inline-block; width: auto; height: auto; margin: 0 10px; }
+
+/* line 119, scss/src/coke_01_common.scss */ .story_link > li > a { width: 100%; height: 100px; }
+
+/* line 120, scss/src/coke_01_common.scss */ .cs_wrap { width: 100%; height: 80%; background-color: #666; text-align: center; padding-top: 10%; box-sizing: border-box; }
+
+/* line 123, scss/src/coke_01_common.scss */ .cs_wrap > li { display: inline-block; width: 300px; height: 300px; margin: 0 20px; background-color: #888; }
+
+/* 공통 // companyBox 회사정보&컴파니박스 ================== */
+/* line 128, scss/src/coke_01_common.scss */ #companyBox { background-color: #aaa; }
+
+/* line 129, scss/src/coke_01_common.scss */ .company_area { overflow: hidden; width: 100%; height: 100%; background-color: #bbb; text-align: center; }
+
+/* line 132, scss/src/coke_01_common.scss */ .company_area > li { display: inline-block; width: 250px; height: 250px; margin: 80px 30px; text-align: center; padding: 40px 0; box-sizing: border-box; background-color: #999; }
+
+/* line 137, scss/src/coke_01_common.scss */ .company_area > li > a { display: block; width: 80px; margin: 75px; padding: 10px; background-color: #ccc; }
+
+/* 공통 // snsBox SNS박스 ================== */
+/* line 142, scss/src/coke_01_common.scss */ #snsBox { overflow: hidden; background-color: #999; }
+
+/* line 143, scss/src/coke_01_common.scss */ .sns_area { width: 1150px; height: 100%; margin: auto; }
+
+/* line 144, scss/src/coke_01_common.scss */ .sns_area .sns_big { width: 500px; height: 600px; background-color: #eee; }
+
+/* line 145, scss/src/coke_01_common.scss */ .sns_area .sns_big dt { width: 60px; height: 60px; margin: auto; background-color: #ccc; }
+
+/* line 146, scss/src/coke_01_common.scss */ .sns_area .sns_big dd { width: 500px; height: 500px; margin: auto; background-color: #fff; }
+
+/* line 148, scss/src/coke_01_common.scss */ .sns_area dl { width: 250px; height: 300px; margin: 20px; }
+
+/* line 149, scss/src/coke_01_common.scss */ .sns_area dl dt { width: 30px; height: 30px; margin: auto; background-color: #ccc; }
+
+/* line 150, scss/src/coke_01_common.scss */ .sns_area dl dd { width: 250px; height: 250px; background-color: #fff; }
+
+/* line 151, scss/src/coke_01_common.scss */ .sns_cont { float: left; }
+
+/* 공통 // footBox 풋박스 ================== */
+/* line 154, scss/src/coke_01_common.scss */ #footBox { width: 100%; height: auto; padding: 40px 0; background-color: #f00; }
+
+/* line 155, scss/src/coke_01_common.scss */ .foot_area { width: 100%; max-width: 1200px; height: auto; margin: auto; }
+
+/* line 156, scss/src/coke_01_common.scss */ .link_area { width: auto; height: auto; padding-top: 10px; box-sizing: border-box; text-align: center; }
+
+/* line 157, scss/src/coke_01_common.scss */ .link_area > li { display: inline-block; margin-right: 15px; }
+
+/* line 158, scss/src/coke_01_common.scss */ .link_area > li:last-child { margin-right: 0; }
+
+/* line 159, scss/src/coke_01_common.scss */ .link_area > li > a { display: block; width: 100%; height: 100%; color: #fff; }
+
+/* line 160, scss/src/coke_01_common.scss */ .foot_ls { width: 100%; height: auto; margin-top: 20px; }
+
+/* line 161, scss/src/coke_01_common.scss */ .foot_ls > h3 { float: left; width: 100px; height: 30px; margin: auto; background: url(../../img/mobile/logo_mobile.gif) no-repeat 50% 50%/cover; }
+
+/* line 163, scss/src/coke_01_common.scss */ .sns_link { float: right; width: auto; height: auto; }
+
+/* line 164, scss/src/coke_01_common.scss */ .sns_link > li { float: left; width: auto; height: auto; margin-right: 20px; padding: 2px 5px; }
+
+/* line 166, scss/src/coke_01_common.scss */ .sns_link > li > a { display: block; overflow: hidden; width: 50px; height: 50px; background-color: #fff; border-radius: 100%; }
+
+/* line 168, scss/src/coke_01_common.scss */ address { width: 100%; max-width: 1200px; height: auto; margin: auto; }
+
+/* line 170, scss/src/coke_01_common.scss */ address > p { width: 100%; height: auto; text-align: center; color: #fff; }
+
+/* 모바일 480px~767px (280) =============== */
+/* media screen and (max-width:767px) */
+@media screen and (max-width: 767px) { /* line 6, scss/src/coke_01_mobile.scss */ #wrap { min-width: 150px; overflow: hidden; }
+  /* line 7, scss/src/coke_01_mobile.scss */ .box_text { font-size: 16px; font-size: 1rem; }
+  /* line 11, scss/src/coke_01_mobile.scss */ .box_size { padding: 25vw 0; }
+  /* line 12, scss/src/coke_01_mobile.scss */ .brand_box { overflow: hidden; padding: 2vh; }
+  /* line 13, scss/src/coke_01_mobile.scss */ .brand_box > li { width: 40vw; height: 70vw; margin-top: 8vw; }
+  /* line 14, scss/src/coke_01_mobile.scss */ .brand_box > li:nth-child(1) { display: none; }
+  /* line 15, scss/src/coke_01_mobile.scss */ .brand_box > li:nth-child(3) { display: none; }
+  /* line 17, scss/src/coke_01_mobile.scss */ .story_link { margin-top: 15px; }
+  /* line 18, scss/src/coke_01_mobile.scss */ .story_link > li:last-child { display: none; }
+  /* line 19, scss/src/coke_01_mobile.scss */ .cs_wrap { overflow: hidden; }
+  /* line 20, scss/src/coke_01_mobile.scss */ .cs_wrap > li { width: 250px; height: 250px; }
+  /* line 21, scss/src/coke_01_mobile.scss */ .cs_wrap > li:nth-child(2) { display: none; }
+  /* line 22, scss/src/coke_01_mobile.scss */ .cs_wrap > li:nth-child(3) { display: none; }
+  /* line 25, scss/src/coke_01_mobile.scss */ .company_area { padding: 50px 0; box-sizing: border-box; }
+  /* line 26, scss/src/coke_01_mobile.scss */ .company_area > li { width: 210px; height: 120px; margin: 10px; }
+  /* line 27, scss/src/coke_01_mobile.scss */ .company_area > li > a { margin: auto; }
+  /* line 29, scss/src/coke_01_mobile.scss */ .sns_area { width: 1150px; height: 100%; margin: auto; padding: 10px; padding-left: 40px; }
+  /* line 31, scss/src/coke_01_mobile.scss */ .sns_area .sns_big { display: none; }
+  /* line 32, scss/src/coke_01_mobile.scss */ .sns_area dl { width: 150px; height: 200px; margin: 20px; }
+  /* line 33, scss/src/coke_01_mobile.scss */ .sns_area dl dt { width: 30px; height: 30px; margin: auto; }
+  /* line 34, scss/src/coke_01_mobile.scss */ .sns_area dl dd { width: 150px; height: 150px; }
+  /* line 35, scss/src/coke_01_mobile.scss */ .sns_cont { float: left; } }
+
+/* // media screen 모바일 */
+/* 패드 768px~1279px =============== */
+/* media screen and (min-width: 768px) and (max-width:1279px) */
+@media screen and (min-width: 768px) and (max-width: 1279px) { /* line 11, scss/src/coke_01_pad.scss */ #brandBox > p { width: 50%; }
+  /* line 12, scss/src/coke_01_pad.scss */ .brand_box { padding: 4vh; }
+  /* line 13, scss/src/coke_01_pad.scss */ .brand_box > li { margin: 0 10px; }
+  /* line 15, scss/src/coke_01_pad.scss */ .cs_wrap > li { width: 200px; height: 200px; }
+  /* line 18, scss/src/coke_01_pad.scss */ .sns_big { display: none; }
+  /* line 19, scss/src/coke_01_pad.scss */ .sns_area { padding: 100px; box-sizing: border-box; } }
+
+/* PC 1280px~1919px (1024)=============== */
+/* media screen and (min-width: 1280px) */
+@media screen and (min-width: 1280px) { /* line 8, scss/src/coke_01_pc.scss */ .head_area { max-width: 1024px; }
+  /* line 12, scss/src/coke_01_pc.scss */ #brandBox > p { width: 30%; } }
+
+/* TV 1920px~ =============== */
+/* media screen and (min-width: 1920px) */
+@media screen and (min-width: 1920px) { /* line 8, scss/src/coke_01_tv.scss */ .head_area { max-width: 1280px; }
+  /* line 12, scss/src/coke_01_tv.scss */ #brandBox > p { width: 20%; height: auto; } }

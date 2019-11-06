@@ -7,26 +7,31 @@
  .box_size{width: 100%; height: 100vh; padding: 110px 0; box-sizing:border-box;}
  .box_title{width: 50%; height: auto; margin: auto;
  	font-size: 35px; text-align: center; text-transform: uppercase;}
- .box_text{width:80%; min-width: 350px; height: auto; margin: auto; font-size: 18px; font-size: 1.125rem; text-align: center; word-break: keep-all;}
+ .box_text{width:80%; min-width: 350px; height: auto; margin: auto; font-size: 18px; 
+  font-size: 1.125rem; text-align: center; word-break: keep-all;}
 
 /* 공통 // headBox 해더박스 ================== */
 #headBox{position: fixed; z-index: 500; top: 0; left: 0;
 	width: 100%; height: 80px;
 	@include mc(1);
-	/* &:after, &::after{display: none; }
-	 &.act:after,&.act::after{content: " "; 
+	&:after, &::after{display: none; }
+	 &.act:after,&.act::after{content: " "; display: block;
 	position:absolute; top:80px; left:0; z-index: 1;
 	 	width: 100vw; height: 0;
-	 	border-bottom: 1px solid #fff;} */}
+	 	border-bottom: 1px solid #fff;}}
  .head_area{@include whp; min-width: 250px; 
  	margin: auto; padding: 20px 30px;
  	box-sizing: border-box; @include mc(1);}
 	h1{float: left; width: 130px; height: 40px;
 	background: url(../../img/mobile/logo_mobile.gif) no-repeat 50% 50% / cover;
 	 &>a{ @include linkblock(); }}
-	.gnb{float: right; width: 45px; height: 40px;}
- .burgur_btn {display: block; position: relative;
-  width: 100%; height: 100%; } 
+	.gnb_cp{float: right; width: 45px; height: 40px; }
+  .search{float: right; width: 45px; height: 40px; font-size: 2.5rem;
+   background-color: transparent;
+   text-align: center; line-height: 40px; color: nth($mc,3)}
+ .open_btn {display: block; position: relative;
+  width: 100%; height: 100%;
+	button{width: 100%; height: 100%; background-color: transparent;}} 
  .navList{position: absolute; top: 0; left:75px; right:0; 
  	margin:auto; @include mc(1);
  	width: 700px; height: auto; 
@@ -51,26 +56,54 @@
  	&>dd{display: none;
  		width: auto; margin: 20px 0;
  	 &>a{display: block; width: auto;
- 	 height: 40px; text-indent: 45px; color:#fff;
+ 	 height: 40px; text-indent: 45px; color:nth($mc,3);
  	 margin-top: 5px;
  	 line-height: 40px;
  	  &:hover,&:focus{color: #ff0;}}}}}
- .gnb span{position: absolute; top: 50%; 
+ //검색창
+ .search_box{position:absolute; top: 40vh; left:0; right: 0;
+  width: 80%; height: 100px; margin: auto;
+  background-color: rgba(nth($mc, 1), 0.8);
+  border-radius: 20px;
+ #siteName {float: left; width: 100px; height: 30px;}
+ #fieldset{float: left;}}
+
+ //bugur_btn open
+ .gnb_cp .burgur{position: absolute; top: 50%; left: 0;
  	width: 100%; height: 8px; transform:translate(0,-50%);
- 	border-radius: 4px; background-color: rgba(256,256,256,1);
+ 	border-radius: 4px; background-color: rgba(nth($mc, 3), 1);
  	&:before,&::before,&:after,&::after{content: " ";
- 		position: absolute;
+ 		position: absolute; left: 0;
  		width: 100%; height: 8px;
  		border-radius: 4px; 
- 		background-color: rgba(256,256,256,1);
+ 		background-color: rgba(nth($mc, 3), 1);
  		transition: all 800ms ease;}
  	&:before,&::before{top:-16px;}
  	&:after,&::after{top:16px}}
- .gnb a>.act{background-color: rgba(256,256,256,0);
+ .gnb_cp .open_btn>.act, .gnb_cp .close_btn>.act
+ {background-color: rgba(nth($mc, 3), 0);
   &:before,&::before{top:0; transform:rotate(45deg);}
 	&:after,&::after{top:0; transform:rotate(-45deg);}}
-
-
+//bugur_btn close
+ .close_btn{ position:relative; 
+ 	width: 50px; height: 50px; float:right;
+ 	button{width: 100%; height: 100%; background-color: transparent;}}
+// PC에서 버튼클릭시 네비나오기
+ .all_gnb{display: none;
+ 	position: absolute; top: 0; right: 0; margin:auto;
+ 	padding: 20px; box-sizing:border-box;
+ 	width: 60%; height: 100vh; background-color: rgba(nth($mc, 4), 0.9);}
+ .nav_site{width: 200px; height: 100%; margin: auto;
+ 	padding: 10px 10vw; 
+  .btn_nav{width: 100%; height: 100%; margin-top: 50px;
+  	li{width: 100%;
+  	 dl{width: 100%; 
+  	  dt{width: 100%; font-size: 1.5rem; margin-top: 5px;
+  	   a{display: block; color: nth($mc,3);}}
+  	  dd{width: 100%;
+  	   a{display: block; width: 100%; height: 100%;
+  	   	color: nth($mc,3);
+  	   	font-size: 1rem; text-indent: 10px;}}}}}}
 /* 공통 // adBox 광고박스 ================== */
 #contentBox{width: 100%; height: auto; @include bbg(3);}
 #adBox{position: relative; width: 100%; height: 100vh;

@@ -1,4 +1,5 @@
 /* PC 1280px~1919px (1024)=============== */
 /* media screen and (min-width: 1280px) */
-@media screen and (min-width: 1280px) { .head_area { max-width: 1024px; }
-  #brandBox > p { width: 30%; } }
+@media screen and (min-width: 1280px) { /* line 8, scss/src/coke_01_pc.scss */ .gnb_cp { display: none; }
+  /* line 9, scss/src/coke_01_pc.scss */ .head_area { max-width: 1024px; }
+  /* line 13, scss/src/coke_01_pc.scss */ #brandBox > p { width: 30%; } }

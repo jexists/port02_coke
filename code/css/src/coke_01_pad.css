@@ -1,9 +1,10 @@
 @charset "UTF-8";
 /* 패드 768px~1279px =============== */
 /* media screen and (min-width: 768px) and (max-width:1279px) */
-@media screen and (min-width: 768px) and (max-width: 1279px) { #brandBox > p { width: 50%; }
-  .brand_box { padding: 4vh; }
-  .brand_box > li { margin: 0 10px; }
-  .cs_wrap > li { width: 200px; height: 200px; }
-  .sns_big { display: none; }
-  .sns_area { padding: 100px; box-sizing: border-box; } }
+@media screen and (min-width: 768px) and (max-width: 1279px) { /* line 8, scss/src/coke_01_pad.scss */ .search { display: none; }
+  /* line 12, scss/src/coke_01_pad.scss */ #brandBox > p { width: 50%; }
+  /* line 13, scss/src/coke_01_pad.scss */ .brand_box { padding: 4vh; }
+  /* line 14, scss/src/coke_01_pad.scss */ .brand_box > li { margin: 0 10px; }
+  /* line 16, scss/src/coke_01_pad.scss */ .cs_wrap > li { width: 200px; height: 200px; }
+  /* line 19, scss/src/coke_01_pad.scss */ .sns_big { display: none; }
+  /* line 20, scss/src/coke_01_pad.scss */ .sns_area { padding: 100px; box-sizing: border-box; } }
