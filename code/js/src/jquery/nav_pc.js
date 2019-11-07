@@ -56,89 +56,112 @@ const dtLk = navDt.children('a');
 const navDd = navDl.children('dd');
 const ddLk = navDd.children('a');
 
- 	nav.on('mouseenter',function(){
-		navDd.stop().slideDown();
-		$(this).closest(headBox).addClass('act');
-	});
-
-	nav.on('mouseleave',function(){
-		navDd.stop().slideUp();
-		$(this).closest(headBox).removeClass('act');
-	});
-
 let gnbContents = nav.contents().clone();
-	navSite.append('<ul class="btn_nav"></ul>');
-	navSite.children('ul').append(gnbContents)
-	
+		navSite.append('<ul class="btn_nav"></ul>');
+		navSite.children('ul').append(gnbContents)
+const PcView = function(){
 
-/*
-	const openGnBtn = $('#gnb_btn>button');
-	const closeGnBtn = $('.close_gnb_btn>button');
-	const sideGnb = $('.side_gnb'); //나타내기
-	const gnbDl = gnb.find('dl');
-	const gnbDd = gnb.find('dd'); 
-	const gnbDt = gnb.find('dt');
-	const gnbTitleLink = gnbDt.children('a');
-	const gnbListLink = gnbDd.children('a');
-
-
-	const addAction = function(){
-		let li = $(this).parents('li');
-		li.find(gnbTitleLink).addClass('action');
-		li.siblings().find(gnbTitleLink).removeClass('action');
-		gnbDd.stop().slideDown();}
-	const removeAction = function(){
-		$(this).parents('li').find(gnbTitleLink).removeClass('action');
-		gnbDd.stop().slideUp();}
-
-	let time = 600;
-
-	let gnbContents = gnb.contents().clone();
-	sideGnbArea.append(gnbContents);
-
-
-	openGnBtn.on('click',function(e){
-		e.preventDefault();
-
-		sideGnb.stop().fadeIn(time,function(){
-			closeGnBtn.focus();
-			$(this).on('keyup',function(e){
-				if(e.keyCode == 27)
-					{sideGnb.stop().fadeOut();
-					openGnBtn.focus()}
-					console.log(e.key.toLowerCase());
-
-			});
+	 	nav.on('mouseenter',function(){
+			navDd.stop().slideDown();
+			$(this).closest(headBox).addClass('act');
 		});
-	});
 
-	closeGnBtn.on('click',function(e){
+		nav.on('mouseleave',function(){
+			navDd.stop().slideUp();
+			$(this).closest(headBox).removeClass('act');
+		});
+
+
+
+	 const openSearch = gnb.find('.search_open');
+	 const closeSearch = gnb.find('.search_close');
+	 const searchBox = gnb.find('.search_box');
+
+
+	 const rotate = {transition: 'all 500ms ease', transform:'rotate(360deg)'};
+	 const rotateZero = {transform:'rotate(0deg)'};
+	 const scale = {transition: 'all 500ms ease', transform:'scale(1.2)'};
+	 const scaleZero = {transition: 'all 500ms ease', transform:'scale(1)'};
+	openSearch.on('click',function(e){
 		e.preventDefault();
-		sideGnb.stop().fadeOut(time*2);
+		$(this).css(scale);
+		closeSearch.css(rotateZero);
+		$(this).stop().fadeOut(function(){
+			closeSearch.stop().fadeIn();
+			closeSearch.css(rotate);
+			searchBox.stop().slideDown();
+		});
+	closeSearch.on('click',function(e){
+		e.preventDefault();
+		openSearch.css(scaleZero)
+		searchBox.stop().slideUp();
+		$(this).css(rotateZero);
+		$(this).stop().fadeOut(function(){
+		$(this).css(rotate);
+			openSearch.stop().fadeIn();
+		});
+	});	
 
 	});
+}; 
 
 
-	gnbDl.on ({'mouseenter':addAction,'mouseleave':removeAction})
+// =================================================================================================
+//모바일 480px~767px (280) & 패드 768px~1279px 
+const TabView = function(){
+   const openBtn = $('.open_btn');
+   const openspan = openBtn.find('span.burgur');
+   const allGnb = $('.all_gnb');
+   const closeBtn = $('.close_btn');
+   const closespan = closeBtn.find('span.burgur');
+  
+  openBtn.on('click focus',function(e){
+  	e.preventDefault();
+   	$(this).children(openspan).addClass('act');
+   	allGnb.stop().fadeIn(2000);
+   	$(this).stop().fadeOut();
+   	closeBtn.children(closespan).addClass('act');
+   });
+  closeBtn.on('click', function(e){
+  	e.preventDefault();
+  	allGnb.stop().fadeOut();
+  	openBtn.stop().fadeIn();
+  	openBtn.children(openspan).removeClass('act');
+  });
+}
 
-	gnbTitleLink.on('focus',addAction);
+// =================================================================================================
+let beforeWw = $(window).outerWidth();
 
-	gnbListLink.eq(-1).on('blur', function(){
-		gnbDd.stop().slideUp();	
-	});
+const browserWidth = function(after){
+	// let pcWidth = $(window).outerWidth();
+	if(beforeWw > 1280){
+		PcView();
+	}else{
+		TabView();
+	}
+}
+browserWidth();
+// =================================================================================================
+// 브라우저 크기 변경시
 
-const sideLink = sideGnbArea.find('a');
-const sideLastLink = sideLink.eq(-1);
 
-	sideLastLink.on('blur',function(e){
-		closeGnBtn.focus();
-	});
 
-sideGnbArea.on('keyup',function(e){
-	console.log(e);
-
+$(window).on('resize', function(){
+	// widthcheck();
+ let afterWw = $(window).outerWidth();
+	 if(beforeWw !== afterWw){
+	 	location.reload();
+	 }
 });
-*/
+
+
+
+
+
+
+
+
 
 
 

@@ -1,249 +1,256 @@
 @charset "UTF-8";
 /* main.css */
 /* 공통 =============== */
-/* line 6, scss/src/coke_01_common.scss */ #wrap { width: 100%; height: auto; margin: auto; }
+#wrap { width: 100%; height: auto; margin: auto; }
 
-/* line 7, scss/src/coke_01_common.scss */ .box_size { width: 100%; height: 100vh; padding: 110px 0; box-sizing: border-box; }
+.box_size { width: 100%; height: 100vh; padding: 110px 0; box-sizing: border-box; }
 
-/* line 8, scss/src/coke_01_common.scss */ .box_title { width: 50%; height: auto; margin: auto; font-size: 35px; text-align: center; text-transform: uppercase; }
+.box_title { width: 50%; height: auto; margin: auto; font-size: 35px; text-align: center; text-transform: uppercase; }
 
-/* line 10, scss/src/coke_01_common.scss */ .box_text { width: 80%; min-width: 350px; height: auto; margin: auto; font-size: 18px; font-size: 1.125rem; text-align: center; word-break: keep-all; }
+.box_text { width: 80%; min-width: 350px; height: auto; margin: auto; font-size: 18px; font-size: 1.125rem; text-align: center; word-break: keep-all; }
 
 /* 공통 // headBox 해더박스 ================== */
-/* line 14, scss/src/coke_01_common.scss */ #headBox { position: fixed; z-index: 500; top: 0; left: 0; width: 100%; height: 80px; background-color: #f00; }
+#headBox { position: fixed; z-index: 500; top: 0; left: 0; width: 100%; height: 80px; background-color: #f00; }
 
-/* line 17, scss/src/coke_01_common.scss */ #headBox:after, #headBox::after { display: none; }
+#headBox:after, #headBox::after { display: none; }
 
-/* line 18, scss/src/coke_01_common.scss */ #headBox.act:after, #headBox.act::after { content: " "; display: block; position: absolute; top: 80px; left: 0; z-index: 1; width: 100vw; height: 0; border-bottom: 1px solid #fff; }
+#headBox.act:after, #headBox.act::after { content: " "; display: block; position: absolute; top: 80px; left: 0; z-index: 1; width: 100vw; height: 0; border-bottom: 1px solid #fff; }
 
-/* line 22, scss/src/coke_01_common.scss */ .head_area { width: 100%; height: 100%; min-width: 250px; margin: auto; padding: 20px 30px; box-sizing: border-box; background-color: #f00; }
+.head_area { width: 100%; height: 100%; min-width: 250px; margin: auto; padding: 20px 30px; box-sizing: border-box; background-color: #f00; }
 
-/* line 25, scss/src/coke_01_common.scss */ h1 { float: left; width: 130px; height: 40px; background: url(../../img/mobile/logo_mobile.gif) no-repeat 50% 50%/cover; }
+h1 { float: left; width: 130px; height: 40px; background: url(../../img/mobile/logo_mobile.gif) no-repeat 50% 50%/cover; }
 
-/* line 27, scss/src/coke_01_common.scss */ h1 > a { display: block; width: 100%; height: 100%; }
+h1 > a { display: block; width: 100%; height: 100%; }
 
-/* line 28, scss/src/coke_01_common.scss */ .gnb_cp { float: right; width: 45px; height: 40px; }
+.gnb_cp { float: right; width: 45px; height: 40px; }
 
-/* line 29, scss/src/coke_01_common.scss */ .search { float: right; width: 45px; height: 40px; font-size: 2.5rem; background-color: transparent; text-align: center; line-height: 40px; color: #fff; }
+.search_open, .search_close { float: right; width: 45px; height: 40px; font-size: 2.5rem; background-color: transparent; text-align: center; line-height: 40px; color: #fff; }
 
-/* line 32, scss/src/coke_01_common.scss */ .open_btn { display: block; position: relative; width: 100%; height: 100%; }
+.search_close { display: none; }
 
-/* line 34, scss/src/coke_01_common.scss */ .open_btn button { width: 100%; height: 100%; background-color: transparent; }
+.open_btn { display: block; position: relative; width: 100%; height: 100%; }
 
-/* line 35, scss/src/coke_01_common.scss */ .navList { position: absolute; top: 0; left: 75px; right: 0; margin: auto; background-color: #f00; width: 700px; height: auto; }
+.open_btn button { width: 100%; height: 100%; background-color: transparent; }
 
-/* line 38, scss/src/coke_01_common.scss */ .navList:before, .navList::before { content: " "; display: block; position: absolute; z-index: -1; top: 0; left: 50%; margin-left: -60vw; width: 120vw; height: 100%; background-color: inherit; }
+.navList { position: absolute; top: 0; left: 75px; right: 0; margin: auto; background-color: #f00; width: 700px; height: auto; }
 
-/* line 44, scss/src/coke_01_common.scss */ .navList:after, .navList::after { content: " "; display: block; width: 0; height: 0; clear: both; }
+.navList:before, .navList::before { content: " "; display: block; position: absolute; z-index: -1; top: 0; left: 50%; margin-left: -60vw; width: 120vw; height: 100%; background-color: inherit; }
 
-/* line 46, scss/src/coke_01_common.scss */ .navList > li { float: left; width: 23%; height: auto; margin: 0 5px; }
+.navList:after, .navList::after { content: " "; display: block; width: 0; height: 0; clear: both; }
 
-/* line 48, scss/src/coke_01_common.scss */ .navList > li > dl { width: auto; height: auto; }
+.navList > li { float: left; width: 23%; height: auto; margin: 0 5px; }
 
-/* line 49, scss/src/coke_01_common.scss */ .navList > li > dl > dt { width: auto; height: auto; }
+.navList > li > dl { width: auto; height: auto; }
 
-/* line 50, scss/src/coke_01_common.scss */ .navList > li > dl > dt > a { display: block; width: 100%; height: 80px; line-height: 80px; text-align: center; font-size: 1.4rem; font-weight: bold; color: #fff; }
+.navList > li > dl > dt { width: auto; height: auto; }
 
-/* line 55, scss/src/coke_01_common.scss */ .navList > li > dl > dt > a:hover, .navList > li > dl > dt > a:focus { color: #ff0; }
+.navList > li > dl > dt > a { display: block; width: 100%; height: 80px; line-height: 80px; text-align: center; font-size: 1.4rem; font-weight: bold; color: #fff; }
 
-/* line 56, scss/src/coke_01_common.scss */ .navList > li > dl > dd { display: none; width: auto; margin: 20px 0; }
+.navList > li > dl > dt > a:hover, .navList > li > dl > dt > a:focus { color: #ff0; }
 
-/* line 58, scss/src/coke_01_common.scss */ .navList > li > dl > dd > a { display: block; width: auto; height: 40px; text-indent: 45px; color: #fff; margin-top: 5px; line-height: 40px; }
+.navList > li > dl > dd { display: none; width: auto; margin: 20px 0; }
 
-/* line 62, scss/src/coke_01_common.scss */ .navList > li > dl > dd > a:hover, .navList > li > dl > dd > a:focus { color: #ff0; }
+.navList > li > dl > dd > a { display: block; width: auto; height: 40px; text-indent: 45px; color: #fff; margin-top: 5px; line-height: 40px; }
 
-/* line 64, scss/src/coke_01_common.scss */ .search_box { position: absolute; top: 40vh; left: 0; right: 0; width: 80%; height: 100px; margin: auto; background-color: rgba(255, 0, 0, 0.8); border-radius: 20px; }
+.navList > li > dl > dd > a:hover, .navList > li > dl > dd > a:focus { color: #ff0; }
 
-/* line 68, scss/src/coke_01_common.scss */ .search_box #siteName { float: left; width: 100px; height: 30px; }
+.search_box { display: none; position: absolute; top: 80px; left: 0; right: 0; width: 100%; height: 80px; margin: auto; padding: 20px; box-sizing: border-box; background-color: white; }
 
-/* line 69, scss/src/coke_01_common.scss */ .search_box #fieldset { float: left; }
+.search_box fieldset { width: 60%; height: 40px; margin: auto; padding: 2px; /* box-sizing:border-box; */ background-color: #fff; }
 
-/* line 72, scss/src/coke_01_common.scss */ .gnb_cp .burgur { position: absolute; top: 50%; left: 0; width: 100%; height: 8px; transform: translate(0, -50%); border-radius: 4px; background-color: white; }
+.search_box #siteName { float: left; width: 15%; height: 40px; margin-right: 2%; text-indent: 8px; font-size: 1.5rem; }
 
-/* line 75, scss/src/coke_01_common.scss */ .gnb_cp .burgur:before, .gnb_cp .burgur::before, .gnb_cp .burgur:after, .gnb_cp .burgur::after { content: " "; position: absolute; left: 0; width: 100%; height: 8px; border-radius: 4px; background-color: white; transition: all 800ms ease; }
+.search_box #searchBar { float: left; width: 75%; height: 40px; font-size: 1.5rem; }
 
-/* line 81, scss/src/coke_01_common.scss */ .gnb_cp .burgur:before, .gnb_cp .burgur::before { top: -16px; }
+.search_box .search_icon { float: right; width: 5%; height: 40px; background-color: transparent; color: #f00; font-size: 2.5rem; }
 
-/* line 82, scss/src/coke_01_common.scss */ .gnb_cp .burgur:after, .gnb_cp .burgur::after { top: 16px; }
+.gnb_cp .burgur { position: absolute; top: 50%; left: 0; width: 100%; height: 8px; transform: translate(0, -50%); border-radius: 4px; background-color: white; }
 
-/* line 83, scss/src/coke_01_common.scss */ .gnb_cp .open_btn > .act, .gnb_cp .close_btn > .act { background-color: rgba(255, 255, 255, 0); }
+.gnb_cp .burgur:before, .gnb_cp .burgur::before, .gnb_cp .burgur:after, .gnb_cp .burgur::after { content: " "; position: absolute; left: 0; width: 100%; height: 8px; border-radius: 4px; background-color: white; transition: all 800ms ease; }
 
-/* line 85, scss/src/coke_01_common.scss */ .gnb_cp .open_btn > .act:before, .gnb_cp .open_btn > .act::before, .gnb_cp .close_btn > .act:before, .gnb_cp .close_btn > .act::before { top: 0; transform: rotate(45deg); }
+.gnb_cp .burgur:before, .gnb_cp .burgur::before { top: -16px; }
 
-/* line 86, scss/src/coke_01_common.scss */ .gnb_cp .open_btn > .act:after, .gnb_cp .open_btn > .act::after, .gnb_cp .close_btn > .act:after, .gnb_cp .close_btn > .act::after { top: 0; transform: rotate(-45deg); }
+.gnb_cp .burgur:after, .gnb_cp .burgur::after { top: 16px; }
 
-/* line 88, scss/src/coke_01_common.scss */ .close_btn { position: relative; width: 50px; height: 50px; float: right; }
+.gnb_cp .open_btn > .act, .gnb_cp .close_btn > .act { background-color: rgba(255, 255, 255, 0); }
 
-/* line 90, scss/src/coke_01_common.scss */ .close_btn button { width: 100%; height: 100%; background-color: transparent; }
+.gnb_cp .open_btn > .act:before, .gnb_cp .open_btn > .act::before, .gnb_cp .close_btn > .act:before, .gnb_cp .close_btn > .act::before { top: 0; transform: rotate(45deg); }
 
-/* line 92, scss/src/coke_01_common.scss */ .all_gnb { display: none; position: absolute; top: 0; right: 0; margin: auto; padding: 20px; box-sizing: border-box; width: 60%; height: 100vh; background-color: rgba(51, 51, 51, 0.9); }
+.gnb_cp .open_btn > .act:after, .gnb_cp .open_btn > .act::after, .gnb_cp .close_btn > .act:after, .gnb_cp .close_btn > .act::after { top: 0; transform: rotate(-45deg); }
 
-/* line 96, scss/src/coke_01_common.scss */ .nav_site { width: 200px; height: 100%; margin: auto; padding: 10px 10vw; }
+.close_btn { position: relative; width: 50px; height: 50px; float: right; }
 
-/* line 98, scss/src/coke_01_common.scss */ .nav_site .btn_nav { width: 100%; height: 100%; margin-top: 50px; }
+.close_btn button { width: 100%; height: 100%; background-color: transparent; }
 
-/* line 99, scss/src/coke_01_common.scss */ .nav_site .btn_nav li { width: 100%; }
+.all_gnb { display: none; position: absolute; top: 0; right: 0; margin: auto; padding: 20px; box-sizing: border-box; width: 60%; height: 100vh; background-color: rgba(51, 51, 51, 0.9); }
 
-/* line 100, scss/src/coke_01_common.scss */ .nav_site .btn_nav li dl { width: 100%; }
+.nav_site { width: 200px; height: 100%; margin: auto; padding: 10px 10vw; }
 
-/* line 101, scss/src/coke_01_common.scss */ .nav_site .btn_nav li dl dt { width: 100%; font-size: 1.5rem; margin-top: 5px; }
+.nav_site .btn_nav { width: 100%; height: 100%; margin-top: 50px; }
 
-/* line 102, scss/src/coke_01_common.scss */ .nav_site .btn_nav li dl dt a { display: block; color: #fff; }
+.nav_site .btn_nav li { width: 100%; }
 
-/* line 103, scss/src/coke_01_common.scss */ .nav_site .btn_nav li dl dd { width: 100%; }
+.nav_site .btn_nav li dl { width: 100%; }
 
-/* line 104, scss/src/coke_01_common.scss */ .nav_site .btn_nav li dl dd a { display: block; width: 100%; height: 100%; color: #fff; font-size: 1rem; text-indent: 10px; }
+.nav_site .btn_nav li dl dt { width: 100%; font-size: 1.5rem; margin-top: 5px; }
+
+.nav_site .btn_nav li dl dt a { display: block; color: #fff; }
+
+.nav_site .btn_nav li dl dd { width: 100%; }
+
+.nav_site .btn_nav li dl dd a { display: block; width: 100%; height: 100%; color: #fff; font-size: 1rem; text-indent: 10px; }
 
 /* 공통 // adBox 광고박스 ================== */
-/* line 108, scss/src/coke_01_common.scss */ #contentBox { width: 100%; height: auto; background-color: #ddd; }
+#contentBox { width: 100%; height: auto; background-color: #ddd; }
 
-/* line 109, scss/src/coke_01_common.scss */ #adBox { position: relative; width: 100%; height: 100vh; margin-top: 80px; background-color: #999; }
+#adBox { position: relative; width: 100%; height: 100vh; margin-top: 80px; background-color: #999; }
 
-/* line 111, scss/src/coke_01_common.scss */ .arrow { position: absolute; z-index: 300; top: 0; bottom: 0; margin: auto; transform: translateY(-50%); width: 80px; height: 80px; }
+.arrow { position: absolute; z-index: 300; top: 0; bottom: 0; margin: auto; transform: translateY(-50%); width: 80px; height: 80px; }
 
-/* line 114, scss/src/coke_01_common.scss */ .arrow > button { width: 100%; height: 100%; padding: 0; background-color: #fff; border-radius: 100%; }
+.arrow > button { width: 100%; height: 100%; padding: 0; background-color: #fff; border-radius: 100%; }
 
-/* line 116, scss/src/coke_01_common.scss */ .arrow > button > i { width: 100%; height: 100%; font-size: 4rem; line-height: 80px; text-align: center; color: #999; }
+.arrow > button > i { width: 100%; height: 100%; font-size: 4rem; line-height: 80px; text-align: center; color: #999; }
 
-/* line 119, scss/src/coke_01_common.scss */ .next_btn { right: 10%; }
+.next_btn { right: 10%; }
 
-/* line 120, scss/src/coke_01_common.scss */ .prev_btn { left: 10%; }
+.prev_btn { left: 10%; }
 
 /* 공통 // brandBox 제품소개&브랜드박스 ================== */
-/* line 123, scss/src/coke_01_common.scss */ #brandBox { background-color: #ddd; }
+#brandBox { background-color: #ddd; }
 
-/* line 124, scss/src/coke_01_common.scss */ .scroll { overflow: hidden; width: 100%; height: 55vh; }
+.scroll { overflow: hidden; width: 100%; height: 55vh; }
 
-/* line 125, scss/src/coke_01_common.scss */ .brand_area { overflow-x: scroll; width: 100%; height: 55vh; margin: auto; background-color: #777; }
+.brand_area { overflow-x: scroll; width: 100%; height: 55vh; margin: auto; background-color: #777; }
 
-/* line 127, scss/src/coke_01_common.scss */ .brand_box { width: 1500px; height: 100%; box-sizing: border-box; background-color: #555; margin-top: 60px; }
+.brand_box { width: 1500px; height: 100%; box-sizing: border-box; background-color: #555; margin-top: 60px; }
 
-/* line 130, scss/src/coke_01_common.scss */ .brand_box > li { float: left; width: 200px; height: 340px; margin: 0 20px; margin-top: 5%; background-color: #fff; text-align: center; line-height: 600px; }
+.brand_box > li { float: left; width: 200px; height: 340px; margin: 0 20px; margin-top: 5%; background-color: #fff; text-align: center; line-height: 600px; }
 
-/* line 134, scss/src/coke_01_common.scss */ .brand_box > li:nth-child(1) { transform: scale(0.8); background-color: #fff; }
+.brand_box > li:nth-child(1) { transform: scale(0.8); background-color: #fff; }
 
-/* line 135, scss/src/coke_01_common.scss */ .brand_box > li:last-child { transform: scale(0.8); }
+.brand_box > li:last-child { transform: scale(0.8); }
 
-/* line 136, scss/src/coke_01_common.scss */ .brand_box > li button { display: block; width: 50px; height: 50px; margin: auto; margin-top: 270px; background-color: #777; border-radius: 10px; }
+.brand_box > li button { display: block; width: 50px; height: 50px; margin: auto; margin-top: 270px; background-color: #777; border-radius: 10px; }
 
-/* line 139, scss/src/coke_01_common.scss */ .brand_more { width: 150px; height: 30px; margin: auto; margin-top: 15px; border-radius: 5px; background-color: #888; text-align: center; line-height: 29px; color: #fff; }
+.brand_more { width: 150px; height: 30px; margin: auto; margin-top: 15px; border-radius: 5px; background-color: #888; text-align: center; line-height: 29px; color: #fff; }
 
 /* 공통 // storyBox 스토리박스 ================== */
-/* line 145, scss/src/coke_01_common.scss */ #storyBox { background-color: #bbb; }
+#storyBox { background-color: #bbb; }
 
-/* line 146, scss/src/coke_01_common.scss */ .story_area { width: 100%; height: auto; }
+.story_area { width: 100%; height: auto; }
 
-/* line 147, scss/src/coke_01_common.scss */ .story_link { width: 100%; height: auto; margin-top: 30px; background-color: #eee; text-align: center; }
+.story_link { width: 100%; height: auto; margin-top: 30px; background-color: #eee; text-align: center; }
 
-/* line 150, scss/src/coke_01_common.scss */ .story_link > li { display: inline-block; width: auto; height: auto; margin: 0 10px; }
+.story_link > li { display: inline-block; width: auto; height: auto; margin: 0 10px; }
 
-/* line 152, scss/src/coke_01_common.scss */ .story_link > li > a { width: 100%; height: 100px; }
+.story_link > li > a { width: 100%; height: 100px; }
 
-/* line 153, scss/src/coke_01_common.scss */ .cs_wrap { width: 100%; height: 80%; background-color: #666; text-align: center; padding-top: 10%; box-sizing: border-box; }
+.cs_wrap { width: 100%; height: 80%; background-color: #666; text-align: center; padding-top: 10%; box-sizing: border-box; }
 
-/* line 156, scss/src/coke_01_common.scss */ .cs_wrap > li { display: inline-block; width: 300px; height: 300px; margin: 0 20px; background-color: #888; }
+.cs_wrap > li { display: inline-block; width: 300px; height: 300px; margin: 0 20px; background-color: #888; }
 
 /* 공통 // companyBox 회사정보&컴파니박스 ================== */
-/* line 161, scss/src/coke_01_common.scss */ #companyBox { background-color: #aaa; }
+#companyBox { background-color: #aaa; }
 
-/* line 162, scss/src/coke_01_common.scss */ .company_area { overflow: hidden; width: 100%; height: 100%; background-color: #bbb; text-align: center; }
+.company_area { overflow: hidden; width: 100%; height: 100%; background-color: #bbb; text-align: center; }
 
-/* line 165, scss/src/coke_01_common.scss */ .company_area > li { display: inline-block; width: 250px; height: 250px; margin: 80px 30px; text-align: center; padding: 40px 0; box-sizing: border-box; background-color: #999; }
+.company_area > li { display: inline-block; width: 250px; height: 250px; margin: 80px 30px; text-align: center; padding: 40px 0; box-sizing: border-box; background-color: #999; }
 
-/* line 170, scss/src/coke_01_common.scss */ .company_area > li > a { display: block; width: 80px; margin: 75px; padding: 10px; background-color: #ccc; }
+.company_area > li > a { display: block; width: 80px; margin: 75px; padding: 10px; background-color: #ccc; }
 
 /* 공통 // snsBox SNS박스 ================== */
-/* line 175, scss/src/coke_01_common.scss */ #snsBox { overflow: hidden; background-color: #999; }
+#snsBox { overflow: hidden; background-color: #999; }
 
-/* line 176, scss/src/coke_01_common.scss */ .sns_area { width: 1150px; height: 100%; margin: auto; }
+.sns_area { width: 1150px; height: 100%; margin: auto; }
 
-/* line 177, scss/src/coke_01_common.scss */ .sns_area .sns_big { width: 500px; height: 600px; background-color: #eee; }
+.sns_area .sns_big { width: 500px; height: 600px; background-color: #eee; }
 
-/* line 178, scss/src/coke_01_common.scss */ .sns_area .sns_big dt { width: 60px; height: 60px; margin: auto; background-color: #ccc; }
+.sns_area .sns_big dt { width: 60px; height: 60px; margin: auto; background-color: #ccc; }
 
-/* line 179, scss/src/coke_01_common.scss */ .sns_area .sns_big dd { width: 500px; height: 500px; margin: auto; background-color: #fff; }
+.sns_area .sns_big dd { width: 500px; height: 500px; margin: auto; background-color: #fff; }
 
-/* line 181, scss/src/coke_01_common.scss */ .sns_area dl { width: 250px; height: 300px; margin: 20px; }
+.sns_area dl { width: 250px; height: 300px; margin: 20px; }
 
-/* line 182, scss/src/coke_01_common.scss */ .sns_area dl dt { width: 30px; height: 30px; margin: auto; background-color: #ccc; }
+.sns_area dl dt { width: 30px; height: 30px; margin: auto; background-color: #ccc; }
 
-/* line 183, scss/src/coke_01_common.scss */ .sns_area dl dd { width: 250px; height: 250px; background-color: #fff; }
+.sns_area dl dd { width: 250px; height: 250px; background-color: #fff; }
 
-/* line 184, scss/src/coke_01_common.scss */ .sns_cont { float: left; }
+.sns_cont { float: left; }
 
 /* 공통 // footBox 풋박스 ================== */
-/* line 187, scss/src/coke_01_common.scss */ #footBox { width: 100%; height: auto; padding: 40px 0; background-color: #f00; }
+#footBox { width: 100%; height: auto; padding: 40px 0; background-color: #f00; }
 
-/* line 188, scss/src/coke_01_common.scss */ .foot_area { width: 100%; max-width: 1200px; height: auto; margin: auto; }
+.foot_area { width: 100%; max-width: 1200px; height: auto; margin: auto; }
 
-/* line 189, scss/src/coke_01_common.scss */ .link_area { width: auto; height: auto; padding-top: 10px; box-sizing: border-box; text-align: center; }
+.link_area { width: auto; height: auto; padding-top: 10px; box-sizing: border-box; text-align: center; }
 
-/* line 190, scss/src/coke_01_common.scss */ .link_area > li { display: inline-block; margin-right: 15px; }
+.link_area > li { display: inline-block; margin-right: 15px; }
 
-/* line 191, scss/src/coke_01_common.scss */ .link_area > li:last-child { margin-right: 0; }
+.link_area > li:last-child { margin-right: 0; }
 
-/* line 192, scss/src/coke_01_common.scss */ .link_area > li > a { display: block; width: 100%; height: 100%; color: #fff; }
+.link_area > li > a { display: block; width: 100%; height: 100%; color: #fff; }
 
-/* line 193, scss/src/coke_01_common.scss */ .foot_ls { width: 100%; height: auto; margin-top: 20px; }
+.foot_ls { width: 100%; height: auto; margin-top: 20px; }
 
-/* line 194, scss/src/coke_01_common.scss */ .foot_ls > h3 { float: left; width: 100px; height: 30px; margin: auto; background: url(../../img/mobile/logo_mobile.gif) no-repeat 50% 50%/cover; }
+.foot_ls > h3 { float: left; width: 100px; height: 30px; margin: auto; background: url(../../img/mobile/logo_mobile.gif) no-repeat 50% 50%/cover; }
 
-/* line 196, scss/src/coke_01_common.scss */ .sns_link { float: right; width: auto; height: auto; }
+.sns_link { float: right; width: auto; height: auto; }
 
-/* line 197, scss/src/coke_01_common.scss */ .sns_link > li { float: left; width: auto; height: auto; margin-right: 20px; padding: 2px 5px; }
+.sns_link > li { float: left; width: auto; height: auto; margin-right: 20px; padding: 2px 5px; }
 
-/* line 199, scss/src/coke_01_common.scss */ .sns_link > li > a { display: block; overflow: hidden; width: 50px; height: 50px; background-color: #fff; border-radius: 100%; }
+.sns_link > li > a { display: block; overflow: hidden; width: 50px; height: 50px; background-color: #fff; border-radius: 100%; }
 
-/* line 201, scss/src/coke_01_common.scss */ address { width: 100%; max-width: 1200px; height: auto; margin: auto; }
+address { width: 100%; max-width: 1200px; height: auto; margin: auto; }
 
-/* line 203, scss/src/coke_01_common.scss */ address > p { width: 100%; height: auto; text-align: center; color: #fff; }
+address > p { width: 100%; height: auto; text-align: center; color: #fff; }
 
 /* 모바일 480px~767px (280) =============== */
 /* media screen and (max-width:767px) */
-@media screen and (max-width: 767px) { /* line 6, scss/src/coke_01_mobile.scss */ #wrap { min-width: 150px; overflow: hidden; }
-  /* line 7, scss/src/coke_01_mobile.scss */ .box_text { font-size: 16px; font-size: 1rem; }
-  /* line 8, scss/src/coke_01_mobile.scss */ .navList { display: none; }
-  /* line 9, scss/src/coke_01_mobile.scss */ .search { display: none; }
-  /* line 13, scss/src/coke_01_mobile.scss */ .box_size { padding: 25vw 0; }
-  /* line 14, scss/src/coke_01_mobile.scss */ .brand_box { overflow: hidden; padding: 2vh; }
-  /* line 15, scss/src/coke_01_mobile.scss */ .brand_box > li { width: 40vw; height: 70vw; margin-top: 8vw; }
-  /* line 16, scss/src/coke_01_mobile.scss */ .brand_box > li:nth-child(1) { display: none; }
-  /* line 17, scss/src/coke_01_mobile.scss */ .brand_box > li:nth-child(3) { display: none; }
-  /* line 19, scss/src/coke_01_mobile.scss */ .story_link { margin-top: 15px; }
-  /* line 20, scss/src/coke_01_mobile.scss */ .story_link > li:last-child { display: none; }
-  /* line 21, scss/src/coke_01_mobile.scss */ .cs_wrap { overflow: hidden; }
-  /* line 22, scss/src/coke_01_mobile.scss */ .cs_wrap > li { width: 250px; height: 250px; }
-  /* line 23, scss/src/coke_01_mobile.scss */ .cs_wrap > li:nth-child(2) { display: none; }
-  /* line 24, scss/src/coke_01_mobile.scss */ .cs_wrap > li:nth-child(3) { display: none; }
-  /* line 27, scss/src/coke_01_mobile.scss */ .company_area { padding: 50px 0; box-sizing: border-box; }
-  /* line 28, scss/src/coke_01_mobile.scss */ .company_area > li { width: 210px; height: 120px; margin: 10px; }
-  /* line 29, scss/src/coke_01_mobile.scss */ .company_area > li > a { margin: auto; }
-  /* line 31, scss/src/coke_01_mobile.scss */ .sns_area { width: 1150px; height: 100%; margin: auto; padding: 10px; padding-left: 40px; }
-  /* line 33, scss/src/coke_01_mobile.scss */ .sns_area .sns_big { display: none; }
-  /* line 34, scss/src/coke_01_mobile.scss */ .sns_area dl { width: 150px; height: 200px; margin: 20px; }
-  /* line 35, scss/src/coke_01_mobile.scss */ .sns_area dl dt { width: 30px; height: 30px; margin: auto; }
-  /* line 36, scss/src/coke_01_mobile.scss */ .sns_area dl dd { width: 150px; height: 150px; }
-  /* line 37, scss/src/coke_01_mobile.scss */ .sns_cont { float: left; } }
+@media screen and (max-width: 767px) { #wrap { min-width: 150px; overflow: hidden; }
+  .box_text { font-size: 16px; font-size: 1rem; }
+  .navList { display: none; }
+  .search_open { display: none; }
+  .box_size { padding: 25vw 0; }
+  .brand_box { overflow: hidden; padding: 2vh; }
+  .brand_box > li { width: 40vw; height: 70vw; margin-top: 8vw; }
+  .brand_box > li:nth-child(1) { display: none; }
+  .brand_box > li:nth-child(3) { display: none; }
+  .story_link { margin-top: 15px; }
+  .story_link > li:last-child { display: none; }
+  .cs_wrap { overflow: hidden; }
+  .cs_wrap > li { width: 250px; height: 250px; }
+  .cs_wrap > li:nth-child(2) { display: none; }
+  .cs_wrap > li:nth-child(3) { display: none; }
+  .company_area { padding: 50px 0; box-sizing: border-box; }
+  .company_area > li { width: 210px; height: 120px; margin: 10px; }
+  .company_area > li > a { margin: auto; }
+  .sns_area { width: 1150px; height: 100%; margin: auto; padding: 10px; padding-left: 40px; }
+  .sns_area .sns_big { display: none; }
+  .sns_area dl { width: 150px; height: 200px; margin: 20px; }
+  .sns_area dl dt { width: 30px; height: 30px; margin: auto; }
+  .sns_area dl dd { width: 150px; height: 150px; }
+  .sns_cont { float: left; } }
 
 /* // media screen 모바일 */
 /* 패드 768px~1279px =============== */
 /* media screen and (min-width: 768px) and (max-width:1279px) */
-@media screen and (min-width: 768px) and (max-width: 1279px) { /* line 8, scss/src/coke_01_pad.scss */ .search { display: none; }
-  /* line 12, scss/src/coke_01_pad.scss */ #brandBox > p { width: 50%; }
-  /* line 13, scss/src/coke_01_pad.scss */ .brand_box { padding: 4vh; }
-  /* line 14, scss/src/coke_01_pad.scss */ .brand_box > li { margin: 0 10px; }
-  /* line 16, scss/src/coke_01_pad.scss */ .cs_wrap > li { width: 200px; height: 200px; }
-  /* line 19, scss/src/coke_01_pad.scss */ .sns_big { display: none; }
-  /* line 20, scss/src/coke_01_pad.scss */ .sns_area { padding: 100px; box-sizing: border-box; } }
+@media screen and (min-width: 768px) and (max-width: 1279px) { .navList { display: none; }
+  .search_open { display: none; }
+  #brandBox > p { width: 50%; }
+  .brand_box { padding: 4vh; }
+  .brand_box > li { margin: 0 10px; }
+  .cs_wrap > li { width: 200px; height: 200px; }
+  .sns_big { display: none; }
+  .sns_area { padding: 100px; box-sizing: border-box; } }
 
 /* PC 1280px~1919px (1024)=============== */
 /* media screen and (min-width: 1280px) */
-@media screen and (min-width: 1280px) { /* line 8, scss/src/coke_01_pc.scss */ .gnb_cp { display: none; }
-  /* line 9, scss/src/coke_01_pc.scss */ .head_area { max-width: 1024px; }
-  /* line 13, scss/src/coke_01_pc.scss */ #brandBox > p { width: 30%; } }
+@media screen and (min-width: 1280px) { .gnb_cp { display: none; }
+  .head_area { max-width: 1024px; }
+  #brandBox > p { width: 30%; } }
 
 /* TV 1920px~ =============== */
 /* media screen and (min-width: 1920px) */
-@media screen and (min-width: 1920px) { /* line 8, scss/src/coke_01_tv.scss */ .head_area { max-width: 1280px; }
-  /* line 9, scss/src/coke_01_tv.scss */ .gnb_cp { display: none; }
-  /* line 13, scss/src/coke_01_tv.scss */ #brandBox > p { width: 20%; height: auto; } }
+@media screen and (min-width: 1920px) { .head_area { max-width: 1280px; }
+  .gnb_cp { display: none; }
+  #brandBox > p { width: 20%; height: auto; } }
