@@ -17,6 +17,10 @@ for (let i=0; i<brand.length; i++){
   button = brand_li.children('button');
   button.prepend('<i class="fas fa-plus">');
 }
+
+
+// .brand_box.css({width:100* +'%'})
+
 })(jQuery);
 
 /*

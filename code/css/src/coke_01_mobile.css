@@ -6,10 +6,6 @@
   .navList { display: none; }
   .search_open { display: none; }
   .box_size { padding: 25vw 0; }
-  .brand_box { overflow: hidden; padding: 2vh; }
-  .brand_box > li { width: 40vw; height: 70vw; margin-top: 8vw; }
-  .brand_box > li:nth-child(1) { display: none; }
-  .brand_box > li:nth-child(3) { display: none; }
   .story_link { margin-top: 15px; }
   .story_link > li:last-child { display: none; }
   .cs_wrap { overflow: hidden; }

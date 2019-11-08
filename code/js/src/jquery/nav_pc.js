@@ -59,6 +59,7 @@ const ddLk = navDd.children('a');
 let gnbContents = nav.contents().clone();
 		navSite.append('<ul class="btn_nav"></ul>');
 		navSite.children('ul').append(gnbContents)
+
 const PcView = function(){
 
 	 	nav.on('mouseenter',function(){
@@ -71,7 +72,10 @@ const PcView = function(){
 			$(this).closest(headBox).removeClass('act');
 		});
 
-
+		dtLk.on('focus',function(){
+			navDd.stop().slideDown();
+			$(this).closest(headBox).addClass('act');
+		});		
 
 	 const openSearch = gnb.find('.search_open');
 	 const closeSearch = gnb.find('.search_close');
@@ -101,7 +105,6 @@ const PcView = function(){
 			openSearch.stop().fadeIn();
 		});
 	});	
-
 	});
 }; 
 
@@ -109,25 +112,34 @@ const PcView = function(){
 // =================================================================================================
 //모바일 480px~767px (280) & 패드 768px~1279px 
 const TabView = function(){
-   const openBtn = $('.open_btn');
+/*	 const openI = $('.open_btn')
+   const openBtn = openI.find('button');
    const openspan = openBtn.find('span.burgur');
    const allGnb = $('.all_gnb');
-   const closeBtn = $('.close_btn');
+   const closeI = $('.close_btn');
+   const closeBtn = closeI.find('button');;
    const closespan = closeBtn.find('span.burgur');
+
+   const rotate = {transition: 'all 500ms ease', transform:'rotate(360deg)'};
+	 const rotateZero = {transform:'rotate(0)'};
   
   openBtn.on('click focus',function(e){
   	e.preventDefault();
-   	$(this).children(openspan).addClass('act');
-   	allGnb.stop().fadeIn(2000);
-   	$(this).stop().fadeOut();
-   	closeBtn.children(closespan).addClass('act');
+   	openspan.addClass('act');
+   	allGnb.stop().fadeIn(1000);
+   	openI.stop().fadeOut();
+   	closespan.addClass('act');
    });
   closeBtn.on('click', function(e){
   	e.preventDefault();
-  	allGnb.stop().fadeOut();
+  	closeI.css(rotate);
+  	allGnb.delay(500).stop().fadeOut(function(){
+	  	closeI.removeAttr('style');
+  	});
   	openBtn.stop().fadeIn();
-  	openBtn.children(openspan).removeClass('act');
-  });
+  	openspan.removeClass('act');
+  });*/
+
 }
 
 // =================================================================================================
@@ -135,7 +147,7 @@ let beforeWw = $(window).outerWidth();
 
 const browserWidth = function(after){
 	// let pcWidth = $(window).outerWidth();
-	if(beforeWw > 1280){
+	if(beforeWw > 1279){
 		PcView();
 	}else{
 		TabView();
@@ -144,9 +156,6 @@ const browserWidth = function(after){
 browserWidth();
 // =================================================================================================
 // 브라우저 크기 변경시
-
-
-
 $(window).on('resize', function(){
 	// widthcheck();
  let afterWw = $(window).outerWidth();
@@ -154,15 +163,6 @@ $(window).on('resize', function(){
 	 	location.reload();
 	 }
 });
-
-
-
-
-
-
-
-
-
 
 
 })(jQuery);

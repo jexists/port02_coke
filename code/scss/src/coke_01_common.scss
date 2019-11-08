@@ -4,7 +4,8 @@
 
 /* 공통 =============== */
 #wrap{width: 100%; height: auto; margin: auto;}
- .box_size{width: 100%; height: 100vh; padding: 110px 0; box-sizing:border-box;}
+ .box_size{width: 100%; height: 100vh; min-height: 800px;
+  padding: 100px 0;box-sizing:border-box;}
  .box_title{width: 50%; height: auto; margin: auto;
  	font-size: 35px; text-align: center; text-transform: uppercase;}
  .box_text{width:80%; min-width: 350px; height: auto; margin: auto; font-size: 18px; 
@@ -93,17 +94,18 @@
  .close_btn{ position:relative; 
  	width: 50px; height: 50px; float:right;
  	button{width: 100%; height: 100%; background-color: transparent;}}
-// PC에서 버튼클릭시 네비나오기
+// 핸드폰에서 버튼클릭시 네비나오기
  .all_gnb{display: none;
  	position: absolute; top: 0; right: 0; margin:auto;
  	padding: 20px; box-sizing:border-box;
  	width: 60%; height: 100vh; background-color: rgba(nth($mc, 4), 0.9);}
- .nav_site{width: 200px; height: 100%; margin: auto;
+ .nav_site{width: 150px; height: 100%; margin: auto;
  	padding: 10px 10vw; 
   .btn_nav{width: 100%; height: 100%; margin-top: 50px;
   	li{width: 100%;
   	 dl{width: 100%; 
-  	  dt{width: 100%; font-size: 1.5rem; margin-top: 5px;
+  	  dt{width: 100%; font-size: 1.5rem; margin-top: 10px;
+        border-bottom: 2px solid nth($mc,3); 
   	   a{display: block; color: nth($mc,3);}}
   	  dd{width: 100%;
   	   a{display: block; width: 100%; height: 100%;
@@ -126,22 +128,21 @@
 
 /* 공통 // brandBox 제품소개&브랜드박스 ================== */
 #brandBox{@include bbg(3);}
- .scroll{overflow: hidden; width:100%; height: 55vh; }
- .brand_area{overflow-x: scroll; width: 100%; height: 55vh; margin:auto;
+ .brand_area{/* overflow: hidden;  */
+  width: 100%; 
+  height: 55vh; margin-top: 60px;
  	@include bbg(9);}
- .brand_box{width: 1500px; height: 100%; 
- 	 box-sizing:border-box; @include bbg(11);
- 	 margin-top: 60px;
+ .brand_box{ $slide: 5;
+   position: relative; top: 50%; transform:translateY(-50%); margin:auto;
+   width: 240px*$slide; height: auto;
+ 	 @include bbg(11);
   &>li{float: left;
   	width: 200px; height: 340px;
-  	margin: 0 20px;	margin-top: 5%; @include bbg(1); text-align: center;
-  	line-height: 600px; 
-  	&:nth-child(1){transform: scale(0.8); @include bbg(1); }
-  	&:last-child{transform: scale(0.8)}
+  	margin: 0 20px; @include bbg(1);  
 		& button{display: block; width: 50px; height: 50px;
-			margin: auto; margin-top: 270px; 
+			margin: auto; margin-top: 140%;
 			@include bbg(9); border-radius: 10px;}}}
-	.brand_more{width: 150px; height: 30px; margin: auto;
+	.brand_more{display:block; width: 150px; height: 30px; margin: auto;
 		margin-top: 15px; border-radius: 5px;
 		@include bbg(8); text-align: center;
 		line-height: 29px; color: nth($bc,1)}

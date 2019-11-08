@@ -9,17 +9,17 @@
 
 openBtn.on('click focus',function(e){
 	e.preventDefault();
- 	$(this).children(openspan).addClass('act');
+ 	openspan.addClass('act');
  	allGnb.stop().fadeIn(2000);
  	$(this).stop().fadeOut();
- 	closeBtn.children(closespan).addClass('act');
+ 	closespan.addClass('act');
  });
 closeBtn.on('click', function(e){
 	e.preventDefault();
 	allGnb.stop().fadeOut();
 	openBtn.stop().fadeIn();
 	// $(this).children(closespan).addClass('act');
-	openBtn.children(openspan).removeClass('act');
+	openspan.removeClass('act');
 });
  // button.on('focus',function(){
  // 	$(this).children(span).addClass('act');
