@@ -1,0 +1,18 @@
+// coke_01_tv.scss
+
+/* TV 1920px~ =============== */
+/* media screen and (min-width: 1920px) */
+@media screen and (min-width: 1920px) {
+// #wrap
+// #headBox
+ .head_area{max-width: 1280px;}
+ .gnb_cp{display: none;}
+// #contentBox
+// #adBox
+// #brandBox
+#brandBox>p{width: 20%; height: auto;}
+// #storyBox
+// #companyBox
+// #snsBox
+// #footBox
+}

@@ -1,0 +1,13 @@
+//coke_01_var.scss
+
+
+$bc: (#fff,#eee,#ddd,#ccc,#bbb,#aaa,#999,#888,#777,#666,#555,#444,#333,#222,#111);
+// 메인 빨강, 집중 노랑, 흰색 , 검정
+$mc: (#f00, #ff0, #fff, #333);
+@mixin whp{
+	width: 100%; height:  100%;}
+// 회색일때 기본배경 
+@mixin bbg($c){
+	background-color:nth($bc, + $c);}
+@mixin mc($c){
+	background-color:nth($mc, + $c);}

@@ -1,0 +1,23 @@
+// coke_01_pad.scss
+
+/* 패드 768px~1279px =============== */
+/* media screen and (min-width: 768px) and (max-width:1279px) */
+@media screen and (min-width: 768px) and (max-width:1279px) {
+// #wrap
+// #headBox
+ .navList{display: none;}
+ .search_open{display: none;}
+// #contentBox
+// #adBox
+// #brandBox
+ #brandBox>p{width: 50%;}
+ .brand_box{padding: 4vh;
+ 	&>li{margin: 0 10px;}}
+// #storyBox
+ .cs_wrap>li {width: 200px; height: 200px;}
+// #companyBox
+// #snsBox
+.sns_big{display: none;}
+.sns_area{padding:100px; box-sizing: border-box;}
+// #footBox
+}

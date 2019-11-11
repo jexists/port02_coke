@@ -1,0 +1,18 @@
+// coke_01_pc.scss
+
+/* PC 1280px~1919px (1024)=============== */
+/* media screen and (min-width: 1280px) */
+@media screen and (min-width: 1280px){
+// #wrap
+// #headBox
+.gnb_cp{display: none;}
+.head_area{max-width: 1024px; }
+// #contentBox
+// #adBox
+// #brandBox
+#brandBox>p{width: 30%;}
+// #storyBox
+// #companyBox
+// #snsBox
+// #footBox
+}
