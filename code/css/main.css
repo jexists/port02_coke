@@ -131,7 +131,7 @@ h1 > a { display: block; width: 100%; height: 100%; }
 /* 공통 // storyBox 스토리박스 ================== */
 #storyBox { position: relative; background-color: #bbb; }
 
-.story_area { position: absolute; top: 50%; left: 0; right: 0; margin: auto; transform: translateY(-50%); width: 90%; height: auto; overflow: hidden; }
+.story_area { /* position:absolute;  */ top: 50%; left: 0; right: 0; margin: auto; /* transform:translateY(-50%); */ width: 90%; height: auto; overflow: hidden; }
 
 .story_link { width: 100%; height: auto; margin-bottom: 30px; text-align: center; }
 
@@ -262,6 +262,7 @@ address > p br { display: none; }
 /* media screen and (min-width: 768px) and (max-width:1279px) */
 @media screen and (min-width: 768px) and (max-width: 1279px) { .navList { display: none; }
   .search_open { display: none; }
+  .cs_wrap > dd { height: 300px; }
   .company_area { width: 100%; height: auto; }
   .company_area > li { position: relative; left: 50%; transform: translateX(-50%); width: 80%; height: 180px; margin-bottom: 20px; }
   .company_area > li a span { line-height: 180px; }
@@ -277,7 +278,8 @@ address > p br { display: none; }
 /* media screen and (min-width: 1280px) */
 @media screen and (min-width: 1280px) { .gnb_cp { display: none; }
   .head_area { max-width: 1024px; }
-  #brandBox > p { width: 30%; } }
+  #brandBox > p { width: 30%; }
+  .cs_wrap > dd { height: 350px; } }
 
 /* TV 1920px~ =============== */
 /* media screen and (min-width: 1920px) */

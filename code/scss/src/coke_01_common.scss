@@ -145,8 +145,8 @@
 
 /* 공통 // storyBox 스토리박스 ================== */
 #storyBox{position: relative; @include bbg(5);}
-.story_area{position:absolute; top: 50%; left:0; right: 0; margin: auto;
-  transform:translateY(-50%); width: 90%; height: auto;
+.story_area{/* position:absolute;  */top: 50%; left:0; right: 0; margin: auto;
+  /* transform:translateY(-50%); */ width: 90%; height: auto;
   overflow: hidden;}
 .story_link{width: 100%; height: auto; margin-bottom: 30px; text-align: center;
  li{display:inline-block; position:relative;
