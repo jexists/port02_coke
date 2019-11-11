@@ -6,15 +6,10 @@
   .navList { display: none; }
   .search_open { display: none; }
   .box_size { padding: 25vw 0; }
-  .story_link { margin-top: 15px; }
-  .story_link > li:last-child { display: none; }
-  .cs_wrap { overflow: hidden; }
-  .cs_wrap > li { width: 250px; height: 250px; }
-  .cs_wrap > li:nth-child(2) { display: none; }
-  .cs_wrap > li:nth-child(3) { display: none; }
-  .company_area { padding: 50px 0; box-sizing: border-box; }
-  .company_area > li { width: 210px; height: 120px; margin: 10px; }
-  .company_area > li > a { margin: auto; }
+  .cs_wrap dt { display: block; width: 100%; height: auto; margin-bottom: 20px; text-decoration: underline; }
+  .cs_wrap dd { height: 150px; }
+  .story_link { display: none; }
+  /* .company_area{padding: 50px 0; box-sizing:border-box;} .company_area>li{width: 210px; height: 120px; margin: 10px;  &>a{margin: auto;}}*/
   .sns_area { width: 1150px; height: 100%; margin: auto; padding: 10px; padding-left: 40px; }
   .sns_area .sns_big { display: none; }
   .sns_area dl { width: 150px; height: 200px; margin: 20px; }

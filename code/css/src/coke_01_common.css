@@ -4,9 +4,11 @@
 
 .box_size { width: 100%; height: 100vh; min-height: 800px; padding: 100px 0; box-sizing: border-box; }
 
-.box_title { width: 50%; height: auto; margin: auto; font-size: 35px; text-align: center; text-transform: uppercase; }
+.box_title { width: 50%; height: auto; margin: 0 auto 10px; font-size: 35px; text-align: center; text-transform: uppercase; }
 
 .box_text { width: 80%; min-width: 350px; height: auto; margin: auto; font-size: 18px; font-size: 1.125rem; text-align: center; word-break: keep-all; }
+
+.more_btn { display: block; width: 150px; height: 30px; margin: auto; margin-top: 30px; border-radius: 5px; background-color: #888; text-align: center; line-height: 29px; color: #fff; }
 
 /* 공통 // headBox 해더박스 ================== */
 #headBox { position: fixed; z-index: 500; top: 0; left: 0; width: 100%; height: 80px; background-color: #f00; }
@@ -117,82 +119,112 @@ h1 > a { display: block; width: 100%; height: 100%; }
 /* 공통 // brandBox 제품소개&브랜드박스 ================== */
 #brandBox { background-color: #ddd; }
 
-.brand_area { /* overflow: hidden;  */ width: 100%; height: 55vh; margin-top: 60px; background-color: #777; }
+.brand_area { /* overflow: hidden; */ width: 100%; height: 55vh; margin-top: 60px; }
 
-.brand_box { position: relative; top: 50%; transform: translateY(-50%); margin: auto; width: 1200px; height: auto; background-color: #555; }
+.brand_box { position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: auto; height: auto; }
 
-.brand_box > li { float: left; width: 200px; height: 340px; margin: 0 20px; background-color: #fff; }
+.brand_box > li { float: left; width: 200px; height: 340px; transform: scale(1); margin: 0 20px; background-color: #fff; }
 
 .brand_box > li button { display: block; width: 50px; height: 50px; margin: auto; margin-top: 140%; background-color: #777; border-radius: 10px; }
 
-.brand_more { display: block; width: 150px; height: 30px; margin: auto; margin-top: 15px; border-radius: 5px; background-color: #888; text-align: center; line-height: 29px; color: #fff; }
-
 /* 공통 // storyBox 스토리박스 ================== */
-#storyBox { background-color: #bbb; }
+#storyBox { position: relative; background-color: #bbb; }
 
-.story_area { width: 100%; height: auto; }
+.story_area { position: absolute; top: 50%; left: 0; right: 0; margin: auto; transform: translateY(-50%); width: 90%; height: auto; overflow: hidden; }
 
-.story_link { width: 100%; height: auto; margin-top: 30px; background-color: #eee; text-align: center; }
+.story_link { width: 100%; height: auto; margin-bottom: 30px; text-align: center; }
 
-.story_link > li { display: inline-block; width: auto; height: auto; margin: 0 10px; }
+.story_link li { display: inline-block; position: relative; width: auto; height: auto; margin-right: 20px; }
 
-.story_link > li > a { width: 100%; height: 100px; }
+.story_link li:after, .story_link li::after { content: " "; position: absolute; right: -12px; top: 0; bottom: 0; margin: auto; width: 0; height: 60%; border-left: 2px solid #333; }
 
-.cs_wrap { width: 100%; height: 80%; background-color: #666; text-align: center; padding-top: 10%; box-sizing: border-box; }
+.story_link li:last-child { margin-right: 0; }
 
-.cs_wrap > li { display: inline-block; width: 300px; height: 300px; margin: 0 20px; background-color: #888; }
+.story_link li:last-child:after, .story_link li:last-child::after { display: none; }
+
+.cs_wrap { width: 100%; height: auto; }
+
+.cs_wrap > dt { display: none; }
+
+.cs_wrap > dd { float: left; width: 32%; height: 400px; margin-right: 2%; background-color: #888; }
+
+.cs_wrap > dd:last-child { margin-right: 0; }
 
 /* 공통 // companyBox 회사정보&컴파니박스 ================== */
-#companyBox { background-color: #aaa; }
+#companyBox { position: relative; background-color: #aaa; }
 
-.company_area { overflow: hidden; width: 100%; height: 100%; background-color: #bbb; text-align: center; }
+.conts_wrap { position: absolute; top: 60%; left: 0; right: 0; margin: auto; transform: translateY(-50%); width: 80%; height: auto; }
 
-.company_area > li { display: inline-block; width: 250px; height: 250px; margin: 80px 30px; text-align: center; padding: 40px 0; box-sizing: border-box; background-color: #999; }
+.company_area { width: 100%; height: auto; }
 
-.company_area > li > a { display: block; width: 80px; margin: 75px; padding: 10px; background-color: #ccc; }
+.company_area > li { float: left; position: relative; width: 30%; height: 250px; margin-right: 5%; }
+
+.company_area > li:last-child { margin-right: 0; }
+
+.company_area > li > a.act { transition: all 1000ms ease; border-radius: 100%; }
+
+.company_area > li > a.act > span { line-height: 18px; width: 100px; height: auto; padding: 10px 30px; }
+
+.company_area > li > a { display: block; width: 100%; height: 100%; background-color: #eee; }
+
+.company_area > li > a > span { display: block; position: absolute; top: 50%; transform: translateY(-50%); right: 0; left: 0; margin: auto; width: 100%; height: 100%; background-color: rgba(51, 51, 51, 0.6); text-align: center; line-height: 250px; color: #fff; font-size: 25px; }
 
 /* 공통 // snsBox SNS박스 ================== */
 #snsBox { overflow: hidden; background-color: #999; }
 
-.sns_area { width: 1150px; height: 100%; margin: auto; }
+.sns_area { width: 70%; height: 70%; position: relative; margin: auto; margin-top: 50px; }
 
-.sns_area .sns_big { width: 500px; height: 600px; background-color: #eee; }
+.sns_area ul { width: auto; height: auto; }
 
-.sns_area .sns_big dt { width: 60px; height: 60px; margin: auto; background-color: #ccc; }
+.sns_area ul li { position: absolute; width: 24%; height: 45%; background-color: #f03; background-color: #ccc; }
 
-.sns_area .sns_big dd { width: 500px; height: 500px; margin: auto; background-color: #fff; }
+.sns_area ul li:nth-child(1) { top: 0; left: 0; }
 
-.sns_area dl { width: 250px; height: 300px; margin: 20px; }
+.sns_area ul li:nth-child(2) { bottom: 0; left: 0; }
 
-.sns_area dl dt { width: 30px; height: 30px; margin: auto; background-color: #ccc; }
+.sns_area ul li:nth-child(3) { width: 48%; height: 100%; top: 0; right: 0; left: 0; margin: auto; }
 
-.sns_area dl dd { width: 250px; height: 250px; background-color: #fff; }
+.sns_area ul li:nth-child(3) dt { top: -30px; width: 60px; height: 60px; }
 
-.sns_cont { float: left; }
+.sns_area ul li:nth-child(4) { top: 0; right: 0; }
+
+.sns_area ul li:nth-child(5) { bottom: 0; right: 0; }
+
+.sns_area ul li a { display: block; width: 100%; height: 100%; }
+
+.sns_area ul li a dl { position: relative; width: 100%; height: 100px; }
+
+.sns_area ul li a dl dt { position: absolute; top: -25px; left: 0; right: 0; margin: auto; width: 50px; height: 50%; background-color: #e3d; border-radius: 100%; }
 
 /* 공통 // footBox 풋박스 ================== */
-#footBox { width: 100%; height: auto; padding: 40px 0; background-color: #f00; }
+#footBox { position: relative; width: 100%; height: auto; padding: 20px 0; background-color: #f00; }
 
-.foot_area { width: 100%; max-width: 1200px; height: auto; margin: auto; }
+#footBox:before { content: " "; position: absolute; left: 0; top: -33px; width: 100%; height: 42px; background: url(../img/background/footbox_bg.png) repeat-x 50% 50%/auto 61%; }
+
+.foot_area { width: 100%; max-width: 1000px; height: auto; margin: auto; }
 
 .link_area { width: auto; height: auto; padding-top: 10px; box-sizing: border-box; text-align: center; }
 
-.link_area > li { display: inline-block; margin-right: 15px; }
+.link_area > li { display: inline-block; position: relative; margin-right: 15px; }
 
 .link_area > li:last-child { margin-right: 0; }
+
+.link_area > li:before, .link_area > li::before { content: " "; position: absolute; top: 0; bottom: 0; left: -10px; margin: auto; width: 0; height: 70%; border-right: 2px solid #fff; }
+
+.link_area > li:first-child:before, .link_area > li:first-child::before { display: none; }
 
 .link_area > li > a { display: block; width: 100%; height: 100%; color: #fff; }
 
 .foot_ls { width: 100%; height: auto; margin-top: 20px; }
 
-.foot_ls > h3 { float: left; width: 100px; height: 30px; margin: auto; background: url(../../img/mobile/logo_mobile.gif) no-repeat 50% 50%/cover; }
+.sns_link { width: auto; height: auto; margin: auto; text-align: center; }
 
-.sns_link { float: right; width: auto; height: auto; }
-
-.sns_link > li { float: left; width: auto; height: auto; margin-right: 20px; padding: 2px 5px; }
+.sns_link > li { display: inline-block; width: auto; height: auto; margin-right: 20px; padding: 2px 5px; }
 
 .sns_link > li > a { display: block; overflow: hidden; width: 50px; height: 50px; background-color: #fff; border-radius: 100%; }
 
-address { width: 100%; max-width: 1200px; height: auto; margin: auto; }
+address { width: 100%; max-width: 1200px; height: auto; margin: auto; margin-top: 10px; }
 
 address > p { width: 100%; height: auto; text-align: center; color: #fff; }
+
+address > p br { display: none; }

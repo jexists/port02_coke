@@ -133,7 +133,7 @@
   <!-- brand_box 자바스크립트 불러오기!!!!!! -->
      </ul>
     </div>
-    <button class="brand_more">전체제품보기</button>
+    <button type="button" class="more_btn">전체제품보기</button>
    </section> <!-- // brandBox 제품소개&브랜드박스 -->
 
 
@@ -148,23 +148,28 @@
       <li><a href="#storyBox">올림픽 월드컵</a></li>
       <li><a href="#storyBox">보도자료</a></li>
     </ul>
+     <dl class="cs_wrap cf">
+       <dt>코크스토리</dt>
+       <dd></dd>
+       <dd></dd>
+       <dd></dd>
+     </dl>
+     <button type="button" class="more_btn">스토리 더보기</button>
     </div>
-    <ul class="cs_wrap">
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
 
      
    </article> <!-- // storyBox 스토리박스 -->
    <section id="companyBox" class="box_size">
     <h3 class="box_title">company</h3>
     <p class="box_text">보다 상쾌한 행복한 일상, 새로운 가치를 추구하는 기업</p>
-    <ul class="company_area">
-      <li><a href="#">비지니스</a></li>
-      <li><a href="#">히스토리</a></li>
-      <li><a href="#">사회공헌 </a></li>
-    </ul>
+    <div class="conts_wrap">
+     <ul class="company_area cf">
+       <li><a href="#companyBox"><span>비지니스</span></a></li>
+       <li><a href="#companyBox"><span>히스토리</span></a></li>
+       <li><a href="#companyBox"><span>사회공헌</span> </a></li>
+     </ul>
+     <button type="button" class="more_btn">회사정보 더보기</button>
+    </div>
    </section> <!-- // companyBox 회사소개박스 -->
 
 
@@ -173,32 +178,13 @@
     <p class="box_text">코카콜라의 더 많은 소식을 <abbr title="social network servuce">SNS</abbr>로 만나보세요!</p>
     <!-- ul.sns_area>(li>a)*5 -->
     <div class="sns_area">
-      <div class="sns_cont">
-      <dl>
-       <dt></dt>
-       <dd><a href="#"></a></dd>
-      </dl>
-      <dl>
-       <dt></dt>
-       <dd><a href="#"></a></dd>
-      </dl>
-      </div>
-      <div class="sns_cont">
-      <dl class="sns_big">
-       <dt></dt>
-       <dd><a href="#"></a></dd>
-      </dl>
-      </div>
-      <div class="sns_cont cf">
-      <dl>
-       <dt></dt>
-       <dd><a href="#"></a></dd>
-      </dl>
-      <dl>
-       <dt></dt>
-       <dd><a href="#"></a></dd>
-      </dl>
-      </div>
+     <ul class="cf">
+       <li><a href="#"><dl><dt>1</dt><dd>sns1</dd></dl></a></li>
+       <li><a href="#"><dl><dt>2</dt><dd>sns2</dd></dl></a></li>
+       <li><a href="#"><dl><dt>3</dt><dd>sns3</dd></dl></a></li>
+       <li><a href="#"><dl><dt>4</dt><dd>sns4</dd></dl></a></li>
+       <li><a href="#"><dl><dt>5</dt><dd>sns5</dd></dl></a></li>
+     </ul>
     </div>
      
    </aside> <!-- //snsBox -->
@@ -215,7 +201,6 @@
    <li><a href="#">사이트맵</a></li>
  </ul>
  <div class="foot_ls cf">
- <h3><span class="hd">코카콜라</span></h3>
  <ul class="sns_link">
    <li><a href="#">페이스북</a></li>
    <li><a href="#">인스타그램</a></li>
@@ -225,8 +210,8 @@
  </div>
  </div>
   <address>
-    <p>서울시 종로구 새문안로 68 흥국생명빌딩 10층 | TEL. 080-024-5999</p>
-    <p>2019 THE COCA-COLA COMPANY. ALL RIGHTS RESERVED</p>
+    <p>서울시 종로구 새문안로 68 흥국생명빌딩 10층 | <br class="cp" /> TEL. 080-024-5999</p>
+    <p>2019 THE COCA-COLA COMPANY. <br class="cp" /> ALL RIGHTS RESERVED</p>
   </address>
  </footer>
 </div>
@@ -239,5 +224,6 @@
 <script src="../js/src/jquery/brand_box.js"></script>
 <script src="../js/src/jquery/burgur_btn.js"></script>
 <script src="../js/src/jquery/nav_pc.js"></script>
+<script src="../js/src/jquery/main_comp.js"></script>
 </body>
 </html>

@@ -2,10 +2,4 @@
 /* 패드 768px~1279px =============== */
 /* media screen and (min-width: 768px) and (max-width:1279px) */
 @media screen and (min-width: 768px) and (max-width: 1279px) { .navList { display: none; }
-  .search_open { display: none; }
-  #brandBox > p { width: 50%; }
-  .brand_box { padding: 4vh; }
-  .brand_box > li { margin: 0 10px; }
-  .cs_wrap > li { width: 200px; height: 200px; }
-  .sns_big { display: none; }
-  .sns_area { padding: 100px; box-sizing: border-box; } }
+  .search_open { display: none; } }
