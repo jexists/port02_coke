@@ -2,4 +2,15 @@
 /* 패드 768px~1279px =============== */
 /* media screen and (min-width: 768px) and (max-width:1279px) */
 @media screen and (min-width: 768px) and (max-width: 1279px) { .navList { display: none; }
-  .search_open { display: none; } }
+  .search_open { display: none; }
+  .cs_wrap > dd { height: 300px; }
+  .company_area { width: 100%; height: auto; }
+  .company_area > li { position: relative; left: 50%; transform: translateX(-50%); width: 80%; height: 180px; margin-bottom: 20px; }
+  .company_area > li a span { line-height: 180px; }
+  .sns_area { width: 70%; height: 80%; position: relative; margin: auto; margin-top: 50px; }
+  .sns_area ul { width: auto; height: auto; }
+  .sns_area ul li { position: absolute; width: 48%; height: 45%; }
+  .sns_area ul li:nth-child(3) { display: none; }
+  .sns_area ul li a { display: block; width: 100%; height: 100%; }
+  .sns_area ul li a dl { position: relative; width: 100%; height: 100px; }
+  .sns_area ul li a dl dt { position: absolute; top: -25px; left: 0; right: 0; margin: auto; width: 50px; height: 50%; border-radius: 100%; } }
