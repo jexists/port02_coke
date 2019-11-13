@@ -17,20 +17,32 @@ const rotateZero = {transform:'rotate(0deg)'};
 const scale = {transition: 'all 500ms ease', transform:'scale(1.2)'};
 const scaleZero = {transition: 'all 500ms ease', transform:'scale(1)'};
 
-nav.on('mouseenter',function(){
+let NavUp = function(t){
+	navDd.stop().slideUp();
+	t.closest(headBox).removeClass('act');
+};
+let NavDown = function(t){
 	navDd.stop().slideDown();
-	$(this).closest(headBox).addClass('act');
+	t.closest(headBox).addClass('act');
+};
+
+nav.on('mouseenter',function(){
+	NavDown($(this));
 });
 
 nav.on('mouseleave',function(){
-	navDd.stop().slideUp();
-	$(this).closest(headBox).removeClass('act');
+	NavUp($(this));
 });
 
+
 dtLk.on('focus',function(){
-	navDd.stop().slideDown();
-	$(this).closest(headBox).addClass('act');
-});		
+	NavDown($(this));
+ ddLk.eq(-1).on('blur',function(){
+ 	NavUp($(this));
+ });
+});
+
+
 
 openSearch.on('click',function(e){
 	e.preventDefault();

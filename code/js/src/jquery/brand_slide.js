@@ -6,7 +6,7 @@
  let brLi = brWrap.children('li');
  const brLiw = brLi.eq(0).outerWidth(true);
 
- let i = 0;
+/* let i = 0;*/
  let go;
  let timed = 1000;
 
@@ -15,7 +15,7 @@
  	let lit = brLi.eq(n).hasClass('action');
  	if(lit){break;}
  }
- console.log(n);
+ // console.log(n);
 
  const SlideGo = function(){
  	go = setInterval(function(){

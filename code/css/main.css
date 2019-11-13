@@ -107,11 +107,11 @@ h1 > a { display: block; width: 100%; height: 100%; }
 
 #adBox { position: relative; width: 100%; height: 100vh; margin-top: 80px; background-color: #999; }
 
-.arrow { position: absolute; z-index: 300; top: 0; bottom: 0; margin: auto; transform: translateY(-50%); width: 80px; height: 80px; }
+.main_btn > .arrow { position: absolute; z-index: 300; top: 0; bottom: 0; margin: auto; transform: translateY(-50%); width: 80px; height: 80px; }
 
-.arrow > button { width: 100%; height: 100%; padding: 0; background-color: #fff; border-radius: 100%; }
+.main_btn > .arrow > button { width: 100%; height: 100%; padding: 0; background-color: #fff; border-radius: 100%; }
 
-.arrow > button > i { width: 100%; height: 100%; font-size: 4rem; line-height: 80px; text-align: center; color: #999; }
+.main_btn > .arrow > button > i { width: 100%; height: 100%; font-size: 4rem; line-height: 80px; text-align: center; color: #999; }
 
 .next_btn { right: 10%; }
 
@@ -120,7 +120,13 @@ h1 > a { display: block; width: 100%; height: 100%; }
 /* 공통 // brandBox 제품소개&브랜드박스 ================== */
 #brandBox { background-color: #fff; }
 
-.brand_area { overflow: hidden; width: 100%; height: 55vh; margin-top: 60px; }
+.brand_area { position: relative; overflow: hidden; width: 100%; height: 55vh; margin-top: 60px; }
+
+.brand_btn > .arrow { position: absolute; z-index: 300; top: 0; bottom: 0; margin: auto; width: 80px; height: 80px; }
+
+.brand_btn > .arrow > button { width: 100%; height: 100%; padding: 0; background-color: #fff; border-radius: 100%; }
+
+.brand_btn > .arrow > button > i { width: 100%; height: 100%; font-size: 4rem; line-height: 80px; text-align: center; color: #999; }
 
 .brand_box { position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: auto; height: auto; }
 
@@ -146,6 +152,8 @@ h1 > a { display: block; width: 100%; height: 100%; }
 .story_link li { display: inline-block; position: relative; width: auto; height: auto; margin-right: 20px; }
 
 .story_link li:after, .story_link li::after { content: " "; position: absolute; right: -12px; top: 0; bottom: 0; margin: auto; width: 0; height: 60%; border-left: 2px solid #333; }
+
+.story_link li.action > a { color: #f00; font-weight: bold; }
 
 .story_link li:last-child { margin-right: 0; }
 

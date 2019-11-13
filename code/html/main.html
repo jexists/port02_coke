@@ -47,19 +47,19 @@
    <nav id="gnb">
      <h2 class="hd">네비게이션 및 검색창</h2>
      <button class="search_open">
-       <h3 class="hd">코카콜라 검색창 버튼</h3>
+       <span class="hd">코카콜라 검색창 버튼</span>
        <i class="fas fa-search"></i>
      </button>
      <button type="button" class="search_close">
-       <h3 class="hd">코카콜라 검색창 닫기 버튼</h3>
+       <span class="hd">코카콜라 검색창 닫기 버튼</span>
        <i class="fas fa-times"></i>
      </button> 
      <div class="search_box">
-       <h3 class="hd">코카콜라 검색창</h2>
+       <h3 class="hd">코카콜라 검색창</h3>
       <form action="#" method="get" class="site">
        <fieldset>
         <legend class="hd">코카콜라 검색창입니다.</legend>
-        <label for="site" id="site" class="hd">
+        <label for="siteName" id="site" class="hd">
           검색창 카테고리를 선택하세요
         </label>
         <select name="site" id="siteName">
@@ -103,7 +103,7 @@
    <section id="adBox">
     <h3 class="hd">코카콜라 이벤트 및 광고보기</h3>
 
-    <aside class="arrow_btn">
+    <aside class="main_btn">
     <div class="arrow next_btn">
      <button type="button">
        <i class="fas fa-chevron-right"></i>
@@ -129,6 +129,22 @@
     <h3 class="box_title"><span class="hd">코카콜라 회사 제품소개 및</span>brand</h3>
     <p class="box_text">No1. 글로벌 종합 음료회사로 탄산, 스포츠음료, 생수, 주스, 차, 커피 등 보유하고 있습니다. </p>
     <div class="brand_area">
+    
+    <aside class="brand_btn">
+    <div class="arrow next_btn">
+     <button type="button">
+       <i class="fas fa-chevron-right"></i>
+       <span class="hd">다음 이벤트 및 광고보기</span>
+     </button>
+    </div>
+    <div class="arrow prev_btn">
+     <button type="button">
+       <i class="fas fa-chevron-left"></i>
+       <span class="hd">이전 이벤트 및 광고보기</span>
+     </button>
+    </div>
+    </aside> <!-- 메인 화살표 -->
+
      <ul class="brand_box cf">
   <!-- brand_box 자바스크립트 불러오기!!!!!! -->
      </ul>
@@ -150,12 +166,6 @@
     </ul>
     <div class="cs_wrap">
   <!-- main_story 자바스크립트 불러오기!!!!!! -->
-     <!-- <dl class=" cf">
-       <dt>코크스토리</dt>
-       <dd></dd>
-       <dd></dd>
-       <dd></dd>
-     </dl> -->
      </div>
      <button type="button" class="more_btn">스토리 더보기</button>
     </div>

@@ -1,7 +1,7 @@
 // brand_box.js
 
 (function($){
-let imgUrl="../img/main_logo/"
+let imgUrl="../img/main_logo/";
 let brand=[
 {title: 'coke', titleLink:'#brandBox', img:'logo_01.jpg'},
 {title: 'sprite', titleLink:'#brandBox', img:'logo_02.jpg'},
@@ -17,7 +17,7 @@ let brand=[
 const brand_box = $('.brand_box');
 
 let brand_li ;
-let button;
+// let button;
 // let icon;
 for (let i=0; i<brand.length; i++){
   brand_box.append('<li>');
@@ -27,7 +27,7 @@ for (let i=0; i<brand.length; i++){
   brand_li.append('<a href="#"></a>');
   liLink = brand_li.children('a');
   liLink.prepend('<i class="fas fa-plus">');
-  liLink.attr('href',brand[i].titleLink)
+  liLink.attr('href',brand[i].titleLink);
   brand_li.css({backgroundImage:`url(${imgUrl}${brand[i].img})`})
 }
 
