@@ -34,10 +34,10 @@ for (let i=0; i<brand.length; i++){
 brand_box.css({width: 240 * brand.length + 40 +'px'});
 let brLi = brand_box.find('li');
 let brLilenHarf = Math.floor(brLi.length / 2);
-brLi.addClass('action');
+brLi.removeClass('action');
+brLi.eq(brLilenHarf).addClass('action');
 //console.log(brLilenHarf);
-brLi.eq(brLilenHarf).css({transform:'scale(1.3)', margin: '0 40px',opacity:1});
-brLi.eq(brLilenHarf).removeClass('action');
-brLi.eq(brLilenHarf).children('a').css({transform:'scale(0.8)'});
+// brLi.eq(brLilenHarf).css({transform:'scale(1.3)', margin: '0 40px',opacity:1});
+// brLi.eq(brLilenHarf).children('a').css({transform:'scale(0.8)'});
 })(jQuery); 
 

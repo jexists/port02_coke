@@ -124,9 +124,15 @@ h1 > a { display: block; width: 100%; height: 100%; }
 
 .brand_box { position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: auto; height: auto; }
 
-.brand_box > li { float: left; width: 200px; height: 280px; transform: scale(1); margin: 0 20px; background-position: 50% 50%; background-size: auto 100%; background-repeat: no-repeat; }
+.brand_box > li { float: left; width: 200px; height: 280px; transform: scale(1); margin: 0 20px; background-position: 50% 50%; background-size: auto 100%; background-repeat: no-repeat; transition: all 500ms linear; }
 
-.brand_box > li.action:after, .brand_box > li.action::after { content: " "; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(51, 51, 51, 0.7); }
+.brand_box > li:after, .brand_box > li::after { content: " "; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(51, 51, 51, 0.7); }
+
+.brand_box > li.action { transform: scale(1.3); margin: 0 40px; }
+
+.brand_box > li.action:after, .brand_box > li.action::after { display: none; }
+
+.brand_box > li.action a { transform: scale(0.8); }
 
 .brand_box > li a { display: block; width: 50px; height: 50px; margin: auto; margin-top: 110%; text-align: center; color: #333; line-height: 50px; font-size: 1.5rem; background-color: rgba(255, 255, 255, 0.7); border-radius: 10px; }
 
@@ -151,13 +157,7 @@ h1 > a { display: block; width: 100%; height: 100%; }
 
 .cs_wrap dl > dt { display: none; }
 
-.cs_wrap dl > dd { float: left; width: 32%; height: 400px; margin-right: 2%; background-color: #888; }
-
-.cs_wrap dl > dd:nth-of-type(1) { background: url("../img/main_story/story_01.png") no-repeat 50% 50%/100% auto; }
-
-.cs_wrap dl > dd:nth-of-type(2) { background: url("../img/main_story/story_02.png") no-repeat 50% 50%/100% auto; }
-
-.cs_wrap dl > dd:nth-of-type(3) { background: url("../img/main_story/story_03.png") no-repeat 50% 50%/100% auto; }
+.cs_wrap dl > dd { float: left; width: 32%; height: 400px; margin-right: 2%; background-position: 50% 50%; background-repeat: no-repeat; background-size: 100% auto; }
 
 .cs_wrap dl > dd:last-child { margin-right: 0; }
 
