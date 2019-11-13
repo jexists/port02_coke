@@ -124,11 +124,11 @@ h1 > a { display: block; width: 100%; height: 100%; }
 
 .brand_box { position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: auto; height: auto; }
 
-.brand_box > li { float: left; width: 200px; height: 340px; transform: scale(1); margin: 0 20px; background-position: 50% 50%; background-size: auto 100%; background-repeat: no-repeat; }
+.brand_box > li { float: left; width: 200px; height: 280px; transform: scale(1); margin: 0 20px; background-position: 50% 50%; background-size: auto 100%; background-repeat: no-repeat; }
 
 .brand_box > li.action:after, .brand_box > li.action::after { content: " "; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(51, 51, 51, 0.7); }
 
-.brand_box > li a { display: block; width: 50px; height: 50px; margin: auto; margin-top: 140%; text-align: center; color: #333; line-height: 50px; font-size: 1.5rem; background-color: rgba(255, 255, 255, 0.7); border-radius: 10px; }
+.brand_box > li a { display: block; width: 50px; height: 50px; margin: auto; margin-top: 110%; text-align: center; color: #333; line-height: 50px; font-size: 1.5rem; background-color: rgba(255, 255, 255, 0.7); border-radius: 10px; }
 
 /* 공통 // storyBox 스토리박스 ================== */
 #storyBox { position: relative; }
@@ -147,11 +147,19 @@ h1 > a { display: block; width: 100%; height: 100%; }
 
 .cs_wrap { width: 100%; height: auto; }
 
-.cs_wrap > dt { display: none; }
+.cs_wrap dl { width: 100%; height: auto; }
 
-.cs_wrap > dd { float: left; width: 32%; height: 400px; margin-right: 2%; background-color: #888; }
+.cs_wrap dl > dt { display: none; }
 
-.cs_wrap > dd:last-child { margin-right: 0; }
+.cs_wrap dl > dd { float: left; width: 32%; height: 400px; margin-right: 2%; background-color: #888; }
+
+.cs_wrap dl > dd:nth-of-type(1) { background: url("../img/main_story/story_01.png") no-repeat 50% 50%/100% auto; }
+
+.cs_wrap dl > dd:nth-of-type(2) { background: url("../img/main_story/story_02.png") no-repeat 50% 50%/100% auto; }
+
+.cs_wrap dl > dd:nth-of-type(3) { background: url("../img/main_story/story_03.png") no-repeat 50% 50%/100% auto; }
+
+.cs_wrap dl > dd:last-child { margin-right: 0; }
 
 /* 공통 // companyBox 회사정보&컴파니박스 ================== */
 #companyBox { position: relative; }
@@ -203,9 +211,17 @@ h1 > a { display: block; width: 100%; height: 100%; }
 
 .sns_area ul li a dl { position: relative; width: 100%; height: 100px; }
 
-.sns_area ul li a dl dt { position: absolute; top: -25px; left: 0; right: 0; margin: auto; width: 50px; height: 50%; background-color: #fff; background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; border-radius: 100%; }
+.sns_area ul li a dl dt { position: absolute; top: -25px; left: 0; right: 0; margin: auto; width: 50px; height: 50%; background-color: #fff; background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; border-radius: 100%; box-shadow: 0 0 10px #333; }
 
 .sns_area li:nth-child(1) dt { background-image: url("../img/sns_logo/insta_logo.png"); }
+
+.sns_area li:nth-child(2) dt { background-image: url("../img/sns_logo/youtube_logo.png"); }
+
+.sns_area li:nth-child(3) dt { background-color: #4072b8; background-image: url("../img/sns_logo/fb_logo.png"); }
+
+.sns_area li:nth-child(4) dt { background-image: url("../img/sns_logo/twitter_logo.png"); }
+
+.sns_area li:nth-child(5) dt { background-image: url("../img/sns_logo/insta_logo.png"); }
 
 /* 공통 // footBox 풋박스 ================== */
 #footBox { position: relative; width: 100%; height: auto; padding: 20px 0; background-color: #f00; }

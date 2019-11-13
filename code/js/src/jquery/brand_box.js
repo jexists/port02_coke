@@ -14,19 +14,6 @@ let brand=[
 {title: 'seagrams', titleLink:'#brandBox', img:'logo_09.jpg'}
 ];
 
-/*
-const navMenu = [
- {title: '회사소개',titleLink:'#', 
-	sub: [
-	{subN:'코카콜라', subLink:'#'},
-	{subN:'글로벌', subLink:'#'},
-	{subN:'코리아', subLink:'#'},
-	{subN:'히스토리', subLink:'#'},
-	{subN:'사회공헌', subLink:'#'}]},
-
-	background: url(../img/background/footbox_bg.png) repeat-x 50% 50% / auto 61%;}}
-	*/
-
 const brand_box = $('.brand_box');
 
 let brand_li ;
@@ -43,7 +30,6 @@ for (let i=0; i<brand.length; i++){
   liLink.attr('href',brand[i].titleLink)
   brand_li.css({backgroundImage:`url(${imgUrl}${brand[i].img})`})
 }
-
 
 brand_box.css({width: 240 * brand.length + 40 +'px'});
 let brLi = brand_box.find('li');
