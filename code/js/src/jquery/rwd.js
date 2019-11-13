@@ -32,13 +32,25 @@ DeviceCheck();
  let ScriptAppend = function(jsName){
   body.append('<script src="'+ jsUrl + jsName +'.js"></script>');
  };
+/*
+.company_area{width: 100%; height: auto; 
+  &>li{
+    float: left; position: relative;
+    width: 30%; height: 250px; 
+    margin-right: 5%;
+   &:nth-child(1)>a{background: url($url + 'main/business.jpg') no-repeat 50% 50% / cover;}
+   &:nth-child(2)>a{background: url($url + 'main/history.jpg') no-repeat 50% 50% / cover;}
+   &:nth-child(3)>a{background: url($url + 'main/social.jpg') no-repeat 50% 50% / cover;}
+   &:last-child{margin-right: 0;}
+   &>a.act
+*/
+
 
 switch(beforeDevice){
   case 'mobile':
 //break;
   case 'pad':
     ScriptAppend('burgur_btn');
-
   break;
   case 'pc':
 //break;

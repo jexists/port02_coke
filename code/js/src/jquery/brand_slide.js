@@ -12,21 +12,28 @@
 
  let n = 0;
  for(; n<brLi.length; n++){	
- 	let lit = brLi.eq(n).hasClass('action');
+ 	let lit = brLi.eq(n-1).hasClass('action');
  	if(lit){break;}
  }
  // console.log(n);
 
+/* const SlideFunction = function(){
+ 	brWrap.append(brLi.eq(0));
+ 	brLi = brWrap.children('li');
+ 	brLi.removeClass('action');
+ 	brLi.eq(n).addClass('action');
+ 	brWrap.css({marginLeft:0});
+ 		}*/
+
  const SlideGo = function(){
  	go = setInterval(function(){
- 		brWrap.stop().animate({marginLeft:-brLiw},timed,function(){
- 			brWrap.append(brLi.eq(0));
  			brLi = brWrap.children('li');
  			brLi.removeClass('action');
+ 			brLi.children('a').attr('tabindex',-1);
  			brLi.eq(n).addClass('action');
- 			// 	brLi.eq(n+1).css({transform:'scale(1.3)', margin: '0 40px',opacity:1});
-			// brLi.eq(n+1).children('a').css({transform:'scale(0.8)'});
-
+ 			brLi.eq(n).children('a').attr('tabindex',0);
+ 		brWrap.stop().animate({marginLeft:-brLiw},timed,function(){
+ 			brWrap.append(brLi.eq(0));
  			brWrap.css({marginLeft:0});
  		});
  	}, timed*2);
@@ -35,7 +42,6 @@
  const SlideStop = function(){
  	clearInterval(go);
  };
-
  SlideGo();
 
  brArea.on('mouseenter',function(){
@@ -44,4 +50,35 @@
  brArea.on('mouseleave',function(){
  	SlideGo();
  });
+
+ const next = brArea.find('.next_btn').children('button');
+ const prev = brArea.find('.prev_btn').children('button');
+
+ next.on('click',function(e){
+ 	e.preventDefault();
+ 			brLi = brWrap.children('li');
+ 			brLi.removeClass('action');
+			brLi.children('a').attr('tabindex',-1);
+ 			brLi.eq(n).addClass('action');
+			brLi.eq(n).children('a').attr('tabindex',0);
+ 	brWrap.stop().animate({marginLeft:-brLiw},timed,function(){
+ 			brWrap.append(brLi.eq(0));
+ 			brWrap.css({marginLeft:0});
+ 		});
+
+ });
+
+ prev.on('click', function(e){
+ 	e.preventDefault();
+ 			brLi = brWrap.children('li');
+ 			brLi.removeClass('action');
+			brLi.children('a').attr('tabindex',-1);
+ 			brLi.eq(n-2).addClass('action');
+			brLi.eq(n).children('a').attr('tabindex',0);
+ 	brWrap.stop().animate({marginLeft:+brLiw},timed,function(){
+ 			brWrap.prepend(brLi.eq(-1));
+ 			brWrap.css({marginLeft:0});
+ 		});
+ });
+
 })(jQuery);

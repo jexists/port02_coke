@@ -7,6 +7,7 @@
   .company_area { width: 100%; height: auto; }
   .company_area > li { position: relative; left: 50%; transform: translateX(-50%); width: 80%; height: 180px; margin-bottom: 20px; }
   .company_area > li a span { line-height: 180px; }
+  /* .company_area{width: 100%; height: auto;  &>li{ float: left; position: relative; width: 30%; height: 250px;  margin-right: 5%; &:nth-child(1)>a{background: url($url + 'main/business.jpg') no-repeat 50% 50% / cover;} &:nth-child(2)>a{background: url($url + 'main/history.jpg') no-repeat 50% 50% / cover;} &:nth-child(3)>a{background: url($url + 'main/social.jpg') no-repeat 50% 50% / cover;} &:last-child{margin-right: 0;} &>a.act{transition:all 1000ms ease; border-radius: 100%; >span{line-height: 18px; width: 100px; height: auto;  padding: 10px 30px;}} &>a{display:block;  width: 100%; height: 100%; @include bbg(2); >span{display:block; position: absolute; top:50%; transform: translateY(-50%); right:0; left:0; margin:auto; width: 100%; height: 100%; background-color: rgba(nth($mc, 4), 0.9); text-align: center; line-height: 250px; color: nth($mc,3); font-size:25px;}}}} */
   .sns_area { width: 70%; height: 80%; position: relative; margin: auto; margin-top: 50px; }
   .sns_area ul { width: auto; height: auto; }
   .sns_area ul li { position: absolute; width: 48%; height: 45%; }
