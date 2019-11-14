@@ -12,14 +12,34 @@
 // #brandBox
 
 // #storyBox
-.cs_wrap{
-  &>dd{height: 300px;}}
+
+.story_link{width: 100%; height: auto; margin: 15px 0 30px; text-align: center;
+ li{display:inline-block; position:relative;
+  width: auto; height: auto;
+  margin-right: 20px;
+ &:after,&::after{content: " "; position: absolute; right: -12px; 
+  top:0; bottom: 0; margin: auto;
+  width: 0; height: 60%; border-left: 2px solid #333;}
+ &.action>a{color:nth($mc,1); font-weight: bold;}
+ &:last-child{margin-right: 0;
+  &:after,&::after{display: none;}}}}
+.cs_wrap{ width: 100%; height: auto;
+  dl{width: 100%; height: auto;
+  &>dt{display: none;}
+  &>dd{float: left;
+    width: (100% - 4)/2; height: 300px; margin-right: 2%;
+    background-position: 50% 50%; background-repeat: no-repeat;
+    background-size: 100% auto;}
+  &>dd:nth-of-child(2){ margin-right: 0;}
+  &>dd:last-child{display:none; margin-right: 0;}}}
 
 // #companyBox
 .company_area{width: 100%; height: auto; 
  &>li{position: relative; left: 50%; transform:translateX(-50%); 
 	width: 80%; height: 180px; margin-bottom: 20px;
  & a span{line-height: 180px; }}}
+ .conts_wrap{top: 60%; transform:translateY(-40%);
+  .more_btn{margin-top: 20px;}}
  /* .company_area{width: 100%; height: auto; 
 	&>li{
     float: left; position: relative;

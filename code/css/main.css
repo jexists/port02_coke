@@ -11,6 +11,8 @@
 
 .more_btn { display: block; width: 150px; height: 30px; margin: auto; margin-top: 30px; border-radius: 5px; background-color: #888; text-align: center; line-height: 29px; color: #fff; }
 
+.cp { display: none; }
+
 /* 공통 // headBox 해더박스 ================== */
 #headBox { position: fixed; z-index: 500; top: 0; left: 0; width: 100%; height: 80px; background-color: #f00; }
 
@@ -105,7 +107,7 @@ h1 > a { display: block; width: 100%; height: 100%; }
 /* 공통 // adBox 광고박스 ================== */
 #contentBox { width: 100%; height: auto; }
 
-#adBox { position: relative; width: 100%; height: 100vh; margin-top: 80px; background-color: #999; }
+#adBox { position: relative; width: 100%; height: 100vh; }
 
 .main_btn > .arrow { position: absolute; z-index: 300; top: 0; bottom: 0; margin: auto; transform: translateY(-50%); width: 80px; height: 80px; }
 
@@ -116,6 +118,22 @@ h1 > a { display: block; width: 100%; height: 100%; }
 .next_btn { right: 10%; }
 
 .prev_btn { left: 10%; }
+
+#slide_wrap { height: 100%; }
+
+#slide_wrap div { position: relative; float: left; height: 100vh; background-repeat: no-repeat; background-position: 50% 100%; background-size: cover; }
+
+#slide_wrap div .Mimg_01 { position: absolute; left: 0; right: 0; bottom: 0; margin: auto; z-index: 1; width: 350px; height: 680px; }
+
+#slide_wrap div .tt { position: absolute; left: 28%; top: 38%; font-size: 1.5rem; transform: rotate(-4deg); padding: 5px 18px; border-radius: 15px; color: #fff; background-color: #333; }
+
+#slide_wrap div .td { position: absolute; left: 50%; top: 65%; transform: translate(-50%, -50%); text-transform: uppercase; font-weight: bold; font-size: 10rem; text-align: center; }
+
+#slide_wrap div .td span { display: block; width: 100%; height: auto; }
+
+#slide_wrap div .td span:first-child { text-indent: -400px; }
+
+#slide_wrap div .td span:last-child { text-indent: 620px; }
 
 /* 공통 // brandBox 제품소개&브랜드박스 ================== */
 .brand_area { position: relative; overflow: hidden; width: 100%; height: 55vh; margin-top: 60px; }
@@ -299,12 +317,12 @@ address > p:nth-of-type(3) { margin-top: 20px; }
   .navList { display: none; }
   .search_open { display: none; }
   .more_btn { margin-top: 50px; }
+  .cp { display: block; }
   .box_size { padding: 25vw 0; }
   .brand_box > li { height: 300px; }
   .brand_box > li a { margin-top: 120%; }
   .cs_wrap dt { display: block; width: 100%; height: auto; margin-bottom: 20px; text-decoration: underline; }
   .cs_wrap dd { height: 150px; }
-  .story_link { display: none; }
   .cs_wrap { width: 100%; height: auto; }
   .cs_wrap dl { width: 100%; height: auto; }
   .cs_wrap dl > dt { display: none; }
@@ -312,6 +330,8 @@ address > p:nth-of-type(3) { margin-top: 20px; }
   .company_area { width: 100%; height: auto; }
   .company_area > li { position: relative; width: 100%; height: 110px; margin-bottom: 20px; }
   .company_area > li a span { line-height: 110px; }
+  .conts_wrap { top: 50%; transform: translateY(-25%); }
+  .conts_wrap .more_btn { margin-top: 10px; }
   .sns_area { width: 70%; height: 80%; position: relative; margin: auto; margin-top: 50px; }
   .sns_area ul { width: auto; height: auto; }
   .sns_area ul li { position: absolute; width: 100%; height: 45%; background-color: #f03; background-color: #ccc; }
@@ -328,10 +348,23 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 /* media screen and (min-width: 768px) and (max-width:1279px) */
 @media screen and (min-width: 768px) and (max-width: 1279px) { .navList { display: none; }
   .search_open { display: none; }
-  .cs_wrap > dd { height: 300px; }
+  .story_link { width: 100%; height: auto; margin: 15px 0 30px; text-align: center; }
+  .story_link li { display: inline-block; position: relative; width: auto; height: auto; margin-right: 20px; }
+  .story_link li:after, .story_link li::after { content: " "; position: absolute; right: -12px; top: 0; bottom: 0; margin: auto; width: 0; height: 60%; border-left: 2px solid #333; }
+  .story_link li.action > a { color: #f00; font-weight: bold; }
+  .story_link li:last-child { margin-right: 0; }
+  .story_link li:last-child:after, .story_link li:last-child::after { display: none; }
+  .cs_wrap { width: 100%; height: auto; }
+  .cs_wrap dl { width: 100%; height: auto; }
+  .cs_wrap dl > dt { display: none; }
+  .cs_wrap dl > dd { float: left; width: 48%; height: 300px; margin-right: 2%; background-position: 50% 50%; background-repeat: no-repeat; background-size: 100% auto; }
+  .cs_wrap dl > dd:nth-of-child(2) { margin-right: 0; }
+  .cs_wrap dl > dd:last-child { display: none; margin-right: 0; }
   .company_area { width: 100%; height: auto; }
   .company_area > li { position: relative; left: 50%; transform: translateX(-50%); width: 80%; height: 180px; margin-bottom: 20px; }
   .company_area > li a span { line-height: 180px; }
+  .conts_wrap { top: 60%; transform: translateY(-40%); }
+  .conts_wrap .more_btn { margin-top: 20px; }
   /* .company_area{width: 100%; height: auto;  &>li{ float: left; position: relative; width: 30%; height: 250px;  margin-right: 5%; &:nth-child(1)>a{background: url($url + 'main/business.jpg') no-repeat 50% 50% / cover;} &:nth-child(2)>a{background: url($url + 'main/history.jpg') no-repeat 50% 50% / cover;} &:nth-child(3)>a{background: url($url + 'main/social.jpg') no-repeat 50% 50% / cover;} &:last-child{margin-right: 0;} &>a.act{transition:all 1000ms ease; border-radius: 100%; >span{line-height: 18px; width: 100px; height: auto;  padding: 10px 30px;}} &>a{display:block;  width: 100%; height: 100%; @include bbg(2); >span{display:block; position: absolute; top:50%; transform: translateY(-50%); right:0; left:0; margin:auto; width: 100%; height: 100%; background-color: rgba(nth($mc, 4), 0.9); text-align: center; line-height: 250px; color: nth($mc,3); font-size:25px;}}}} */
   .sns_area { width: 70%; height: 80%; position: relative; margin: auto; margin-top: 50px; }
   .sns_area ul { width: auto; height: auto; }

@@ -8,6 +8,7 @@
  .navList{display: none;}
  .search_open{display: none;}
  .more_btn{margin-top: 50px;}
+ .cp{display: block;}
 // #contentBox
 // #adBox
 // #brandBox
@@ -20,7 +21,7 @@
 .cs_wrap dd{height: 150px;}
 
 // #storyBox
-.story_link {display: none}
+// .story_link {display: none}
 
 .cs_wrap{ width: 100%; height: auto;
   dl{width: 100%; height: auto;
@@ -32,6 +33,8 @@
  &>li{position: relative;
 	width: 100%; height: 110px; margin-bottom: 20px;
  & a span{line-height: 110px; }}}
+  .conts_wrap{top: 50%; transform:translateY(-25%);
+  .more_btn{margin-top: 10px;}}
 // #snsBox
 
 .sns_area{width: 70%; height: 80%;
