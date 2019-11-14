@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!-- main.html -->
+<html lang="ko-KR">
+<head>
+ 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="웹페이지 실습에 따른 목차구성">
+  <meta name="keyword" content="html, css, js, web, design, 웹디자인">
+  <meta name="author" content="jexists">
+  <meta name="generator" content="illustrator, photoshop, sublimetext">
+
+  <!-- link ===================================== -->
+   <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet"> -->
+   <link rel="stylesheet" href="../css/base/reset.css">
+   <link rel="stylesheet" href="../css/base/common.css">
+   <link rel="stylesheet" href="../font/fontawesome/css/all.min.css">
+   <link rel="stylesheet" href="../css/main.css">
+
+   <!--[if lte IE 9]>
+      <script src="./ie/html5shiv-3.7.3/dist/html5shiv.min.js"> </script>
+      <script src="../ie/PIE-1.0.0/PIE.js"></script>
+      <script src="../ie/Respond-1.4.2/dest/respond.min.js"></script>
+
+   <![endif]-->
+
+
+  <!-- link favicon ============================= -->
+   <link rel="shortcut icon" type="image/png" href="../favicon.png">
+  <!-- link touch ============================= -->
+   <link rel="apple-touch-icon" href="../favicon.png">
+   <title>코카콜라</title>
+</head>
+<body>
+   <noscript>
+    <p>현재 접속하고 있는 사이트의 기능의 일부가 원활하게 실행되고 있지 않습니다. <br />
+    자바스크립트의 기능을 활성화 해주세요.</p>
+    <p><a href="http://enable-javascript.com/ko/" target="_blank">
+    브라우저에서 자바스크립트 활성화하는 방법</a></p>
+  </noscript>
+<!-- layout=================== -->
+<div id="wrap">
+ <header id="headBox">
+  <div class="head_area">
+ 	 <h1><a href="../index.html"><span class="hd">코카콜라</span></a></h1>
+   <nav id="gnb">
+     <h2 class="hd">네비게이션 및 검색창</h2>
+     <button class="search_open">
+       <span class="hd">코카콜라 검색창 버튼</span>
+       <i class="fas fa-search"></i>
+     </button>
+     <button type="button" class="search_close">
+       <span class="hd">코카콜라 검색창 닫기 버튼</span>
+       <i class="fas fa-times"></i>
+     </button> 
+     <div class="search_box">
+       <h3 class="hd">코카콜라 검색창</h3>
+      <form action="#" method="get" class="site">
+       <fieldset>
+        <legend class="hd">코카콜라 검색창입니다.</legend>
+        <label for="siteName" id="site" class="hd">
+          검색창 카테고리를 선택하세요
+        </label>
+        <select name="site" id="siteName">
+          <option value="전체">전체</option>
+          <option value="브랜드">브랜드</option>
+          <option value="제품">제품</option>
+          <option value="스토리">스토리</option>
+          <option value="이벤트">이벤트</option>
+        </select>
+         <label for="searchBar" class="hd">검색창</label>
+         <input type="search" id="searchBar" name="searchBar"
+          value="" placeholder="코카콜라 정보, 검색하세요!"/>
+       <button type="submit" class="search_icon">
+        <i class="fas fa-search"></i>
+       </button>
+       </fieldset>
+      </form>
+     </div>
+     <div class="gnb_cp">
+      <div class="open_btn">
+      <button type="button">
+       <span class="hd">전체메뉴 확인 버튼</span>
+      </button>
+       <span class="burgur"></span>
+      </div>
+      <div class="all_gnb">
+       <div class="close_btn">
+        <button type="button">
+         <span class="hd">전체 메뉴 닫기 버튼</span>
+        </button>
+         <span class="burgur"></span>
+       </div>
+       <div class="nav_site"></div>
+     </div>  
+     </div> <!-- //gnb_cp -->
+   </nav> <!-- //id="gnb" -->
+  </div> <!-- // head_area -->
+ </header> <!-- // headBox 해더박스 -->
+ <main id="contentBox">
+   <h2 class="hd">코카콜라 웹사이트 콘텐츠</h2>
+   <section id="adBox">
+    <h3 class="hd">코카콜라 이벤트 및 광고보기</h3>
+
+    <aside class="main_btn">
+    <h4 class="hd">메인광고 버튼</h4>
+    <div class="arrow next_btn">
+     <button type="button">
+       <i class="fas fa-chevron-right"></i>
+       <span class="hd">다음 이벤트 및 광고보기</span>
+     </button>
+    </div>
+    <div class="arrow prev_btn">
+     <button type="button">
+       <i class="fas fa-chevron-left"></i>
+       <span class="hd">이전 이벤트 및 광고보기</span>
+     </button>
+    </div>
+    </aside> <!-- 메인 화살표 -->
+
+    <article class="ad_01">
+      <h4 class="hd">코카콜라 광고1</h4>
+    </article> <!-- 메인광고01 -->
+
+     
+   </section> <!-- // adBox 광고박스 -->
+
+   <section id="brandBox" class="box_size">
+    <h3 class="box_title"><span class="hd">코카콜라 회사 제품소개 및</span>brand</h3>
+    <p class="box_text">No1. 글로벌 종합 음료회사로 탄산, 스포츠음료, 생수, 주스, 차, 커피 등 보유하고 있습니다. </p>
+    <div class="brand_area">
+    
+    <aside class="brand_btn">
+    <h4 class="hd">브랜드 광고 버튼</h4>
+    <div class="arrow next_btn">
+     <button type="button">
+       <i class="fas fa-chevron-right"></i>
+       <span class="hd">다음 이벤트 및 광고보기</span>
+     </button>
+    </div>
+    <div class="arrow prev_btn">
+     <button type="button">
+       <i class="fas fa-chevron-left"></i>
+       <span class="hd">이전 이벤트 및 광고보기</span>
+     </button>
+    </div>
+    </aside> <!-- 메인 화살표 -->
+
+     <ul class="brand_box cf">
+  <!-- brand_box 자바스크립트 불러오기!!!!!! -->
+     </ul>
+    </div>
+    <button type="button" class="more_btn">전체제품보기</button>
+   </section> <!-- // brandBox 제품소개&브랜드박스 -->
+
+
+   <article id="storyBox" class="box_size">
+    <h3 class="box_title">story</h3>
+    <p class="box_text">코카콜라와 함께하는 톡~ 쏘는 이야기!</p>
+    <div class="story_area">
+    <ul class="story_link">
+      <li><a href="#storyBox">코크스토리</a></li>
+      <li><a href="#storyBox">글로벌스토리</a></li>
+      <li><a href="#storyBox">코리아스토리</a></li>
+      <li><a href="#storyBox">올림픽 월드컵</a></li>
+      <li><a href="#storyBox">보도자료</a></li>
+    </ul>
+    <div class="cs_wrap">
+  <!-- main_story 자바스크립트 불러오기!!!!!! -->
+     </div>
+     <button type="button" class="more_btn">스토리 더보기</button>
+    </div>
+    
+   </article> <!-- // storyBox 스토리박스 -->
+   <section id="companyBox" class="box_size">
+    <h3 class="box_title">company</h3>
+    <p class="box_text">보다 상쾌한 행복한 일상, 새로운 가치를 추구하는 기업</p>
+    <div class="conts_wrap">
+     <ul class="company_area cf">
+       <li><a href="#companyBox"><span>비지니스</span></a></li>
+       <li><a href="#companyBox"><span>히스토리</span></a></li>
+       <li><a href="#companyBox"><span>사회공헌</span> </a></li>
+     </ul>
+     <button type="button" class="more_btn">회사정보 더보기</button>
+    </div>
+   </section> <!-- // companyBox 회사소개박스 -->
+
+
+   <aside id="snsBox" class="box_size">
+    <h3 class="box_title"><abbr title="social network servuce">SNS</abbr></h3>
+    <p class="box_text">코카콜라의 더 많은 소식을 <abbr title="social network servuce">SNS</abbr>로 만나보세요!</p>
+    <!-- ul.sns_area>(li>a)*5 -->
+    <div class="sns_area">
+     <ul class="cf">
+       <li><a href="#snsBox">
+        <dl><dt><span class="hd">인스타그램</span></dt><dd class="hd">sns1</dd></dl>
+       </a></li>
+       <li><a href="#snsBox">
+        <dl><dt><span class="hd">유투브</span></dt><dd class="hd">sns2</dd></dl>
+       </a></li>
+       <li><a href="#snsBox">
+        <dl><dt><span class="hd">페이스북</span></dt><dd class="hd">sns3</dd></dl>
+       </a></li>
+       <li><a href="#snsBox">
+        <dl><dt><span class="hd">트위터</span></dt><dd class="hd">sns4</dd></dl>
+       </a></li>
+       <li><a href="#snsBox">
+        <dl><dt><span class="hd">인스타그램</span></dt><dd class="hd">sns5</dd></dl>
+       </a></li>
+     </ul>
+    </div>
+     
+   </aside> <!-- //snsBox -->
+ </main> <!-- // contentBox 메인박스 -->
+ <footer id="footBox">
+ 	<h2 class="hd">코카콜라 회사 정보 및 관련 사이트</h2>
+  <div class="foot_area">
+  <ul class="link_area cf">
+   <li><a href="https://www.coca-cola.com/">글로벌</a></li>
+   <li><a href="https://www.coca-colajourney.co.kr/">코리아</a></li>
+   <li><a href="#snsBox">이용약관</a></li>
+   <li><a href="#snsBox">개인정보처리방침</a></li>
+   <li><a href="#snsBox">고객센터</a></li>
+   <li><a href="#snsBox">사이트맵</a></li>
+ </ul>
+ <div class="foot_ls cf">
+ <ul class="sns_link">
+   <li><a href="https://www.facebook.com/Coca-Cola"><span class="hd">페이스북</span></a></li>
+   <li><a href="https://www.instagram.com/coke.style/"><span class="hd">인스타그램</span></a></li>
+   <li><a href="https://twitter.com/CocaCola_Korea"><span class="hd">트위터</span></a></li>
+   <li><a href="https://www.youtube.com/user/openhappinesskorea"><span class="hd">유투브</span></a></li>
+ </ul>
+ </div>
+ </div>
+  <address>
+    <p>서울시 종로구 새문안로 68 흥국생명빌딩 10층 | <br class="cp" /> TEL. 080-024-5999</p>
+    <p>2019 THE COCA-COLA COMPANY. <br class="cp" /> ALL RIGHTS RESERVED</p>
+    <p>&#42;본 페이지는 포트폴리오용으로 제작되어 있으므로,<br class="cp" /> 
+    사용된 이미지 및 내용은 상업적 용도로 사용하지 않습니다.</p>
+  </address>
+ </footer>
+</div>
+
+<!-- 버블 -->
+<span class="move_bubble"></span>
+
+
+
+<!-- Script=================== -->
+<!--   <script></script> -->
+<script src="../js/base/jquery-3.4.1.min.js"></script>
+<script src="../js/base/jquery-ui.min.js"></script>
+<script src="../js/src/jquery/nav_make.js"></script>
+<script src="../js/src/jquery/rwd.js"></script>
+<script src="../js/src/jquery/brand_box.js"></script>
+<script src="../js/src/jquery/main_comp.js"></script>
+<script src="../js/src/jquery/main_story.js"></script>
+<!-- <script src="../js/src/jquery/brand_slide.js"></script> -->
+<script src="../js/src/jquery/main_bg.js"></script>
+<!-- <script src="../js/src/jquery/burgur_btn.js"></script> -->
+<!-- <script src="../js/src/jquery/nav_all.js"></script> -->
+</body>
+</html>

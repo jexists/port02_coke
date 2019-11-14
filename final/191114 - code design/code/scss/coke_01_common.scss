@@ -1,0 +1,307 @@
+// coke_01_common.scss
+@import "./coke_01_var";
+$url: '../img/';
+@mixin linkblock(){display:block; width: 100%; height: 100%;}
+
+/* 공통 =============== */
+#wrap{width: 100%; height: auto; margin: auto;}
+ .box_size{width: 100%; height: 100vh; min-height: 800px;
+  padding: 100px 0;box-sizing:border-box;}
+ .box_title{width: 50%; height: auto; margin: 0 auto 10px;
+ 	font-size: 35px; text-align: center; text-transform: uppercase;}
+ .box_text{width:80%; min-width: 350px; height: auto; margin: auto; font-size: 18px; 
+  font-size: 1.125rem; text-align: center; word-break: keep-all;}
+ .more_btn{display:block; width: 150px; height: 30px; margin: auto;
+    margin-top: 30px; border-radius: 5px;
+    @include bbg(8); text-align: center;
+    line-height: 29px; color: nth($bc,1)}
+/* 공통 // headBox 해더박스 ================== */
+#headBox{position: fixed; z-index: 500; top: 0; left: 0;
+	width: 100%; height: 80px;
+	@include mc(1);
+	&:after, &::after{display: none; }
+	 &.act:after,&.act::after{content: " "; display: block;
+	position:absolute; top:80px; left:0; z-index: 1;
+	 	width: 100vw; height: 0;
+	 	border-bottom: 1px solid #fff;}}
+ .head_area{@include whp; min-width: 250px; 
+ 	margin: auto; padding: 20px 30px;
+ 	box-sizing: border-box; @include mc(1);}
+	h1{float: left; width: 130px; height: 40px;
+	background: url($url + 'mobile/logo_mobile.gif') no-repeat 50% 50% / cover;
+	 &>a{ @include linkblock(); }}
+	.gnb_cp{float: right; width: 45px; height: 40px; }
+  .search_open,.search_close{float: right; width: 45px; height: 40px; font-size: 2.5rem;
+   background-color: transparent;
+   text-align: center; line-height: 40px; color: nth($mc,3)}
+  .search_close{display: none;}
+ .open_btn {display: block; position: relative;
+  width: 100%; height: 100%;
+	button{width: 100%; height: 100%; background-color: transparent;}} 
+ .navList{position: absolute; top: 0; left:75px; right:0; 
+ 	margin:auto; @include mc(1);
+ 	width: 700px; height: auto; 
+ 	&:before,&::before{content:" "; 
+ 		display:block; 
+ 		position:absolute; z-index: -1;
+ 		top: 0; left: 50%; margin-left: -60vw;
+ 		width: 120vw; height: 100%;
+ 		background-color: inherit;}
+ 	&:after,&::after{content:" "; display: block;
+ 		width: 0; height: 0; clear:both;}}
+ .navList>li{float: left; width:23%; height: auto;
+ 	margin: 0 5px; 
+ 	&>dl{width: auto; height: auto;
+ 	&>dt{width: auto; height: auto;
+ 	 &>a{display: block; 
+ 	 	width: 100%; height: 80px;
+ 	 	line-height: 80px; text-align: center;
+ 	 	font-size: 1.4rem; font-weight: bold;
+ 	 	color:#fff;
+ 	 &:hover,&:focus{color: #ff0;}}}
+ 	&>dd{display: none;
+ 		width: auto; margin: 20px 0;
+ 	 &>a{display: block; width: auto;
+ 	 height: 40px; text-indent: 45px; color:nth($mc,3);
+ 	 margin-top: 5px;
+ 	 line-height: 40px;
+ 	  &:hover,&:focus{color: #ff0;}}}}}
+ //검색창
+ .search_box{display: none; position:absolute; top: 80px; left:0; right: 0;
+  width: 100%; height: 80px; margin: auto; padding: 20px; box-sizing:border-box;
+  background-color: rgba(nth($mc, 3), 1);
+ fieldset{width: 60%; height: 40px; margin: auto;
+  padding: 2px; /* box-sizing:border-box; */ background-color: #fff;}
+ #siteName {float: left; width: 15%; height: 40px; margin-right: 2%;
+  text-indent: 8px; font-size: 1.5rem;}
+ #searchBar{float: left; width: 75%; height: 40px; font-size: 1.5rem; }
+ .search_icon{float:right;width: 5%; height: 40px; background-color: transparent;
+  color: nth($mc, 1); font-size: 2.5rem;}}
+
+ //bugur_btn open
+ .gnb_cp .burgur{position: absolute; top: 50%; left: 0;
+ 	width: 100%; height: 8px; transform:translate(0,-50%);
+ 	border-radius: 4px; background-color: rgba(nth($mc, 3), 1);
+ 	&:before,&::before,&:after,&::after{content: " ";
+ 		position: absolute; left: 0;
+ 		width: 100%; height: 8px;
+ 		border-radius: 4px; 
+ 		background-color: rgba(nth($mc, 3), 1);
+ 		transition: all 800ms ease;}
+ 	&:before,&::before{top:-16px;}
+ 	&:after,&::after{top:16px}}
+ .gnb_cp .open_btn>.act, .gnb_cp .close_btn>.act
+ {background-color: rgba(nth($mc, 3), 0);
+  &:before,&::before{top:0; transform:rotate(45deg);}
+	&:after,&::after{top:0; transform:rotate(-45deg);}}
+//bugur_btn close
+ .close_btn{ position:relative; 
+ 	width: 50px; height: 50px; float:right;
+ 	button{width: 100%; height: 100%; background-color: transparent;}}
+// 핸드폰에서 버튼클릭시 네비나오기
+ .all_gnb{display: none;
+ 	position: absolute; top: 0; right: 0; margin:auto;
+ 	padding: 20px; box-sizing:border-box;
+ 	width: 60%; height: 100vh; background-color: rgba(nth($mc, 4), 0.9);}
+ .nav_site{width: 150px; height: 100%; margin: auto;
+ 	padding: 10px 10vw; 
+  .btn_nav{width: 100%; height: 100%; margin-top: 50px;
+  	li{width: 100%;
+  	 dl{width: 100%; 
+  	  dt{width: 100%; font-size: 1.5rem; margin-top: 10px;
+        border-bottom: 2px solid nth($mc,3); 
+  	   a{display: block; color: nth($mc,3);}}
+  	  dd{width: 100%;
+  	   a{display: block; width: 100%; height: 100%;
+  	   	color: nth($mc,3);
+  	   	font-size: 1rem; text-indent: 10px;}}}}}}
+/* 공통 // adBox 광고박스 ================== */
+#contentBox{width: 100%; height: auto;}
+#adBox{position: relative; width: 100%; height: 100vh;
+	margin-top: 80px; @include bbg(7);}
+ .main_btn>.arrow{position: absolute; z-index: 300; top: 0; bottom: 0; 
+ 	margin: auto; transform: translateY(-50%);
+ 	width: 80px; height: 80px;
+   & > button{width: 100%; height: 100%; 
+   	padding: 0; @include bbg(1); border-radius: 100%; 
+    & > i{width: 100%; height: 100%; 
+    	font-size: 4rem; line-height: 80px; 
+    	text-align: center; color: nth($bc,7);}}}
+ .next_btn{right: 10%;}
+ .prev_btn{left: 10%;}
+
+/* 공통 // brandBox 제품소개&브랜드박스 ================== */
+// #brandBox{}
+ .brand_area{position:relative; overflow: hidden;
+  width: 100%; height: 55vh; margin-top: 60px;}
+ 
+ .brand_btn>.arrow{position: absolute; z-index: 300; top: 0; bottom: 0; 
+  margin: auto; width: 80px; height: 80px;
+   & > button{width: 100%; height: 100%; 
+    padding: 0; @include bbg(1); border-radius: 100%; 
+    & > i{width: 100%; height: 100%; 
+      font-size: 4rem; line-height: 80px; 
+      text-align: center; color: nth($bc,7);}}}
+
+ .brand_box{
+   position: relative; top: 50%; left:50%; transform:translate(-50%, -50%); 
+   margin:auto; height: auto; 
+  &>li{float: left;
+  	width: 200px; height: 280px; transform:scale(1);
+  	margin: 0 20px; background-position: 50% 50%;
+    background-size: auto 100%; background-repeat: no-repeat; 
+    transition:all 500ms linear;
+    &:after,&::after{content: " "; 
+      position: absolute; left: 0; top: 0;
+      width: 100%; height: 100%; background-color: rgba(nth($mc,4),0.7);}
+    &.action{
+      &:after,&::after{display:none;}
+      transform:scale(1.3); margin:0 40px;
+      a{transform:scale(0.8);}}//.action
+		& a{display: block; width: 50px; height: 50px;
+			margin: auto; margin-top: 110%; 
+      text-align: center; color: nth($mc,4);
+      line-height: 50px; font-size: 1.5rem;
+			background-color: rgba(nth($mc,3),0.7); border-radius: 10px;
+    }}}// .brand_box
+
+/* 공통 // storyBox 스토리박스 ================== */
+#storyBox{position: relative; }
+.story_area{overflow: hidden;
+  width: 90%; height: auto; margin: auto;}
+
+.story_link{width: 100%; height: auto; margin: 15px 0 30px; text-align: center;
+ li{display:inline-block; position:relative;
+  width: auto; height: auto;
+  margin-right: 20px;
+ &:after,&::after{content: " "; position: absolute; right: -12px; 
+  top:0; bottom: 0; margin: auto;
+  width: 0; height: 60%; border-left: 2px solid #333;}
+ &.action>a{color:nth($mc,1); font-weight: bold;}
+ &:last-child{margin-right: 0;
+  &:after,&::after{display: none;}}}}
+.cs_wrap{ width: 100%; height: auto;
+  dl{width: 100%; height: auto;
+  &>dt{display: none;}
+  &>dd{float: left;
+    width: (100% - 4)/3; height: 400px; margin-right: 2%;
+    background-position: 50% 50%; background-repeat: no-repeat;
+    background-size: 100% auto;}
+  &>dd:last-child{margin-right: 0;}}}
+
+/* 공통 // companyBox 회사정보&컴파니박스 ================== */
+#companyBox{position: relative;}
+.conts_wrap{position:absolute; top: 60%; left:0; right: 0; margin: auto;
+  transform:translateY(-50%);
+  width: 80%; height: auto; }
+.company_area{width: 100%; height: auto; 
+	&>li{
+    float: left; position: relative;
+		width: 30%; height: 250px; 
+		margin-right: 5%;
+   &:nth-child(1)>a{background: url($url + 'main/business.jpg') no-repeat 50% 50% / cover;}
+   &:nth-child(2)>a{background: url($url + 'main/history.jpg') no-repeat 50% 50% / cover;}
+   &:nth-child(3)>a{background: url($url + 'main/social.jpg') no-repeat 50% 50% / cover;}
+   &:last-child{margin-right: 0;}
+   &>a.act{transition:all 1000ms ease; border-radius: 100%;
+   >span{line-height: 18px;
+      width: 100px; height: auto; 
+      padding: 10px 30px;}}
+	 &>a{display:block; 
+	 	width: 100%; height: 100%; @include bbg(2);
+	 	>span{display:block; position: absolute; top:50%; transform: translateY(-50%);
+      right:0; left:0; margin:auto;
+      width: 100%; height: 100%;
+      background-color: rgba(nth($mc, 4), 0.9);
+      text-align: center; line-height: 250px; color: nth($mc,3);
+      font-size:25px;}}}}
+
+/* 공통 // snsBox SNS박스 ================== */
+#snsBox{overflow: hidden; }
+.sns_area{width: 70%; height: 70%;
+  position:relative; margin: auto; margin-top: 50px;
+ ul{width: auto; height: auto;
+ li{position: absolute; width: 24%; height: 45%; background-color: #f03;
+  @include bbg(4);
+ // &:nth-child(3),&:last-child{margin-right: 0;}
+
+ &:nth-child(1){top:0; left: 0;}
+ &:nth-child(2){bottom: 0; left: 0;}
+ &:nth-child(3){width: 48%; height: 100%; top:0; right: 0; left: 0; margin: auto;
+  dt{top: -30px; width: 60px; height: 60px;}}
+ &:nth-child(4){top:0; right:0;}
+ &:nth-child(5){bottom:0; right: 0;}
+
+ &:nth-child(1)>a{background: url($url + 'main_sns/main_sns_01.jfif') repeat-x 50% 50% / cover;}
+ &:nth-child(2)>a{background: url($url + 'main_sns/main_sns_02.jfif') repeat-x 50% 50% / cover;}
+ &:nth-child(3)>a{background: url($url + 'main_sns/main_sns_03.jfif') repeat-x 50% 50% / cover;}
+ &:nth-child(4)>a{background: url($url + 'main_sns/main_sns_04.jfif') repeat-x 50% 50% / cover;}
+ &:nth-child(5)>a{background: url($url + 'main_sns/main_sns_05.jfif') repeat-x 50% 50% / cover;}
+ a{display: block; width: 100%; height: 100%;
+  dl{position:relative; width: 100%;height: 100px;
+   dt{position:absolute; top: -25px; left: 0; right: 0; margin: auto;
+    width: 50px; height: 50%; background-color: #fff;
+    background-position: 50% 50%; background-size: 100% auto;
+    background-repeat: no-repeat; border-radius: 100%;}}}}}}
+.sns_area li:nth-child(1) dt{background-image: url($url + 'sns_logo/insta_logo.png')}
+.sns_area li:nth-child(2) dt{background-image: url($url + 'sns_logo/youtube_logo.png')}
+.sns_area li:nth-child(3) dt{background-color: #4072b8; background-size: 105% auto; background-image: url($url + 'sns_logo/fb_logo.png')}
+.sns_area li:nth-child(4) dt{background-image: url($url + 'sns_logo/twitter_logo.png')}
+.sns_area li:nth-child(5) dt{background-image: url($url + 'sns_logo/insta_logo.png')}
+
+
+/* 공통 // footBox 풋박스 ================== */
+#footBox{position:relative;
+  width: 100%; height: auto; padding: 20px 0;@include mc(1);
+ &:before{content: " "; position:absolute; left: 0; top:-33px;
+  width: 100%; height: 42px;
+  background: url($url + 'background/footbox_bg.png') repeat-x 50% 50% / auto 61%;}}
+.foot_area{width: 100%; max-width: 1000px; height: auto; margin: auto;}
+.link_area{width: auto; height: auto; padding-top: 10px; box-sizing:border-box; text-align: center;
+ &>li{display:inline-block; 
+  position:relative; margin-right: 15px; 
+ 	&:last-child{margin-right: 0;}
+  &:before,&::before{content:" "; position: absolute; 
+    top:0; bottom:0; left: -10px; margin: auto;
+    width: 0; height: 70%; border-right: 2px solid nth($mc,3);}
+  &:first-child:before,&:first-child::before{display: none;}
+  &>a{display:block; width: 100%; height: 100%; color: nth($bc,1);}}}
+.foot_ls{width: 100%; height: auto; margin-top: 20px;}
+.sns_link{width: auto; height: auto; margin: auto; text-align: center;
+ &>li{display: inline-block; width: auto; height: auto; margin-right: 20px;
+ 	padding: 2px 5px;
+  &:nth-child(1)>a{background-color: #4072b8;background-image: url($url + 'sns_logo/fb_logo.png'); background-size: 105% auto; }
+  &:nth-child(2)>a{background-image: url($url + 'sns_logo/insta_logo.png')}
+  &:nth-child(3)>a{background-image: url($url + 'sns_logo/twitter_logo.png')}
+  &:nth-child(4)>a{background-image: url($url + 'sns_logo/youtube_logo.png')}
+  &>a{display:block; overflow:hidden; width: 50px; height: 50px; 
+    @include bbg(1);
+  	border-radius: 100%; background-position: 50% 50%; background-size: cover;
+    background-repeat: no-repeat;}}}
+address {width: 100%; max-width: 1200px; height: auto; 
+	margin: auto; margin-top: 10px;
+&>p{width: 100%; height: auto; text-align: center; color: nth($bc,1);
+  br{display: none;}
+&:nth-of-type(3){margin-top: 20px;}}}
+
+// bubble
+// $val : #{random(100)}px #{random(100)}px 0 rgba(#{random(255)}, #{random(255)},#{random(255)},#{random(10)/10});
+
+//   $value: '#{random(2000)}px #{random(2000)}px #FFF';
+// @function multi ($n){  
+//   @return  
+//    @for $i from 2 through $n{
+//     $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF'
+//   }
+// } 
+
+
+.move_bubble{position: fixed; width: 100%; height: 0; bottom:200px; z-index: -1; 
+  .bub{position:fixed; bottom:-100px; background-color: #f00; border-radius:100%;}
+}
+
+@keyframes bubble {
+  50%{transform:translateX(-40%) scale(0.6)}
+  80%{transform:translateX(20%) scale(0.4)}
+  100%{bottom:100%; transform:scale(0.2); opacity: 0.2;}
+}
