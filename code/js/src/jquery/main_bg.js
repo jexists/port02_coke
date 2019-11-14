@@ -10,7 +10,7 @@ for(let i=1; i<=100 ;i++){
 	 let a = Math.random()*100;
 	 let b = Math.round(a);
 	 // console.log(b)
-	bubble_wrap.append('<div class="bub bub_'+ i +'"></div>');
+	bubble_wrap.append('<span class="bub bub_'+ i +'"></span>');
 	// bubble_wrap.children('div').eq(i).css({left:b+'px', width:b+'px',height:b+'px',animation:'bubble 9s ease-in infinite'})
 }
 // for(let i=0; i<=100 ;i++){
@@ -33,7 +33,7 @@ for(let i=0; i<=100 ;i++){
 	 // console.log(b)
 	 let c = r(50)+10;
 	 let e = r(4);
-	bubble_wrap.children('div').eq(i).css({left:r(100)+'%', width:c+'px',height:c+'px',opacity:r(100)/100,animation:`bubble ${r(100)+5}s ${easing[e]} ${count[e]}`})
+	bubble_wrap.children('span').eq(i).css({left:r(100)+'%', width:c+'px',height:c+'px',opacity:r(100)/100,animation:`bubble ${r(100)+5}s ${easing[e]} ${count[e]}`})
 }
 
 
