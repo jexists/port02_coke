@@ -119,8 +119,8 @@ $url: '../img/';
 /* 공통 // adBox 광고박스 ================== */
 #contentBox{width: 100%; height: auto;}
 #adBox{position: relative; width: 100%; height: 100vh;}
- .main_btn>.arrow{position: absolute; z-index: 300; top: 0; bottom: 0; 
- 	margin: auto; transform: translateY(-50%);
+ .main_btn>.arrow{position: absolute; z-index: 300; top: 50%;
+ 	margin: auto; /* transform: translateY(-30%); */
  	width: 80px; height: 80px;
    & > button{width: 100%; height: 100%; 
    	padding: 0; @include bbg(1); border-radius: 100%; 
@@ -131,7 +131,7 @@ $url: '../img/';
  .prev_btn{left: 10%;}
  #slide_wrap{height: 100%;
   div{position: relative; float: left; 
-    height: 100vh;background-repeat: no-repeat; background-position: 50% 100%; background-size: cover;
+    height: 100vh; background-repeat: no-repeat; background-position: 50% 100%; background-size: cover;
    .Mimg_01{position: absolute; left:0; right:0; bottom:0; margin: auto; z-index: 1;
     width: 350px;height: 680px;}
    .tt{position: absolute; left: 28%; top: 38%; font-size: 1.5rem; transform:rotate(-4deg);
