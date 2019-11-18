@@ -9,7 +9,9 @@
 
 .box_text { width: 80%; min-width: 350px; height: auto; margin: auto; font-size: 18px; font-size: 1.125rem; text-align: center; word-break: keep-all; }
 
-.more_btn { display: block; width: 150px; height: 30px; margin: auto; margin-top: 30px; border-radius: 5px; background-color: #888; text-align: center; line-height: 29px; color: #fff; }
+.more_btn { display: block; width: 150px; height: 30px; margin: auto; margin-top: 30px; border-radius: 5px; background-color: #333; text-align: center; line-height: 29px; color: #fff; }
+
+.more_btn:hover { background-color: #f00; }
 
 .cp { display: none; }
 
@@ -22,9 +24,11 @@
 
 .head_area { width: 100%; height: 100%; min-width: 250px; margin: auto; padding: 20px 30px; box-sizing: border-box; background-color: #f00; }
 
-h1 { float: left; width: 130px; height: 40px; background: url("../img/mobile/logo_mobile.gif") no-repeat 50% 50%/cover; }
+h1 { float: left; width: 130px; height: 40px; }
 
-h1 > a { display: block; width: 100%; height: 100%; }
+h1 > a { display: block; width: 100%; height: 100%; background: url("../img/mobile/logo_mobile.gif") no-repeat 50% 50%/cover; }
+
+h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 
 .gnb_cp { float: right; width: 45px; height: 40px; }
 
@@ -48,15 +52,21 @@ h1 > a { display: block; width: 100%; height: 100%; }
 
 .navList > li > dl > dt { width: auto; height: auto; }
 
+.navList > li > dl > dt.act a { color: #ff0; }
+
 .navList > li > dl > dt > a { display: block; width: 100%; height: 80px; line-height: 80px; text-align: center; font-size: 1.4rem; font-weight: bold; color: #fff; }
 
-.navList > li > dl > dt > a:hover, .navList > li > dl > dt > a:focus { color: #ff0; }
+.navList > li > dl > dt > a:hover, .navList > li > dl > dt > a:focus { color: #ff0; outline: none; }
 
-.navList > li > dl > dd { display: none; width: auto; margin: 20px 0; }
+.navList > li > dl > dd { display: none; width: auto; margin: 20px 0; outline: none; }
 
 .navList > li > dl > dd > a { display: block; width: auto; height: 40px; text-indent: 45px; color: #fff; margin-top: 5px; line-height: 40px; }
 
-.navList > li > dl > dd > a:hover, .navList > li > dl > dd > a:focus { color: #ff0; }
+.navList > li > dl > dd > a:hover, .navList > li > dl > dd > a:focus { color: #ff0; outline: none; }
+
+#headBox button:hover { background-color: transparent; transform: scale(1.1); }
+
+#headBox button:focus { outline: none; transform: scale(1.1); }
 
 .search_box { display: none; position: absolute; top: 80px; left: 0; right: 0; width: 100%; height: 80px; margin: auto; padding: 20px; box-sizing: border-box; background-color: white; }
 
@@ -123,17 +133,13 @@ h1 > a { display: block; width: 100%; height: 100%; }
 
 #slide_wrap div { position: relative; float: left; height: 100vh; background-repeat: no-repeat; background-position: 50% 100%; background-size: cover; }
 
-#slide_wrap div .Mimg_01 { position: absolute; left: 0; right: 0; bottom: 0; margin: auto; z-index: 1; width: 350px; height: 680px; }
+#slide_wrap div .Mimg_01 { position: absolute; left: 0; right: 0; bottom: 0; margin: auto; z-index: 1; /* width: 30vw; max-width: 350px; height: 50vw; max-height: 680px; */ }
 
-#slide_wrap div .tt { position: absolute; left: 28%; top: 38%; font-size: 1.5rem; transform: rotate(-4deg); padding: 5px 18px; border-radius: 15px; color: #fff; background-color: #333; }
+#slide_wrap div .tt { position: absolute; /* left: 20%; top: 37%; font-size: 1.5rem; */ transform: rotate(-4deg); padding: 5px 18px; border-radius: 15px; color: #fff; background-color: #333; }
 
-#slide_wrap div .td { position: absolute; left: 50%; top: 65%; transform: translate(-50%, -50%); text-transform: uppercase; font-weight: bold; font-size: 10rem; text-align: center; }
+#slide_wrap div .td { position: absolute; /* left:50%; top: 65%; */ transform: translate(-50%, -50%); text-transform: uppercase; font-weight: bold; /* font-size: 10rem; */ text-align: center; }
 
-#slide_wrap div .td span { display: block; width: 100%; height: auto; }
-
-#slide_wrap div .td span:first-child { text-indent: -400px; }
-
-#slide_wrap div .td span:last-child { text-indent: 620px; }
+#slide_wrap div .td span { display: block; width: 100%; height: auto; /* &:first-child{text-indent:-400px;} &:last-child{text-indent:620px;} */ }
 
 /* 공통 // brandBox 제품소개&브랜드박스 ================== */
 .brand_area { position: relative; overflow: hidden; width: 100%; height: 55vh; margin-top: 60px; }
@@ -169,7 +175,7 @@ h1 > a { display: block; width: 100%; height: 100%; }
 
 .story_link li:after, .story_link li::after { content: " "; position: absolute; right: -12px; top: 0; bottom: 0; margin: auto; width: 0; height: 60%; border-left: 2px solid #333; }
 
-.story_link li.action > a { color: #f00; font-weight: bold; }
+.story_link li.action > a { color: #f00; font-weight: bold; font-size: 1.2rem; }
 
 .story_link li:last-child { margin-right: 0; }
 
@@ -310,7 +316,7 @@ address > p:nth-of-type(3) { margin-top: 20px; }
     transform: scale(0.2);
     opacity: 0.2; } }
 
-/* 모바일 480px~767px (280) =============== */
+/* 모바일 480px~767px (280) h:640 =============== */
 /* media screen and (max-width:767px) */
 @media screen and (max-width: 767px) { #wrap { min-width: 150px; overflow: hidden; }
   .box_text { font-size: 16px; font-size: 1rem; }
@@ -318,6 +324,11 @@ address > p:nth-of-type(3) { margin-top: 20px; }
   .search_open { display: none; }
   .more_btn { margin-top: 50px; }
   .cp { display: block; }
+  #slide_wrap div .Mimg_01 { left: -10%; width: 45%; min-width: 170px; max-width: 250px; height: 75%; min-height: 200px; max-height: 850px; }
+  #slide_wrap div .tt { left: 5%; top: 15%; font-size: 1.2rem; }
+  #slide_wrap div .td { left: 41%; top: 32%; font-size: 5rem; line-height: 75px; }
+  #slide_wrap div .td span:first-child { text-indent: -20vw; }
+  #slide_wrap div .td span:last-child { text-indent: 43vw; }
   .box_size { padding: 25vw 0; }
   .brand_box > li { height: 300px; }
   .brand_box > li a { margin-top: 120%; }
@@ -344,10 +355,15 @@ address > p:nth-of-type(3) { margin-top: 20px; }
   address > p > br { display: block; } }
 
 /* // media screen 모바일 */
-/* 패드 768px~1279px =============== */
+/* 패드 768px~1279px  h:1024 =============== */
 /* media screen and (min-width: 768px) and (max-width:1279px) */
 @media screen and (min-width: 768px) and (max-width: 1279px) { .navList { display: none; }
   .search_open { display: none; }
+  #slide_wrap div .Mimg_01 { width: 25%; min-width: 280px; max-width: 350px; height: 45%; min-height: 600px; max-height: 680px; }
+  #slide_wrap div .tt { left: 23%; top: 30%; font-size: 1.2rem; }
+  #slide_wrap div .td { left: 50%; top: 58%; font-size: 7rem; }
+  #slide_wrap div .td span:first-child { text-indent: -20vw; }
+  #slide_wrap div .td span:last-child { text-indent: 43vw; }
   .story_link { width: 100%; height: auto; margin: 15px 0 30px; text-align: center; }
   .story_link li { display: inline-block; position: relative; width: auto; height: auto; margin-right: 20px; }
   .story_link li:after, .story_link li::after { content: " "; position: absolute; right: -12px; top: 0; bottom: 0; margin: auto; width: 0; height: 60%; border-left: 2px solid #333; }
@@ -374,15 +390,20 @@ address > p:nth-of-type(3) { margin-top: 20px; }
   .sns_area ul li a dl { position: relative; width: 100%; height: 100px; }
   .sns_area ul li a dl dt { position: absolute; top: -25px; left: 0; right: 0; margin: auto; width: 50px; height: 50%; border-radius: 100%; } }
 
-/* PC 1280px~1919px (1024)=============== */
+/* PC 1280px~1919px (1024) h:800=============== */
 /* media screen and (min-width: 1280px) */
-@media screen and (min-width: 1280px) { .gnb_cp { display: none; }
+@media screen and (min-width: 1280px) and (max-width: 1919px) { .gnb_cp { display: none; }
   .head_area { max-width: 1024px; }
+  #slide_wrap div .Mimg_01 { width: 50%; min-width: 250px; max-width: 300px; height: 100%; max-height: 600px; }
+  #slide_wrap div .tt { left: 30%; top: 28%; font-size: 1.5rem; }
+  #slide_wrap div .td { left: 50%; top: 58%; font-size: 7rem; }
+  #slide_wrap div .td span:first-child { text-indent: -20vw; }
+  #slide_wrap div .td span:last-child { text-indent: 40vw; }
   #brandBox > p { width: 30%; }
   .cs_wrap > dd { height: 350px; } }
 
 /* TV 1920px~ =============== */
-/* media screen and (min-width: 1920px) */
+/* media screen and (min-width: 1920px) h:900 */
 @media screen and (min-width: 1920px) { .head_area { max-width: 1280px; }
   .gnb_cp { display: none; }
   #brandBox > p { width: 20%; height: auto; } }

@@ -11,3 +11,5 @@ $mc: (#f00, #ff0, #fff, #333);
 	background-color:nth($bc, + $c);}
 @mixin mc($c){
 	background-color:nth($mc, + $c);}
+@mixin linkblock(){
+	display:block; width: 100%; height: 100%;}

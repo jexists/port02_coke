@@ -13,8 +13,9 @@ $url: '../img/';
   font-size: 1.125rem; text-align: center; word-break: keep-all;}
  .more_btn{display:block; width: 150px; height: 30px; margin: auto;
     margin-top: 30px; border-radius: 5px;
-    @include bbg(8); text-align: center;
-    line-height: 29px; color: nth($bc,1)}
+    @include mc(4); text-align: center;
+    line-height: 29px; color: nth($bc,1);
+    &:hover{background-color: #f00;}}
   .cp{display: none;}
 /* 공통 // headBox 해더박스 ================== */
 #headBox{position: fixed; z-index: 500; top: 0; left: 0;
@@ -29,8 +30,9 @@ $url: '../img/';
  	margin: auto; padding: 20px 30px;
  	box-sizing: border-box; @include mc(1);}
 	h1{float: left; width: 130px; height: 40px;
-	background: url($url + 'mobile/logo_mobile.gif') no-repeat 50% 50% / cover;
-	 &>a{ @include linkblock(); }}
+	 &>a{ @include linkblock();
+    background: url($url + 'mobile/logo_mobile.gif') no-repeat 50% 50% / cover;
+   &:hover,&:focus{transform:scale(1.1); outline: none;}}}
 	.gnb_cp{float: right; width: 45px; height: 40px; }
   .search_open,.search_close{float: right; width: 45px; height: 40px; font-size: 2.5rem;
    background-color: transparent;
@@ -54,23 +56,26 @@ $url: '../img/';
  	margin: 0 5px; 
  	&>dl{width: auto; height: auto;
  	&>dt{width: auto; height: auto;
+   &.act a{color: #ff0;}
  	 &>a{display: block; 
  	 	width: 100%; height: 80px;
  	 	line-height: 80px; text-align: center;
  	 	font-size: 1.4rem; font-weight: bold;
  	 	color:#fff;
- 	 &:hover,&:focus{color: #ff0;}}}
+ 	 &:hover,&:focus,{color: #ff0; outline: none;}}}
  	&>dd{display: none;
- 		width: auto; margin: 20px 0;
+ 		width: auto; margin: 20px 0; outline: none;
  	 &>a{display: block; width: auto;
  	 height: 40px; text-indent: 45px; color:nth($mc,3);
  	 margin-top: 5px;
  	 line-height: 40px;
- 	  &:hover,&:focus{color: #ff0;}}}}}
+ 	  &:hover,&:focus{color: #ff0; outline: none;}}}}}
  //검색창
+ #headBox button:hover {background-color: transparent; transform:scale(1.1);}
+ #headBox button:focus {outline:none; transform:scale(1.1);}
  .search_box{display: none; position:absolute; top: 80px; left:0; right: 0;
   width: 100%; height: 80px; margin: auto; padding: 20px; box-sizing:border-box;
-  background-color: rgba(nth($mc, 3), 1);
+  background-color: rgba(nth($mc, 3), 1); 
  fieldset{width: 60%; height: 40px; margin: auto;
   padding: 2px; /* box-sizing:border-box; */ background-color: #fff;}
  #siteName {float: left; width: 15%; height: 40px; margin-right: 2%;
@@ -133,15 +138,17 @@ $url: '../img/';
   div{position: relative; float: left; 
     height: 100vh; background-repeat: no-repeat; background-position: 50% 100%; background-size: cover;
    .Mimg_01{position: absolute; left:0; right:0; bottom:0; margin: auto; z-index: 1;
-    width: 350px;height: 680px;}
-   .tt{position: absolute; left: 28%; top: 38%; font-size: 1.5rem; transform:rotate(-4deg);
+    /* width: 30vw; max-width: 350px; height: 50vw; max-height: 680px; */}
+   .tt{position: absolute; /* left: 20%; top: 37%; font-size: 1.5rem; */ 
+    transform:rotate(-4deg);
     padding: 5px 18px; border-radius: 15px; color: nth($mc,3);
     background-color: nth($mc,4);}
-   .td{position: absolute; left:50%; top: 65%; transform:translate(-50%, -50%);
-      text-transform: uppercase; font-weight: bold; font-size: 10rem; text-align: center;
+   .td{position: absolute; /* left:50%; top: 65%; */ transform:translate(-50%, -50%);
+      text-transform: uppercase; font-weight: bold; /* font-size: 10rem; */ 
+      text-align: center;
     span{display: block; width: 100%; height: auto; 
-      &:first-child{text-indent:-400px;}
-      &:last-child{text-indent:620px;}}}}}
+      /* &:first-child{text-indent:-400px;}
+      &:last-child{text-indent:620px;} */}}}}
 
 /* 공통 // brandBox 제품소개&브랜드박스 ================== */
 // #brandBox{}
@@ -190,7 +197,7 @@ $url: '../img/';
  &:after,&::after{content: " "; position: absolute; right: -12px; 
   top:0; bottom: 0; margin: auto;
   width: 0; height: 60%; border-left: 2px solid #333;}
- &.action>a{color:nth($mc,1); font-weight: bold;}
+ &.action>a{color:nth($mc,1); font-weight: bold; font-size: 1.2rem;}
  &:last-child{margin-right: 0;
   &:after,&::after{display: none;}}}}
 .cs_wrap{ width: 100%; height: auto;

@@ -1,6 +1,6 @@
 // coke_01_pad.scss
 
-/* 패드 768px~1279px =============== */
+/* 패드 768px~1279px  h:1024 =============== */
 /* media screen and (min-width: 768px) and (max-width:1279px) */
 @media screen and (min-width: 768px) and (max-width:1279px) {
 // #wrap
@@ -8,7 +8,19 @@
  .navList{display: none;}
  .search_open{display: none;}
 // #contentBox
+
 // #adBox
+ #slide_wrap{
+  div{
+   .Mimg_01 {
+    width: 25%; min-width: 280px; max-width: 350px; 
+    height: 45%; min-height: 600px; max-height: 680px;}
+    .tt{left: 23%; top: 30%; font-size: 1.2rem;}
+    .td{left: 50%; top: 58%;
+      font-size: 7rem;
+     span{
+       &:first-child{text-indent:-20vw;}
+       &:last-child{text-indent:43vw;}}}}}
 // #brandBox
 
 // #storyBox

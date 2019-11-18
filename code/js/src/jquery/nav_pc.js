@@ -12,6 +12,7 @@ const ddLk = navDd.children('a');
 const openSearch = gnb.find('.search_open');
 const closeSearch = gnb.find('.search_close');
 const searchBox = gnb.find('.search_box');
+const btn = gnb.find('button');
 const rotate = {transition: 'all 500ms ease', transform:'rotate(360deg)'};
 const rotateZero = {transform:'rotate(0deg)'};
 const scale = {transition: 'all 500ms ease', transform:'scale(1.2)'};
@@ -19,10 +20,13 @@ const scaleZero = {transition: 'all 500ms ease', transform:'scale(1)'};
 
 let NavUp = function(t){
 	navDd.stop().slideUp();
+	navDt.removeClass('act');
 	t.closest(headBox).removeClass('act');
 };
 let NavDown = function(t){
 	navDd.stop().slideDown();
+	t.parents('li').siblings().find('dt').removeClass('act');
+	t.parents('li').find('dt').addClass('act');
 	t.closest(headBox).addClass('act');
 };
 
@@ -30,10 +34,17 @@ nav.on('mouseenter',function(){
 	NavDown($(this));
 });
 
+ddLk.on('mouseenter',function(){
+	$(this).parents('li').siblings().find('dt').removeClass('act');
+	$(this).parents('li').find('dt').addClass('act');
+});
+ddLk.on('mouseleave',function(){
+	navDt.removeClass('act');
+});
+
 nav.on('mouseleave',function(){
 	NavUp($(this));
 });
-
 
 dtLk.on('focus',function(){
 	NavDown($(this));
@@ -42,7 +53,15 @@ dtLk.on('focus',function(){
  });
 });
 
+btn.on('mouseenter',function(e){
+	e.preventDefault();
+	$(this).css({transform:'scale(1.1)'})
+});
 
+btn.on('mouseleave',function(e){
+	e.preventDefault();
+	$(this).css({transform:'scale(1)'})
+});
 
 openSearch.on('click',function(e){
 	e.preventDefault();

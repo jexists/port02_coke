@@ -1,0 +1,57 @@
+<!-- header.html -->
+
+<div class="head_area">
+ <h1><a href="../index.html"><span class="hd">코카콜라</span></a></h1>
+ <nav id="gnb">
+   <h2 class="hd">네비게이션 및 검색창</h2>
+   <button class="search_open">
+     <span class="hd">코카콜라 검색창 버튼</span>
+     <i class="fas fa-search"></i>
+   </button>
+   <button type="button" class="search_close">
+     <span class="hd">코카콜라 검색창 닫기 버튼</span>
+     <i class="fas fa-times"></i>
+   </button> 
+   <div class="search_box">
+     <h3 class="hd">코카콜라 검색창</h3>
+    <form action="#" method="get" class="site">
+     <fieldset>
+      <legend class="hd">코카콜라 검색창입니다.</legend>
+      <label for="siteName" id="site" class="hd">
+        검색창 카테고리를 선택하세요
+      </label>
+      <select name="site" id="siteName">
+        <option value="전체">전체</option>
+        <option value="브랜드">브랜드</option>
+        <option value="제품">제품</option>
+        <option value="스토리">스토리</option>
+        <option value="이벤트">이벤트</option>
+      </select>
+       <label for="searchBar" class="hd">검색창</label>
+       <input type="search" id="searchBar" name="searchBar"
+        value="" placeholder="코카콜라 정보, 검색하세요!"/>
+     <button type="submit" class="search_icon">
+      <i class="fas fa-search"></i>
+     </button>
+     </fieldset>
+    </form>
+   </div>
+   <div class="gnb_cp">
+    <div class="open_btn">
+    <button type="button">
+     <span class="hd">전체메뉴 확인 버튼</span>
+    </button>
+     <span class="burgur"></span>
+    </div>
+    <div class="all_gnb">
+     <div class="close_btn">
+      <button type="button">
+       <span class="hd">전체 메뉴 닫기 버튼</span>
+      </button>
+       <span class="burgur"></span>
+     </div>
+     <div class="nav_site"></div>
+   </div>  
+   </div> <!-- //gnb_cp -->
+ </nav> <!-- //id="gnb" -->
+</div> <!-- // head_area -->

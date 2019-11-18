@@ -1,5 +1,5 @@
 /* TV 1920px~ =============== */
-/* media screen and (min-width: 1920px) */
-@media screen and (min-width: 1920px) { /* line 8, scss/src/coke_01_tv.scss */ .head_area { max-width: 1280px; }
-  /* line 9, scss/src/coke_01_tv.scss */ .gnb_cp { display: none; }
-  /* line 13, scss/src/coke_01_tv.scss */ #brandBox > p { width: 20%; height: auto; } }
+/* media screen and (min-width: 1920px) h:900 */
+@media screen and (min-width: 1920px) { .head_area { max-width: 1280px; }
+  .gnb_cp { display: none; }
+  #brandBox > p { width: 20%; height: auto; } }

@@ -1,0 +1,141 @@
+
+@import "../src/coke_01_var";
+$url: '../img/';
+/* 공통 // headBox 해더박스 ================== */
+#headBox{position: fixed; z-index: 500; top: 0; left: 0;
+	width: 100%; height: 80px;
+	@include mc(1);
+	&:after, &::after{display: none; }
+	 &.act:after,&.act::after{content: " "; display: block;
+	position:absolute; top:80px; left:0; z-index: 1;
+	 	width: 100vw; height: 0;
+	 	border-bottom: 1px solid #fff;}}
+ .head_area{@include whp; min-width: 250px; 
+ 	margin: auto; padding: 20px 30px;
+ 	box-sizing: border-box; @include mc(1);}
+	h1{float: left; width: 130px; height: 40px;
+	background: url($url + 'mobile/logo_mobile.gif') no-repeat 50% 50% / cover;
+	 &>a{ @include linkblock(); }}
+	.gnb_cp{float: right; width: 45px; height: 40px; }
+  .search_open,.search_close{float: right; width: 45px; height: 40px; font-size: 2.5rem;
+   background-color: transparent;
+   text-align: center; line-height: 40px; color: nth($mc,3)}
+  .search_close{display: none;}
+ .open_btn {display: block; position: relative;
+  width: 100%; height: 100%;
+	button{width: 100%; height: 100%; background-color: transparent;}} 
+ .navList{position: absolute; top: 0; left:75px; right:0; 
+ 	margin:auto; @include mc(1);
+ 	width: 700px; height: auto; 
+ 	&:before,&::before{content:" "; 
+ 		display:block; 
+ 		position:absolute; z-index: -1;
+ 		top: 0; left: 50%; margin-left: -60vw;
+ 		width: 120vw; height: 100%;
+ 		background-color: inherit;}
+ 	&:after,&::after{content:" "; display: block;
+ 		width: 0; height: 0; clear:both;}}
+ .navList>li{float: left; width:23%; height: auto;
+ 	margin: 0 5px; 
+ 	&>dl{width: auto; height: auto;
+ 	&>dt{width: auto; height: auto;
+ 	 &>a{display: block; 
+ 	 	width: 100%; height: 80px;
+ 	 	line-height: 80px; text-align: center;
+ 	 	font-size: 1.4rem; font-weight: bold;
+ 	 	color:#fff;
+ 	 &:hover,&:focus{color: #ff0;}}}
+ 	&>dd{display: none;
+ 		width: auto; margin: 20px 0;
+ 	 &>a{display: block; width: auto;
+ 	 height: 40px; text-indent: 45px; color:nth($mc,3);
+ 	 margin-top: 5px;
+ 	 line-height: 40px;
+ 	  &:hover,&:focus{color: #ff0;}}}}}
+ //검색창
+ .search_box{display: none; position:absolute; top: 80px; left:0; right: 0;
+  width: 100%; height: 80px; margin: auto; padding: 20px; box-sizing:border-box;
+  background-color: rgba(nth($mc, 3), 1);
+ fieldset{width: 60%; height: 40px; margin: auto;
+  padding: 2px; /* box-sizing:border-box; */ background-color: #fff;}
+ #siteName {float: left; width: 15%; height: 40px; margin-right: 2%;
+  text-indent: 8px; font-size: 1.5rem;}
+ #searchBar{float: left; width: 75%; height: 40px; font-size: 1.5rem; }
+ .search_icon{float:right;width: 5%; height: 40px; background-color: transparent;
+  color: nth($mc, 1); font-size: 2.5rem;}}
+
+ //bugur_btn open
+ .gnb_cp .burgur{position: absolute; top: 50%; left: 0;
+ 	width: 100%; height: 8px; transform:translate(0,-50%);
+ 	border-radius: 4px; background-color: rgba(nth($mc, 3), 1);
+ 	&:before,&::before,&:after,&::after{content: " ";
+ 		position: absolute; left: 0;
+ 		width: 100%; height: 8px;
+ 		border-radius: 4px; 
+ 		background-color: rgba(nth($mc, 3), 1);
+ 		transition: all 800ms ease;}
+ 	&:before,&::before{top:-16px;}
+ 	&:after,&::after{top:16px}}
+ .gnb_cp .open_btn>.act, .gnb_cp .close_btn>.act
+ {background-color: rgba(nth($mc, 3), 0);
+  &:before,&::before{top:0; transform:rotate(45deg);}
+	&:after,&::after{top:0; transform:rotate(-45deg);}}
+//bugur_btn close
+ .close_btn{ position:relative; 
+ 	width: 50px; height: 50px; float:right;
+ 	button{width: 100%; height: 100%; background-color: transparent;}}
+// 핸드폰에서 버튼클릭시 네비나오기
+ .all_gnb{display: none;
+ 	position: absolute; top: 0; right: 0; margin:auto;
+ 	padding: 20px; box-sizing:border-box;
+ 	width: 60%; height: 100vh; background-color: rgba(nth($mc, 4), 0.9);}
+ .nav_site{width: 150px; height: 100%; margin: auto;
+ 	padding: 10px 10vw; 
+  .btn_nav{width: 100%; height: 100%; margin-top: 50px;
+  	li{width: 100%;
+  	 dl{width: 100%; 
+  	  dt{width: 100%; font-size: 1.5rem; margin-top: 10px;
+        border-bottom: 2px solid nth($mc,3); 
+  	   a{display: block; color: nth($mc,3);}}
+  	  dd{width: 100%;
+  	   a{display: block; width: 100%; height: 100%;
+  	   	color: nth($mc,3);
+  	   	font-size: 1rem; text-indent: 10px;}}}}}}
+
+
+/* 모바일 480px~767px (280) h:640 =============== */
+/* media screen and (max-width:767px) */
+@media screen and (max-width:767px) {
+#wrap{min-width: 150px; overflow: hidden;}
+ .box_text{font-size: 16px; font-size: 1rem;}
+ .navList{display: none;}
+ .search_open{display: none;}
+ .more_btn{margin-top: 50px;}
+ .cp{display: block;}
+
+}  /* // media screen 모바일 */
+
+/* 패드 768px~1279px  h:1024 =============== */
+/* media screen and (min-width: 768px) and (max-width:1279px) */
+@media screen and (min-width: 768px) and (max-width:1279px) {
+// #headBox
+ .navList{display: none;}
+ .search_open{display: none;}
+
+}
+
+/* PC 1280px~1919px (1024) h:800=============== */
+/* media screen and (min-width: 1280px) */
+@media screen and (min-width: 1280px) and (max-width: 1919px){
+// #headBox
+.gnb_cp{display: none;}
+.head_area{max-width: 1024px; }
+}
+
+/* TV 1920px~ =============== */
+/* media screen and (min-width: 1920px) h:900 */
+@media screen and (min-width: 1920px) {
+// #headBox
+ .head_area{max-width: 1280px;}
+ .gnb_cp{display: none;}
+}
