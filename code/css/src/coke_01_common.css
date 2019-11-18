@@ -6,7 +6,7 @@
 /* 공통 =============== */
 #wrap { width: 100%; height: auto; margin: auto; }
 
-.box_size { width: 100%; height: 100vh; min-height: 800px; padding: 100px 0; box-sizing: border-box; }
+.box_size { width: 100%; height: 100%; min-height: 700px; padding: 100px 0; box-sizing: border-box; }
 
 .box_title { width: 50%; height: auto; margin: 0 auto 10px; font-size: 35px; text-align: center; text-transform: uppercase; }
 
@@ -122,7 +122,7 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 /* 공통 // adBox 광고박스 ================== */
 #contentBox { width: 100%; height: auto; }
 
-#adBox { position: relative; width: 100%; height: 100vh; }
+#adBox { position: relative; width: 100%; height: 100vh; overflow: hidden; }
 
 .main_btn > .arrow { position: absolute; z-index: 300; top: 50%; margin: auto; /* transform: translateY(-30%); */ width: 80px; height: 80px; }
 
@@ -145,6 +145,13 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 #slide_wrap div .td { position: absolute; /* left:50%; top: 65%; */ transform: translate(-50%, -50%); text-transform: uppercase; font-weight: bold; /* font-size: 10rem; */ text-align: center; }
 
 #slide_wrap div .td span { display: block; width: 100%; height: auto; /* &:first-child{text-indent:-400px;} &:last-child{text-indent:620px;} */ }
+
+.mouse { position: absolute; bottom: 30px; right: 0; left: 0; margin: auto; z-index: 100; width: 30px; height: 40px; text-transform: uppercase; background: url("../img/main_slide/mouse.png") no-repeat 50% 50%/cover; animation: mouse 1s ease-in infinite alternate; }
+
+.mouse > span { position: absolute; left: 50%; transform: translateX(-50%); display: block; color: #fff; bottom: -20px; font-size: 0.7rem; }
+
+@keyframes mouse { 0% { bottom: 30px; }
+  100% { bottom: 5px; } }
 
 /* 공통 // brandBox 제품소개&브랜드박스 ================== */
 .brand_area { position: relative; overflow: hidden; width: 100%; height: 55vh; margin-top: 60px; }
@@ -222,7 +229,7 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 .company_area > li > a > span { display: block; position: absolute; top: 50%; transform: translateY(-50%); right: 0; left: 0; margin: auto; width: 100%; height: 100%; background-color: rgba(51, 51, 51, 0.9); text-align: center; line-height: 250px; color: #fff; font-size: 25px; }
 
 /* 공통 // snsBox SNS박스 ================== */
-#snsBox { overflow: hidden; }
+#snsBox { overflow: hidden; height: 100vh; }
 
 #snsBox a:focus { outline: 2px solid #f00; }
 

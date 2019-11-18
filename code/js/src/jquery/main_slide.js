@@ -31,4 +31,32 @@ slWrap.children('div').eq(0).append('<p class="td"><span>new</span><span>york</s
 slWrap.children('div').eq(0).append('<p class="tt"></p>');
 slWrap.children('div').eq(0).find('.tt').text(slide[0].text)
 slWrap.children('div').eq(0).siblings().hide();
+
+let n=0;
+let go;
+let timed = 1000;
+const SlideGo = function(){
+ 	go = setInterval(function(){
+ 		
+ 	}, timed*2);
+ };
+
+ const SlideStop = function(){
+ 	clearInterval(go);
+ };
+ SlideGo();
 })(jQuery);
+
+/*go = setInterval(function(){
+ 			brLi = brWrap.children('li');
+ 			brLi.removeClass('action');
+ 			brLi.children('a').attr('tabindex',-1);
+ 			brLi.eq(n).addClass('action');
+ 			brLi.eq(n).children('a').attr('tabindex',0);
+ 		brWrap.stop().animate({marginLeft:-brLiw},timed,function(){
+ 			brWrap.append(brLi.eq(0));
+ 			brWrap.css({marginLeft:0});
+ 		});
+ 	}, timed*2);
+
+ */

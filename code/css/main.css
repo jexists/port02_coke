@@ -7,7 +7,7 @@
 /* 공통 =============== */
 #wrap { width: 100%; height: auto; margin: auto; }
 
-.box_size { width: 100%; height: 100vh; min-height: 800px; padding: 100px 0; box-sizing: border-box; }
+.box_size { width: 100%; height: 100%; min-height: 700px; padding: 100px 0; box-sizing: border-box; }
 
 .box_title { width: 50%; height: auto; margin: 0 auto 10px; font-size: 35px; text-align: center; text-transform: uppercase; }
 
@@ -123,7 +123,7 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 /* 공통 // adBox 광고박스 ================== */
 #contentBox { width: 100%; height: auto; }
 
-#adBox { position: relative; width: 100%; height: 100vh; }
+#adBox { position: relative; width: 100%; height: 100vh; overflow: hidden; }
 
 .main_btn > .arrow { position: absolute; z-index: 300; top: 50%; margin: auto; /* transform: translateY(-30%); */ width: 80px; height: 80px; }
 
@@ -146,6 +146,13 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 #slide_wrap div .td { position: absolute; /* left:50%; top: 65%; */ transform: translate(-50%, -50%); text-transform: uppercase; font-weight: bold; /* font-size: 10rem; */ text-align: center; }
 
 #slide_wrap div .td span { display: block; width: 100%; height: auto; /* &:first-child{text-indent:-400px;} &:last-child{text-indent:620px;} */ }
+
+.mouse { position: absolute; bottom: 30px; right: 0; left: 0; margin: auto; z-index: 100; width: 30px; height: 40px; text-transform: uppercase; background: url("../img/main_slide/mouse.png") no-repeat 50% 50%/cover; animation: mouse 1s ease-in infinite alternate; }
+
+.mouse > span { position: absolute; left: 50%; transform: translateX(-50%); display: block; color: #fff; bottom: -20px; font-size: 0.7rem; }
+
+@keyframes mouse { 0% { bottom: 30px; }
+  100% { bottom: 5px; } }
 
 /* 공통 // brandBox 제품소개&브랜드박스 ================== */
 .brand_area { position: relative; overflow: hidden; width: 100%; height: 55vh; margin-top: 60px; }
@@ -223,7 +230,7 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 .company_area > li > a > span { display: block; position: absolute; top: 50%; transform: translateY(-50%); right: 0; left: 0; margin: auto; width: 100%; height: 100%; background-color: rgba(51, 51, 51, 0.9); text-align: center; line-height: 250px; color: #fff; font-size: 25px; }
 
 /* 공통 // snsBox SNS박스 ================== */
-#snsBox { overflow: hidden; }
+#snsBox { overflow: hidden; height: 100vh; }
 
 #snsBox a:focus { outline: 2px solid #f00; }
 
@@ -335,6 +342,7 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 /* 모바일 480px~767px (280) h:640 =============== */
 /* media screen and (max-width:767px) */
 @media screen and (max-width: 767px) { #wrap { min-width: 150px; overflow: hidden; }
+  .box_size { height: 100vh; min-height: 850px; padding: 100px 0; }
   .box_text { font-size: 16px; font-size: 1rem; }
   .navList { display: none; }
   .search_open { display: none; }
@@ -345,7 +353,6 @@ address > p:nth-of-type(3) { margin-top: 20px; }
   #slide_wrap div .td { left: 41%; top: 32%; font-size: 5rem; line-height: 75px; }
   #slide_wrap div .td span:first-child { text-indent: -20vw; }
   #slide_wrap div .td span:last-child { text-indent: 43vw; }
-  .box_size { padding: 25vw 0; }
   .brand_box > li { height: 300px; }
   .brand_box > li a { margin-top: 120%; }
   .cs_wrap dt { display: block; width: 100%; height: auto; margin-bottom: 20px; text-decoration: underline; }
@@ -354,11 +361,12 @@ address > p:nth-of-type(3) { margin-top: 20px; }
   .cs_wrap dl { width: 100%; height: auto; }
   .cs_wrap dl > dt { display: none; }
   .cs_wrap dl > dd { width: 100%; height: 150px; margin-top: 20px; }
+  .cs_wrap dl > dd:last-child { display: none; }
   .company_area { width: 100%; height: auto; }
   .company_area > li { position: relative; width: 100%; height: 110px; margin-bottom: 20px; }
   .company_area > li > a { display: block; width: 100%; height: 100%; }
   .company_area > li > a > span { line-height: 18px; width: 100px; height: auto; padding: 10px 30px; text-align: center; font-size: 25px; }
-  .conts_wrap { top: 50%; transform: translateY(-25%); }
+  .conts_wrap { top: 40%; transform: translateY(-25%); }
   .conts_wrap .more_btn { margin-top: 10px; }
   .sns_area { width: 70%; height: 80%; position: relative; margin: auto; margin-top: 50px; }
   .sns_area ul { width: auto; height: auto; }
@@ -374,7 +382,8 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 /* // media screen 모바일 */
 /* 패드 768px~1279px  h:1024 =============== */
 /* media screen and (min-width: 768px) and (max-width:1279px) */
-@media screen and (min-width: 768px) and (max-width: 1279px) { .navList { display: none; }
+@media screen and (min-width: 768px) and (max-width: 1279px) { .box_size { height: 100vh; min-height: 800px; padding: 90px 0; }
+  .navList { display: none; }
   .search_open { display: none; }
   #slide_wrap div .Mimg_01 { width: 25%; min-width: 280px; max-width: 350px; height: 45%; min-height: 600px; max-height: 680px; }
   #slide_wrap div .tt { left: 23%; top: 30%; font-size: 1.2rem; }

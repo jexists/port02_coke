@@ -4,6 +4,7 @@
 /* media screen and (max-width:767px) */
 @media screen and (max-width:767px) {
 #wrap{min-width: 150px; overflow: hidden;}
+.box_size{height: 100vh; min-height: 850px; padding: 100px 0;}
  .box_text{font-size: 16px; font-size: 1rem;}
  .navList{display: none;}
  .search_open{display: none;}
@@ -22,7 +23,6 @@
        &:first-child{text-indent:-20vw;}
        &:last-child{text-indent:43vw;}}}}}
 // #brandBox
-.box_size{padding: 25vw 0;}
 .brand_box{
   &>li{height: 300px;
 	& a{margin-top: 120%;}}}
@@ -36,7 +36,8 @@
 .cs_wrap{ width: 100%; height: auto;
   dl{width: 100%; height: auto;
   &>dt{display: none;}
-  &>dd{width:100%; height: 150px;margin-top: 20px;}}}
+  &>dd{width:100%; height: 150px;margin-top: 20px;
+    &:last-child{display: none;}}}}
 
 // #companyBox
 
@@ -51,7 +52,7 @@
      text-align: center;
      font-size:25px;}}}}
 
-  .conts_wrap{top: 50%; transform:translateY(-25%);
+  .conts_wrap{top: 40%; transform:translateY(-25%);
   .more_btn{margin-top: 10px;}}
 
 // #snsBox
