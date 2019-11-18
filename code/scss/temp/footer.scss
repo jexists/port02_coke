@@ -36,6 +36,9 @@ address {width: 100%; max-width: 1200px; height: auto;
   br{display: none;}
 &:nth-of-type(3){margin-top: 20px;}}}
 
+#footBox a:hover {outline: none; transform:scale(1.1); }
+#footBox a:focus {outline: none; color:#ff0;}
+.sns_link a:focus {border: 3px solid #ff0; box-sizing:border-box;}
 
 /* 모바일 480px~767px (280) h:640 =============== */
 /* media screen and (max-width:767px) */

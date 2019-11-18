@@ -1,4 +1,8 @@
 @charset "UTF-8";
+#wrap a:hover { transform: scale(1.1); }
+
+#wrap a:focus { outline: none; }
+
 /* 공통 =============== */
 #wrap { width: 100%; height: auto; margin: auto; }
 
@@ -11,6 +15,8 @@
 .more_btn { display: block; width: 150px; height: 30px; margin: auto; margin-top: 30px; border-radius: 5px; background-color: #333; text-align: center; line-height: 29px; color: #fff; }
 
 .more_btn:hover { background-color: #f00; }
+
+.more_btn:focus { background-color: #f50; }
 
 .cp { display: none; }
 
@@ -207,7 +213,7 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 
 .company_area > li:last-child { margin-right: 0; }
 
-.company_area > li > a.act { transition: all 1000ms ease; border-radius: 100%; }
+.company_area > li > a.act { transition: all 1000ms ease; border-radius: 100%; outline: 0; }
 
 .company_area > li > a.act > span { line-height: 18px; width: 100px; height: auto; padding: 10px 30px; }
 
@@ -217,6 +223,10 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 
 /* 공통 // snsBox SNS박스 ================== */
 #snsBox { overflow: hidden; }
+
+#snsBox a:focus { outline: 2px solid #f00; }
+
+#snsBox a:hover { transform: scale(1.02); }
 
 .sns_area { width: 70%; height: 70%; position: relative; margin: auto; margin-top: 50px; }
 
@@ -271,11 +281,11 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 
 .link_area { width: auto; height: auto; padding-top: 10px; box-sizing: border-box; text-align: center; }
 
-.link_area > li { display: inline-block; position: relative; margin-right: 15px; }
+.link_area > li { display: inline-block; position: relative; margin-right: 20px; }
 
 .link_area > li:last-child { margin-right: 0; }
 
-.link_area > li:before, .link_area > li::before { content: " "; position: absolute; top: 0; bottom: 0; left: -10px; margin: auto; width: 0; height: 70%; border-right: 2px solid #fff; }
+.link_area > li:before, .link_area > li::before { content: " "; position: absolute; top: 0; bottom: 0; left: -12px; margin: auto; width: 0; height: 70%; border-right: 2px solid #fff; }
 
 .link_area > li:first-child:before, .link_area > li:first-child::before { display: none; }
 
@@ -304,6 +314,12 @@ address > p { width: 100%; height: auto; text-align: center; color: #fff; }
 address > p br { display: none; }
 
 address > p:nth-of-type(3) { margin-top: 20px; }
+
+#footBox a:hover { outline: none; transform: scale(1.1); }
+
+#footBox a:focus { outline: none; color: #ff0; }
+
+.sns_link a:focus { border: 3px solid #ff0; box-sizing: border-box; }
 
 .move_bubble { position: fixed; width: 100%; height: 0; bottom: 200px; z-index: -1; }
 

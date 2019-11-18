@@ -67,7 +67,7 @@ contDl.addClass('cf');
 contDl.eq(0).siblings().hide();
 linkLi.eq(0).addClass('action');
 
-linkA.on('click',function(e){
+linkA.on('click focus',function(e){
 	e.preventDefault();
 	let storyi = $(this).parent('li').index();
 	// console.log(storyi);

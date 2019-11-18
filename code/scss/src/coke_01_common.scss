@@ -3,6 +3,9 @@
 $url: '../img/';
 @mixin linkblock(){display:block; width: 100%; height: 100%;}
 
+#wrap a:hover{transform: scale(1.1)}
+#wrap a:focus{outline: none;}
+
 /* 공통 =============== */
 #wrap{width: 100%; height: auto; margin: auto;}
  .box_size{width: 100%; height: 100vh; min-height: 800px;
@@ -15,7 +18,8 @@ $url: '../img/';
     margin-top: 30px; border-radius: 5px;
     @include mc(4); text-align: center;
     line-height: 29px; color: nth($bc,1);
-    &:hover{background-color: #f00;}}
+    &:hover{background-color: #f00;}
+    &:focus{background-color: #f50;}}
   .cp{display: none;}
 /* 공통 // headBox 해더박스 ================== */
 #headBox{position: fixed; z-index: 500; top: 0; left: 0;
@@ -223,7 +227,7 @@ $url: '../img/';
    &:nth-child(2)>a{background: url($url + 'main/history.jpg') no-repeat 50% 50% / cover;}
    &:nth-child(3)>a{background: url($url + 'main/social.jpg') no-repeat 50% 50% / cover;}
    &:last-child{margin-right: 0;}
-   &>a.act{transition:all 1000ms ease; border-radius: 100%;
+   &>a.act{transition:all 1000ms ease; border-radius: 100%; outline: 0;
    >span{line-height: 18px;
       width: 100px; height: auto; 
       padding: 10px 30px;}}
@@ -237,7 +241,9 @@ $url: '../img/';
       font-size:25px;}}}}
 
 /* 공통 // snsBox SNS박스 ================== */
-#snsBox{overflow: hidden; }
+#snsBox{overflow: hidden; 
+ a:focus{outline: 2px solid #f00;}
+ a:hover{transform:scale(1.02)}}
 .sns_area{width: 70%; height: 70%;
   position:relative; margin: auto; margin-top: 50px;
  ul{width: auto; height: auto;
@@ -270,6 +276,7 @@ $url: '../img/';
 .sns_area li:nth-child(5) dt{background-image: url($url + 'sns_logo/insta_logo.png')}
 
 
+
 /* 공통 // footBox 풋박스 ================== */
 #footBox{position:relative;
   width: 100%; height: auto; padding: 20px 0;@include mc(1);
@@ -279,10 +286,10 @@ $url: '../img/';
 .foot_area{width: 100%; max-width: 1000px; height: auto; margin: auto;}
 .link_area{width: auto; height: auto; padding-top: 10px; box-sizing:border-box; text-align: center;
  &>li{display:inline-block; 
-  position:relative; margin-right: 15px; 
+  position:relative; margin-right: 20px; 
  	&:last-child{margin-right: 0;}
   &:before,&::before{content:" "; position: absolute; 
-    top:0; bottom:0; left: -10px; margin: auto;
+    top:0; bottom:0; left: -12px; margin: auto;
     width: 0; height: 70%; border-right: 2px solid nth($mc,3);}
   &:first-child:before,&:first-child::before{display: none;}
   &>a{display:block; width: 100%; height: 100%; color: nth($bc,1);}}}
@@ -303,6 +310,10 @@ address {width: 100%; max-width: 1200px; height: auto;
 &>p{width: 100%; height: auto; text-align: center; color: nth($bc,1);
   br{display: none;}
 &:nth-of-type(3){margin-top: 20px;}}}
+
+#footBox a:hover {outline: none; transform:scale(1.1); }
+#footBox a:focus {outline: none; color:#ff0;}
+.sns_link a:focus {border: 3px solid #ff0; box-sizing:border-box;}
 
 // bubble
 // $val : #{random(100)}px #{random(100)}px 0 rgba(#{random(255)}, #{random(255)},#{random(255)},#{random(10)/10});

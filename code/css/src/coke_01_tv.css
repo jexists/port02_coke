@@ -2,4 +2,9 @@
 /* media screen and (min-width: 1920px) h:900 */
 @media screen and (min-width: 1920px) { .head_area { max-width: 1280px; }
   .gnb_cp { display: none; }
+  #slide_wrap div .Mimg_01 { width: 50%; min-width: 250px; max-width: 450px; height: 100%; max-height: 800px; }
+  #slide_wrap div .tt { left: 30%; top: 28%; font-size: 1.5rem; }
+  #slide_wrap div .td { left: 50%; top: 58%; font-size: 7rem; }
+  #slide_wrap div .td span:first-child { text-indent: -20vw; }
+  #slide_wrap div .td span:last-child { text-indent: 40vw; }
   #brandBox > p { width: 20%; height: auto; } }

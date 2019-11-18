@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* main.css */
+#wrap a:hover { transform: scale(1.1); }
+
+#wrap a:focus { outline: none; }
+
 /* 공통 =============== */
 #wrap { width: 100%; height: auto; margin: auto; }
 
@@ -12,6 +16,8 @@
 .more_btn { display: block; width: 150px; height: 30px; margin: auto; margin-top: 30px; border-radius: 5px; background-color: #333; text-align: center; line-height: 29px; color: #fff; }
 
 .more_btn:hover { background-color: #f00; }
+
+.more_btn:focus { background-color: #f50; }
 
 .cp { display: none; }
 
@@ -208,7 +214,7 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 
 .company_area > li:last-child { margin-right: 0; }
 
-.company_area > li > a.act { transition: all 1000ms ease; border-radius: 100%; }
+.company_area > li > a.act { transition: all 1000ms ease; border-radius: 100%; outline: 0; }
 
 .company_area > li > a.act > span { line-height: 18px; width: 100px; height: auto; padding: 10px 30px; }
 
@@ -218,6 +224,10 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 
 /* 공통 // snsBox SNS박스 ================== */
 #snsBox { overflow: hidden; }
+
+#snsBox a:focus { outline: 2px solid #f00; }
+
+#snsBox a:hover { transform: scale(1.02); }
 
 .sns_area { width: 70%; height: 70%; position: relative; margin: auto; margin-top: 50px; }
 
@@ -272,11 +282,11 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 
 .link_area { width: auto; height: auto; padding-top: 10px; box-sizing: border-box; text-align: center; }
 
-.link_area > li { display: inline-block; position: relative; margin-right: 15px; }
+.link_area > li { display: inline-block; position: relative; margin-right: 20px; }
 
 .link_area > li:last-child { margin-right: 0; }
 
-.link_area > li:before, .link_area > li::before { content: " "; position: absolute; top: 0; bottom: 0; left: -10px; margin: auto; width: 0; height: 70%; border-right: 2px solid #fff; }
+.link_area > li:before, .link_area > li::before { content: " "; position: absolute; top: 0; bottom: 0; left: -12px; margin: auto; width: 0; height: 70%; border-right: 2px solid #fff; }
 
 .link_area > li:first-child:before, .link_area > li:first-child::before { display: none; }
 
@@ -305,6 +315,12 @@ address > p { width: 100%; height: auto; text-align: center; color: #fff; }
 address > p br { display: none; }
 
 address > p:nth-of-type(3) { margin-top: 20px; }
+
+#footBox a:hover { outline: none; transform: scale(1.1); }
+
+#footBox a:focus { outline: none; color: #ff0; }
+
+.sns_link a:focus { border: 3px solid #ff0; box-sizing: border-box; }
 
 .move_bubble { position: fixed; width: 100%; height: 0; bottom: 200px; z-index: -1; }
 
@@ -340,12 +356,13 @@ address > p:nth-of-type(3) { margin-top: 20px; }
   .cs_wrap dl > dd { width: 100%; height: 150px; margin-top: 20px; }
   .company_area { width: 100%; height: auto; }
   .company_area > li { position: relative; width: 100%; height: 110px; margin-bottom: 20px; }
-  .company_area > li a span { line-height: 110px; }
+  .company_area > li > a { display: block; width: 100%; height: 100%; }
+  .company_area > li > a > span { line-height: 18px; width: 100px; height: auto; padding: 10px 30px; text-align: center; font-size: 25px; }
   .conts_wrap { top: 50%; transform: translateY(-25%); }
   .conts_wrap .more_btn { margin-top: 10px; }
   .sns_area { width: 70%; height: 80%; position: relative; margin: auto; margin-top: 50px; }
   .sns_area ul { width: auto; height: auto; }
-  .sns_area ul li { position: absolute; width: 100%; height: 45%; background-color: #f03; background-color: #ccc; }
+  .sns_area ul li { position: absolute; width: 100%; height: 45%; }
   .sns_area ul li:nth-child(3) { display: none; }
   .sns_area ul li:nth-child(4) { display: none; }
   .sns_area ul li:nth-child(5) { display: none; }
@@ -378,10 +395,10 @@ address > p:nth-of-type(3) { margin-top: 20px; }
   .cs_wrap dl > dd:last-child { display: none; margin-right: 0; }
   .company_area { width: 100%; height: auto; }
   .company_area > li { position: relative; left: 50%; transform: translateX(-50%); width: 80%; height: 180px; margin-bottom: 20px; }
-  .company_area > li a span { line-height: 180px; }
+  .company_area > li > a { display: block; width: 100%; height: 100%; }
+  .company_area > li > a > span { line-height: 18px; width: 100px; height: auto; padding: 10px 30px; text-align: center; font-size: 25px; }
   .conts_wrap { top: 60%; transform: translateY(-40%); }
   .conts_wrap .more_btn { margin-top: 20px; }
-  /* .company_area{width: 100%; height: auto;  &>li{ float: left; position: relative; width: 30%; height: 250px;  margin-right: 5%; &:nth-child(1)>a{background: url($url + 'main/business.jpg') no-repeat 50% 50% / cover;} &:nth-child(2)>a{background: url($url + 'main/history.jpg') no-repeat 50% 50% / cover;} &:nth-child(3)>a{background: url($url + 'main/social.jpg') no-repeat 50% 50% / cover;} &:last-child{margin-right: 0;} &>a.act{transition:all 1000ms ease; border-radius: 100%; >span{line-height: 18px; width: 100px; height: auto;  padding: 10px 30px;}} &>a{display:block;  width: 100%; height: 100%; @include bbg(2); >span{display:block; position: absolute; top:50%; transform: translateY(-50%); right:0; left:0; margin:auto; width: 100%; height: 100%; background-color: rgba(nth($mc, 4), 0.9); text-align: center; line-height: 250px; color: nth($mc,3); font-size:25px;}}}} */
   .sns_area { width: 70%; height: 80%; position: relative; margin: auto; margin-top: 50px; }
   .sns_area ul { width: auto; height: auto; }
   .sns_area ul li { position: absolute; width: 48%; height: 45%; }
@@ -406,4 +423,9 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 /* media screen and (min-width: 1920px) h:900 */
 @media screen and (min-width: 1920px) { .head_area { max-width: 1280px; }
   .gnb_cp { display: none; }
+  #slide_wrap div .Mimg_01 { width: 50%; min-width: 250px; max-width: 450px; height: 100%; max-height: 800px; }
+  #slide_wrap div .tt { left: 30%; top: 28%; font-size: 1.5rem; }
+  #slide_wrap div .td { left: 50%; top: 58%; font-size: 7rem; }
+  #slide_wrap div .td span:first-child { text-indent: -20vw; }
+  #slide_wrap div .td span:last-child { text-indent: 40vw; }
   #brandBox > p { width: 20%; height: auto; } }
