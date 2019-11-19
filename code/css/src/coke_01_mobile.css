@@ -19,7 +19,6 @@
   .cs_wrap dd { height: 150px; }
   .cs_wrap { width: 100%; height: auto; }
   .cs_wrap dl { width: 100%; height: auto; }
-  .cs_wrap dl > dt { display: none; }
   .cs_wrap dl > dd { width: 100%; height: 150px; margin-top: 20px; }
   .cs_wrap dl > dd:last-child { display: none; }
   .company_area { width: 100%; height: auto; }

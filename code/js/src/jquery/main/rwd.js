@@ -4,6 +4,7 @@
  const win = $(window);
  const body = $('body');
 // const wrap = $('#wrap');
+
 //현재 디바이스 크기 파악하여 정의
 /* 모바일 480px~767px (280) =============== */
 /* 패드 768px~1279px =============== */
@@ -28,7 +29,7 @@ DeviceCheck();
  let winW = win.outerWidth();
  let beforeDevice = DeviceCheck(winW);
 
- let jsUrl = '../js/src/jquery/';
+ let jsUrl = '../js/src/jquery/main/';
  let ScriptAppend = function(jsName){
   body.append('<script src="'+ jsUrl + jsName +'.js"></script>');
  };
@@ -44,8 +45,6 @@ DeviceCheck();
    &:last-child{margin-right: 0;}
    &>a.act
 */
-
-
 switch(beforeDevice){
   case 'mobile':
 //break;
@@ -56,10 +55,7 @@ switch(beforeDevice){
 //break;
   case 'tv':
     ScriptAppend('nav_pc');
-
   break;
-
- 
 }
 
 //사이즈가 변하면 파악

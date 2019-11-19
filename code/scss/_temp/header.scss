@@ -1,5 +1,5 @@
 
-@import "../src/coke_01_var";
+@import "../_base/coke_01_var";
 $url: '../img/';
 /* 공통 // headBox 해더박스 ================== */
 #headBox{position: fixed; z-index: 500; top: 0; left: 0;
@@ -87,7 +87,8 @@ $url: '../img/';
 //bugur_btn close
  .close_btn{ position:relative; 
   width: 50px; height: 50px; float:right;
-  button{width: 100%; height: 100%; background-color: transparent;}}
+  button{width: 100%; height: 100%; background-color: transparent;}
+  &:hover{transform:scale(1.1);}}
 // 핸드폰에서 버튼클릭시 네비나오기
  .all_gnb{display: none;
   position: absolute; top: 0; right: 0; margin:auto;
@@ -95,7 +96,8 @@ $url: '../img/';
   width: 60%; height: 100vh; background-color: rgba(nth($mc, 4), 0.9);}
  .nav_site{width: 150px; height: 100%; margin: auto;
   padding: 10px 10vw; 
-  .btn_nav{width: 100%; height: 100%; margin-top: 50px;
+  .btn_nav{width: 100%; height: 100%; 
+    margin-top: 50px; overflow: auto;
     li{width: 100%;
      dl{width: 100%; 
       dt{width: 100%; font-size: 1.5rem; margin-top: 10px;
@@ -105,6 +107,8 @@ $url: '../img/';
        a{display: block; width: 100%; height: 100%;
         color: nth($mc,3);
         font-size: 1rem; text-indent: 10px;}}}}}}
+  .btn_nav a:hover{outline: none;}
+  .btn_nav a:focus{color: #ff0;}
 
 
 /* 모바일 480px~767px (280) h:640 =============== */

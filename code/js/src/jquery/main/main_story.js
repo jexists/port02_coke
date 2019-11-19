@@ -54,7 +54,7 @@ for(let i=0; i < story.length ;i++){
 	contDt.eq(i).text(story[i].title);
  	// contDt.eq(i).nextAll('dd').css({backgroundImage: 'url('+imgUrl+story[i].contents[0].cont1 +')'});
   for(let j = 0; j < story[i].contents.length; j++){
-  	contDl.eq(i).children('dd').eq(j).css({backgroundImage:'url('+imgUrl+story[i].contents[j].cont +')'});
+  	contDl.eq(i).children('dd').eq(j).children('a').css({backgroundImage:'url('+imgUrl+story[i].contents[j].cont +')'});
   }
 } //for문
 

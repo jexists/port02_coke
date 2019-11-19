@@ -1,9 +1,9 @@
 // coke_01_common.scss
-@import "./coke_01_var";
+@import "../_base/coke_01_var";
 $url: '../img/';
 @mixin linkblock(){display:block; width: 100%; height: 100%;}
 
-#wrap a:hover{transform: scale(1.1)}
+#wrap a:hover{transform: scale(1.1);}
 #wrap a:focus{outline: none;}
 
 /* 공통 =============== */
@@ -107,7 +107,8 @@ $url: '../img/';
 //bugur_btn close
  .close_btn{ position:relative; 
  	width: 50px; height: 50px; float:right;
- 	button{width: 100%; height: 100%; background-color: transparent;}}
+ 	button{width: 100%; height: 100%; background-color: transparent;}
+  &:hover{transform:scale(1.1);}}
 // 핸드폰에서 버튼클릭시 네비나오기
  .all_gnb{display: none;
  	position: absolute; top: 0; right: 0; margin:auto;
@@ -115,7 +116,8 @@ $url: '../img/';
  	width: 60%; height: 100vh; background-color: rgba(nth($mc, 4), 0.9);}
  .nav_site{width: 150px; height: 100%; margin: auto;
  	padding: 10px 10vw; 
-  .btn_nav{width: 100%; height: 100%; margin-top: 50px;
+  .btn_nav{width: 100%; height: 100%; min-height: 800px;
+    margin-top: 50px; overflow: auto;
   	li{width: 100%;
   	 dl{width: 100%; 
   	  dt{width: 100%; font-size: 1.5rem; margin-top: 10px;
@@ -125,6 +127,8 @@ $url: '../img/';
   	   a{display: block; width: 100%; height: 100%;
   	   	color: nth($mc,3);
   	   	font-size: 1rem; text-indent: 10px;}}}}}}
+  .btn_nav a:hover{outline: none;}
+  .btn_nav a:focus{color: #ff0;}
 /* 공통 // adBox 광고박스 ================== */
 #contentBox{width: 100%; height: auto;}
 #adBox{position: relative; width: 100%; height: 100vh; 
@@ -206,7 +210,7 @@ $url: '../img/';
 #storyBox{position: relative; }
 .story_area{overflow: hidden;
   width: 90%; height: auto; margin: auto;}
-
+.story_link a:hover{font-size: 1.1rem; outline: none;}
 .story_link{width: 100%; height: auto; margin: 15px 0 30px; text-align: center;
  li{display:inline-block; position:relative;
   width: auto; height: auto;
@@ -219,12 +223,17 @@ $url: '../img/';
   &:after,&::after{display: none;}}}}
 .cs_wrap{ width: 100%; height: auto;
   dl{width: 100%; height: auto;
-  &>dt{display: none;}
+  &>dt{display: block; overflow: hidden; position: absolute;
+  width: 0; height: 0;}
   &>dd{float: left;
     width: (100% - 4)/3; height: 400px; margin-right: 2%;
+    overflow: hidden;}
+  &>dd:last-child{margin-right: 0;}
+   a{display: block; width: 100%; height: 100%;
     background-position: 50% 50%; background-repeat: no-repeat;
-    background-size: 100% auto;}
-  &>dd:last-child{margin-right: 0;}}}
+    background-size: cover;
+    &:hover{transform: scale(1.2);}
+    &:focus{border: 3px solid #f00; box-sizing:border-box;}}}}
 
 /* 공통 // companyBox 회사정보&컴파니박스 ================== */
 #companyBox{position: relative;}
@@ -322,7 +331,9 @@ address {width: 100%; max-width: 1200px; height: auto;
 	margin: auto; margin-top: 10px;
 &>p{width: 100%; height: auto; text-align: center; color: nth($bc,1);
   br{display: none;}
-&:nth-of-type(3){margin-top: 20px;}}}
+
+&:nth-of-type(3){margin-top: 20px;
+  a{color:inherit;}}}}
 
 #footBox a:hover {outline: none; transform:scale(1.1); }
 #footBox a:focus {outline: none; color:#ff0;}

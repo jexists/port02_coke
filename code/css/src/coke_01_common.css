@@ -197,11 +197,17 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 
 .cs_wrap dl { width: 100%; height: auto; }
 
-.cs_wrap dl > dt { display: none; }
+.cs_wrap dl > dt { display: block; overflow: hidden; position: absolute; width: 0; height: 0; }
 
-.cs_wrap dl > dd { float: left; width: 32%; height: 400px; margin-right: 2%; background-position: 50% 50%; background-repeat: no-repeat; background-size: 100% auto; }
+.cs_wrap dl > dd { float: left; width: 32%; height: 400px; margin-right: 2%; overflow: hidden; }
 
 .cs_wrap dl > dd:last-child { margin-right: 0; }
+
+.cs_wrap dl a { display: block; width: 100%; height: 100%; background-position: 50% 50%; background-repeat: no-repeat; background-size: cover; }
+
+.cs_wrap dl a:hover { transform: scale(1.2); }
+
+.cs_wrap dl a:focus { border: 3px solid #f00; box-sizing: border-box; }
 
 /* 공통 // companyBox 회사정보&컴파니박스 ================== */
 #companyBox { position: relative; }

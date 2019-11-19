@@ -2,30 +2,30 @@
 
 (function($){
 const navMenu = [
- {title: '회사소개',titleLink:'#', 
+ {title: '회사소개',titleLink:'./s1_company.html', 
 	sub: [
 	{subN:'코카콜라', subLink:'#'},
 	{subN:'글로벌', subLink:'#'},
 	{subN:'코리아', subLink:'#'},
 	{subN:'히스토리', subLink:'#'},
 	{subN:'사회공헌', subLink:'#'}]},
- {title: '제품소개', titleLink:'#',  
+ {title: '제품소개', titleLink:'./s2_brand.html',  
 	sub: [
-	{subN:'대표제품',subLink:"#"},
-	{subN:'전체제품',subLink:"#"}]},
+	{subN:'대표제품',subLink:'#'},
+	{subN:'전체제품',subLink:'#'}]},
  {title: '스토리', titleLink:'#', 
 	sub: [
-	{subN:'코크스토리',subLink:"#"},
-	{subN:'글로벌스토리',subLink:"#"},
-	{subN:'코리아스토리',subLink:"#"},
-	{subN:'올림픽&월드컵',subLink:"#"},
-	{subN:'보도자료',subLink:"#"}]},
- {title: '커뮤니티', titleLink:'#', 
+	{subN:'코크스토리',subLink:'./s3_stroy.html'},
+	{subN:'글로벌스토리',subLink:'#'},
+	{subN:'코리아스토리',subLink:'#'},
+	{subN:'올림픽&월드컵',subLink:'#'},
+	{subN:'보도자료',subLink:'#'}]},
+ {title: '커뮤니티', titleLink:'./s4_sns.html', 
 	sub: [
-	{subN:'이벤트',subLink:"#"},
-	{subN:'고객센터',subLink:"#"},
-	{subN:'사진&영상',subLink:"#"},
-	{subN:'SNS',subLink:"#"}]}];
+	{subN:'이벤트',subLink:'#'},
+	{subN:'고객센터',subLink:'#'},
+	{subN:'사진&영상',subLink:'#'},
+	{subN:'SNS',subLink:'#'}]}];
 
 const gnb = $('#gnb');
 const navSite = $('.nav_site');
@@ -34,12 +34,15 @@ gnb.children('h2').after('<ul></ul>');
 const nav = gnb.children('ul');
 nav.addClass('navList');
 
+
 for(let i = 0; i < menuLen; i++){
  nav.append('<li><dl><dt><a href="#"></a></dt><dd></dd></dl></li>');
  let navLi = nav.children('li').eq(i);
- let dtLk = navLi.find('dt').children('a');
+ let dtLk = navLi.find('dt').find('a');
  dtLk.text(navMenu[i].title);
  dtLk.attr('href',navMenu[i].titleLink);
+ 
+
 
  let subLen = navMenu[i].sub.length;
  for (let j=0; j<subLen; j++){

@@ -35,7 +35,6 @@
 
 .cs_wrap{ width: 100%; height: auto;
   dl{width: 100%; height: auto;
-  &>dt{display: none;}
   &>dd{width:100%; height: 150px;margin-top: 20px;
     &:last-child{display: none;}}}}
 

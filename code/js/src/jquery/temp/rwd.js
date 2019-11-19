@@ -28,7 +28,7 @@ DeviceCheck();
  let winW = win.outerWidth();
  let beforeDevice = DeviceCheck(winW);
 
- let jsUrl = '../js/src/jquery/';
+ let jsUrl = '../js/src/jquery/temp/';
  let ScriptAppend = function(jsName){
   body.append('<script src="'+ jsUrl + jsName +'.js"></script>');
  };
