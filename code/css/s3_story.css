@@ -196,3 +196,37 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 /* media screen and (min-width: 1920px) h:900 */
 @media screen and (min-width: 1920px) { .head_area { max-width: 1280px; }
   .gnb_cp { display: none; } }
+
+#contentBox { padding-top: 80px; }
+
+h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20px auto; }
+
+.stLink { width: 100%; height: auto; margin: 15px 0 30px; text-align: center; }
+
+.stLink li { display: inline-block; position: relative; width: auto; height: auto; margin-right: 20px; font-size: 1.1rem; }
+
+.stLink li:after, .stLink li::after { content: " "; position: absolute; right: -12px; top: 0; bottom: 0; margin: auto; width: 0; height: 60%; border-left: 2px solid #333; }
+
+.stLink li.action > a { color: #f00; font-weight: bold; font-size: 1.2rem; }
+
+.stLink li:last-child { margin-right: 0; }
+
+.stLink li:last-child:after, .stLink li:last-child::after { display: none; }
+
+.stLink a:hover { font-weight: bold; outline: none; }
+
+#allStory { width: 80%; height: auto; min-height: 500px; margin: auto; }
+
+#allStory ul { width: 100%; height: auto; }
+
+#allStory ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
+
+#allStory ul li:nth-child(3n) { margin-right: 0; }
+
+#allStory .numLink { width: 100%; height: 30px; margin: 10px auto 61px; text-align: center; }
+
+#allStory .numLink li { display: inline-block; width: 30px; height: 30px; margin-right: 5px; }
+
+#allStory .numLink li:last-child { margin-right: 0; }
+
+#allStory .numLink li button { width: 100%; height: 100%; border-radius: 5px; text-align: center; }

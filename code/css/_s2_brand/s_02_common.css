@@ -1,0 +1,13 @@
+#contentBox { padding-top: 80px; }
+
+h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20px auto; }
+
+.BrLink { width: auto; height: auto; text-align: center; }
+
+.BrLink li { display: inline-block; position: relative; width: auto; padding: 1px 5px; margin-right: 5px; font-size: 1.2rem; }
+
+.BrLink li:last-child:after { display: none; }
+
+.BrLink li:after { content: " "; position: absolute; top: 0; bottom: 0; right: -5px; margin: auto; width: 0; height: 60%; border-right: 2px solid #333; }
+
+#mainBrand { width: 100%; height: auto; }

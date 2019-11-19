@@ -1,3 +1,29 @@
 // s_02_common.scss
 #wrap{}
-#contentBox{}
+#contentBox{padding-top: 80px;}
+h2{width: 200px; 
+	height: auto;
+	font-size: 35px; 
+	text-align: center;
+	margin: 20px auto;}
+.brLink{width: 100%; height: auto; margin: 15px 0 30px; text-align: center;
+ li{display:inline-block; position:relative;
+  width: auto; height: auto;
+  margin-right: 20px; font-size: 1.1rem;
+ &:after,&::after{content: " "; position: absolute; right: -12px; 
+  top:0; bottom: 0; margin: auto;
+  width: 0; height: 60%; border-left: 2px solid #333;}
+ &.action>a{color:nth($mc,1); font-weight: bold; font-size: 1.2rem;}
+ &:last-child{margin-right: 0;
+  &:after,&::after{display: none;}}}}
+.brLink a:hover{font-weight: bold; outline: none;}
+
+#mainBrand{width: 80%; height: auto; min-height: 500px;
+	margin: auto; background-color: #fed;
+ ul{width: 100%; height: auto;
+  li{float:left; width: (100%-4)/3; height: 300px; 
+  	background-color: #fff; margin: 0 2% 20px 0;
+  	border: 1px solid #888; box-sizing:border-box; 
+  	&:nth-child(3n){margin-right: 0;}}}
+ button{display:block; width: 100px; height: 30px;
+ 	margin: 10px auto 61px;}}

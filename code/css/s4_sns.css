@@ -196,3 +196,33 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 /* media screen and (min-width: 1920px) h:900 */
 @media screen and (min-width: 1920px) { .head_area { max-width: 1280px; }
   .gnb_cp { display: none; } }
+
+#contentBox { padding-top: 80px; }
+
+h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20px auto; }
+
+.snsLink { width: 100%; height: auto; margin: 15px 0 30px; text-align: center; }
+
+.snsLink li { display: inline-block; position: relative; width: auto; height: auto; margin-right: 20px; font-size: 1.1rem; }
+
+.snsLink li:after, .snsLink li::after { content: " "; position: absolute; right: -12px; top: 0; bottom: 0; margin: auto; width: 0; height: 60%; border-left: 2px solid #333; }
+
+.snsLink li.action > a { color: #f00; font-weight: bold; font-size: 1.2rem; }
+
+.snsLink li:last-child { margin-right: 0; }
+
+.snsLink li:last-child:after, .snsLink li:last-child::after { display: none; }
+
+.stLink a:hover { font-weight: bold; outline: none; }
+
+#eventBox { width: 100%; height: auto; }
+
+#eventBox .event_box { width: 100%; height: 70vh; padding: 50px 500px; box-sizing: border-box; }
+
+#eventBox h4 { width: 240px; height: 40px; font-size: 1.5rem; }
+
+#event_ing { background-color: #fee; }
+
+#event_ing .slide_box { width: 100%; height: 80%; background-color: #efe; }
+
+#event_end { background-color: #e8f; }
