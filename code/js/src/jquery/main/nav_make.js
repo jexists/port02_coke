@@ -2,30 +2,32 @@
 
 (function($){
 const navMenu = [
- {title: '회사소개',titleLink:'./s1_company.html', 
+ {title: '회사소개',titleLink:'./s1_company.html?cokeBox', 
 	sub: [
-	{subN:'코카콜라', subLink:'#'},
-	{subN:'글로벌', subLink:'#'},
-	{subN:'코리아', subLink:'#'},
-	{subN:'히스토리', subLink:'#'},
-	{subN:'사회공헌', subLink:'#'}]},
+	{subN:'코카콜라', subLink:'./s1_company.html?cokeBox'},
+	{subN:'글로벌', subLink:'./s1_company.html?globBox'},
+	{subN:'코리아', subLink:'./s1_company.html?korBox'},
+	{subN:'히스토리', subLink:'./s1_company.html?histBox'},
+	{subN:'사회공헌', subLink:'./s1_company.html?sociBox'}]},
  {title: '제품소개', titleLink:'./s2_brand.html',  
 	sub: [
-	{subN:'대표제품',subLink:'#'},
-	{subN:'전체제품',subLink:'#'}]},
+	{subN:'브랜드',subLink:'./s2_brand.html?mainBrand'},
+	{subN:'대표제품',subLink:'./s2_brand.html?mainProd'},
+	{subN:'전체제품',subLink:'./s2_brand.html?allProd'},
+	{subN:'새제품',subLink:'./s2_brand.html?newProd'}]},
  {title: '스토리', titleLink:'#', 
 	sub: [
-	{subN:'코크스토리',subLink:'./s3_stroy.html'},
-	{subN:'글로벌스토리',subLink:'#'},
-	{subN:'코리아스토리',subLink:'#'},
-	{subN:'올림픽&월드컵',subLink:'#'},
-	{subN:'보도자료',subLink:'#'}]},
+	// {subN:'전체',subLink:'./s3_story.html?allStory'},
+	{subN:'코크스토리',subLink:'./s3_story.html?cokeStory'},
+	{subN:'글로벌스토리',subLink:'./s3_story.html?globStory'},
+	{subN:'코리아스토리',subLink:'./s3_story.html?korStory'},
+	{subN:'올림픽&월드컵',subLink:'./s3_story.html?sporStory'},
+	{subN:'보도자료',subLink:'./s3_story.html?pressStory'}]},
  {title: '커뮤니티', titleLink:'./s4_sns.html', 
 	sub: [
-	{subN:'이벤트',subLink:'#'},
-	{subN:'고객센터',subLink:'#'},
-	{subN:'사진&영상',subLink:'#'},
-	{subN:'SNS',subLink:'#'}]}];
+	{subN:'이벤트',subLink:'./s4_sns.html?eventBox'},
+	{subN:'고객센터',subLink:'./s4_sns.html?servBox'},
+	{subN:'미디어',subLink:'./s4_sns.html?mediaBox'}]}];
 
 const gnb = $('#gnb');
 const navSite = $('.nav_site');

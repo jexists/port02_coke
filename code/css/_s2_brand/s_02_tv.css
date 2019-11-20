@@ -1,0 +1,8 @@
+/* TV 1920px~ =============== */
+/* media screen and (min-width: 1920px) h:900 */
+@media screen and (min-width: 1920px) { #mainBrand { width: 80%; height: auto; min-height: 500px; margin: auto; }
+  #mainBrand ul { width: 100%; height: auto; }
+  #mainBrand ul li { float: left; width: 18.4%; height: 350px; margin: 0 2% 20px 0; }
+  #mainBrand ul li:nth-child(3n) { margin-right: 2%; }
+  #mainBrand ul li:nth-child(5n) { margin-right: 0; }
+  #mainBrand button { display: block; width: 100px; height: 30px; margin: 10px auto 61px; } }

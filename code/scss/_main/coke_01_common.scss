@@ -147,7 +147,8 @@ $url: '../img/';
   div{position: relative; float: left; 
     height: 100vh; background-repeat: no-repeat; background-position: 50% 100%; background-size: cover;
    .Mimg_01{position: absolute; left:0; right:0; bottom:0; margin: auto; z-index: 1;
-    /* width: 30vw; max-width: 350px; height: 50vw; max-height: 680px; */}
+    /* width: 30vw; max-width: 350px; height: 50vw; max-height: 680px; */
+   &.act{transform:scale(0.5)}}
    .tt{position: absolute; /* left: 20%; top: 37%; font-size: 1.5rem; */ 
     transform:rotate(-4deg);
     padding: 5px 18px; border-radius: 15px; color: nth($mc,3);

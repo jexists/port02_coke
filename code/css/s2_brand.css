@@ -215,7 +215,7 @@ h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20
 
 .brLink a:hover { font-weight: bold; outline: none; }
 
-#mainBrand { width: 80%; height: auto; min-height: 500px; margin: auto; background-color: #fed; }
+#mainBrand { width: 80%; height: auto; min-height: 500px; margin: auto; }
 
 #mainBrand ul { width: 100%; height: auto; }
 
@@ -224,3 +224,42 @@ h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20
 #mainBrand ul li:nth-child(3n) { margin-right: 0; }
 
 #mainBrand button { display: block; width: 100px; height: 30px; margin: 10px auto 61px; }
+
+#mainProd { display: none; width: 80%; height: auto; min-height: 500px; margin: auto; }
+
+#mainProd ul { width: 100%; height: auto; }
+
+#mainProd ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
+
+#mainProd ul li:nth-child(3n) { margin-right: 0; }
+
+#mainProd button { display: block; width: 100px; height: 30px; margin: 10px auto 61px; }
+
+#allProd { display: none; width: 80%; height: auto; min-height: 500px; margin: auto; }
+
+#allProd ul { width: 100%; height: auto; }
+
+#allProd ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
+
+#allProd ul li:nth-child(3n) { margin-right: 0; }
+
+#allProd button { display: block; width: 100px; height: 30px; margin: 10px auto 61px; }
+
+#newProd { display: none; width: 80%; height: auto; min-height: 500px; margin: auto; }
+
+#newProd ul { width: 100%; height: auto; }
+
+#newProd ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
+
+#newProd ul li:nth-child(3n) { margin-right: 0; }
+
+#newProd button { display: block; width: 100px; height: 30px; margin: 10px auto 61px; }
+
+/* TV 1920px~ =============== */
+/* media screen and (min-width: 1920px) h:900 */
+@media screen and (min-width: 1920px) { #mainBrand { width: 80%; height: auto; min-height: 500px; margin: auto; }
+  #mainBrand ul { width: 100%; height: auto; }
+  #mainBrand ul li { float: left; width: 18.4%; height: 350px; margin: 0 2% 20px 0; }
+  #mainBrand ul li:nth-child(3n) { margin-right: 2%; }
+  #mainBrand ul li:nth-child(5n) { margin-right: 0; }
+  #mainBrand button { display: block; width: 100px; height: 30px; margin: 10px auto 61px; } }

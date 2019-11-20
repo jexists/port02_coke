@@ -226,3 +226,7 @@ h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20
 #event_ing .slide_box { width: 100%; height: 80%; background-color: #efe; }
 
 #event_end { background-color: #e8f; }
+
+#servBox { display: none; }
+
+#mediaBox { display: none; }

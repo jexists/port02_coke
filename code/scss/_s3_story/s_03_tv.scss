@@ -1,0 +1,14 @@
+// s_03_tv.scss
+
+/* TV 1920px~ =============== */
+/* media screen and (min-width: 1920px) h:900 */
+@media screen and (min-width: 1920px) {
+
+#allStory{width: 80%; height: auto; min-height: 500px;
+  margin: auto; 
+ ul{width: 100%; height: auto;
+  li{float:left; width: (100%-8)/5; height: 350px; 
+    margin: 0 2% 20px 0;
+    &:nth-child(3n){margin-right: 2%;} 
+    &:nth-child(5n){margin-right: 0;}}}}
+} //media screen

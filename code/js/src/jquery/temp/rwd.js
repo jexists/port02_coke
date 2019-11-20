@@ -32,19 +32,6 @@ DeviceCheck();
  let ScriptAppend = function(jsName){
   body.append('<script src="'+ jsUrl + jsName +'.js"></script>');
  };
-/*
-.company_area{width: 100%; height: auto; 
-  &>li{
-    float: left; position: relative;
-    width: 30%; height: 250px; 
-    margin-right: 5%;
-   &:nth-child(1)>a{background: url($url + 'main/business.jpg') no-repeat 50% 50% / cover;}
-   &:nth-child(2)>a{background: url($url + 'main/history.jpg') no-repeat 50% 50% / cover;}
-   &:nth-child(3)>a{background: url($url + 'main/social.jpg') no-repeat 50% 50% / cover;}
-   &:last-child{margin-right: 0;}
-   &>a.act
-*/
-
 
 switch(beforeDevice){
   case 'mobile':
@@ -56,18 +43,24 @@ switch(beforeDevice){
 //break;
   case 'tv':
     ScriptAppend('nav_pc');
-
   break;
-
- 
 }
-
+  let browser = navigator.userAgent.toLowerCase();
+  let nowb = null;
+  if(browser.indexOf('firefox') !== -1){
+    nowb = 'firefox';
+  }else{
+    nowb = 'other';
+  }
 //사이즈가 변하면 파악
  win.on('resize',function(){
-	let nowWinW = win.outerWidth();
-	let afterDevice = DeviceCheck(nowWinW);
-	if(winW !== nowWinW && beforeDevice !== afterDevice){
-	location.reload(); //새로고침
-	}
+  let nowWinW = win.outerWidth();
+  let afterDevice = DeviceCheck(nowWinW);
+  if(winW !== nowWinW && beforeDevice !== afterDevice){
+    if(nowb == 'firefox'){
+      window.location = window.location; //강제 새로고침
+    }else{
+      location.reload();}
+  }
  });
 })(jQuery);

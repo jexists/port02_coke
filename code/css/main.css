@@ -147,6 +147,8 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 
 #slide_wrap div .Mimg_01 { position: absolute; left: 0; right: 0; bottom: 0; margin: auto; z-index: 1; /* width: 30vw; max-width: 350px; height: 50vw; max-height: 680px; */ }
 
+#slide_wrap div .Mimg_01.act { transform: scale(0.5); }
+
 #slide_wrap div .tt { position: absolute; /* left: 20%; top: 37%; font-size: 1.5rem; */ transform: rotate(-4deg); padding: 5px 18px; border-radius: 15px; color: #fff; background-color: #333; }
 
 #slide_wrap div .td { position: absolute; /* left:50%; top: 65%; */ transform: translate(-50%, -50%); text-transform: uppercase; font-weight: bold; /* font-size: 10rem; */ text-align: center; }
