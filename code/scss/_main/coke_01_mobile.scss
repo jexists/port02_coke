@@ -13,15 +13,23 @@
 // #contentBox
 // #adBox
  #slide_wrap{
-  div{
-   .Mimg_01 {left:-10%;
+  .slide{
+   .mBox {left:-10%;
     width: 45%; min-width: 170px; max-width: 250px; 
     height: 75%; min-height: 200px; max-height: 850px;}
     .tt{left: 5%; top: 15%; font-size: 1.2rem;}
     .td{left: 41%; top: 32%; font-size: 5rem; line-height: 75px;
      span{
-       &:first-child{text-indent:-20vw;}
-       &:last-child{text-indent:43vw;}}}}}
+       &:first-child{margin-left: 0; text-indent:-20vw;}
+       &:last-child{transform: translateX(0); text-indent:43vw;}}}}}
+  #slide_wrap{
+  .ad_02{
+   .mBox{}
+   .tt{}
+   .td{
+    span{}}}}
+
+
 // #brandBox
 .brand_box{
   &>li{height: 300px;

@@ -1,0 +1,17 @@
+/* TV 1920px~ =============== */
+/* media screen and (min-width: 1920px) h:900 */
+@media screen and (min-width: 1920px) { .head_area { max-width: 1280px; }
+  .gnb_cp { display: none; }
+  #slide_wrap .slide.act .mBox { width: 50%; min-width: 250px; max-width: 450px; height: 100%; max-height: 800px; }
+  #slide_wrap .slide.act .tt { left: 30%; top: 28%; font-size: 1.5rem; }
+  #slide_wrap .slide.act .td { left: 50%; top: 58%; font-size: 8rem; }
+  #slide_wrap .slide.act .td span:first-child { margin-left: 0; text-indent: -20vw; }
+  #slide_wrap .slide.act .td span:last-child { transform: translateX(0); text-indent: 40vw; }
+  #slide_wrap .ad_02.act .tt { left: 15%; }
+  #slide_wrap .ad_02.act .td span:first-child { text-indent: -35vw; }
+  #slide_wrap .ad_02.act .td span:last-child { text-indent: 30vw; }
+  #slide_wrap .ad_03.act .tt { left: 15%; }
+  #slide_wrap .ad_03.act .td { line-height: 100px; }
+  #slide_wrap .ad_03.act .td span:first-child { text-indent: -45vw; }
+  #slide_wrap .ad_03.act .td span:last-child { text-indent: 30vw; }
+  #brandBox > p { width: 20%; height: auto; } }

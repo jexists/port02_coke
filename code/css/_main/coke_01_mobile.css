@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* 모바일 480px~767px (280) h:640 =============== */
+/* media screen and (max-width:767px) */
+@media screen and (max-width: 767px) { #wrap { min-width: 150px; overflow: hidden; }
+  .box_size { height: 100vh; min-height: 850px; padding: 100px 0; }
+  .box_text { font-size: 16px; font-size: 1rem; }
+  .navList { display: none; }
+  .search_open { display: none; }
+  .more_btn { margin-top: 50px; }
+  .cp { display: block; }
+  #slide_wrap .slide .mBox { left: -10%; width: 45%; min-width: 170px; max-width: 250px; height: 75%; min-height: 200px; max-height: 850px; }
+  #slide_wrap .slide .tt { left: 5%; top: 15%; font-size: 1.2rem; }
+  #slide_wrap .slide .td { left: 41%; top: 32%; font-size: 5rem; line-height: 75px; }
+  #slide_wrap .slide .td span:first-child { margin-left: 0; text-indent: -20vw; }
+  #slide_wrap .slide .td span:last-child { transform: translateX(0); text-indent: 43vw; }
+  .brand_box > li { height: 300px; }
+  .brand_box > li a { margin-top: 120%; }
+  .cs_wrap dt { display: block; width: 100%; height: auto; margin-bottom: 20px; text-decoration: underline; }
+  .cs_wrap dd { height: 150px; }
+  .cs_wrap { width: 100%; height: auto; }
+  .cs_wrap dl { width: 100%; height: auto; }
+  .cs_wrap dl > dd { width: 100%; height: 150px; margin-top: 20px; }
+  .cs_wrap dl > dd:last-child { display: none; }
+  .company_area { width: 100%; height: auto; }
+  .company_area > li { position: relative; width: 100%; height: 110px; margin-bottom: 20px; }
+  .company_area > li > a { display: block; width: 100%; height: 100%; }
+  .company_area > li > a > span { line-height: 18px; width: 100px; height: auto; padding: 10px 30px; text-align: center; font-size: 25px; }
+  .conts_wrap { top: 40%; transform: translateY(-25%); }
+  .conts_wrap .more_btn { margin-top: 10px; }
+  .sns_area { width: 70%; height: 80%; position: relative; margin: auto; margin-top: 50px; }
+  .sns_area ul { width: auto; height: auto; }
+  .sns_area ul li { position: absolute; width: 100%; height: 45%; }
+  .sns_area ul li:nth-child(3) { display: none; }
+  .sns_area ul li:nth-child(4) { display: none; }
+  .sns_area ul li:nth-child(5) { display: none; }
+  .sns_area ul li a { display: block; width: 100%; height: 100%; }
+  .sns_area ul li a dl { position: relative; width: 100%; height: 100px; }
+  .sns_area ul li a dl dt { position: absolute; top: -25px; left: 0; right: 0; margin: auto; width: 50px; height: 50%; border-radius: 100%; }
+  address > p > br { display: block; } }
+
+/* // media screen 모바일 */

@@ -12,8 +12,8 @@
 
 // #adBox
  #slide_wrap{
-  div{
-   .Mimg_01 {
+  .slide.act{
+   .mBox {
     width: 25%; min-width: 280px; max-width: 350px; 
     height: 45%; min-height: 600px; max-height: 680px;}
     .tt{left: 23%; top: 30%; font-size: 1.2rem;}
@@ -22,6 +22,22 @@
      span{
        &:first-child{text-indent:-20vw;}
        &:last-child{text-indent:43vw;}}}}}
+ #slide_wrap{
+  .ad_02.act{
+   .mBox{}
+   .tt{left: 10%; }
+   .td{
+    span{
+      &:first-child{margin-left: 0; text-indent:-50vw;}
+      &:last-child{transform: translateX(0); text-indent:25vw;}}}}}
+ #slide_wrap{
+  .ad_03.act{
+   .mBox{}
+   .tt{left: 10%;  }
+   .td{line-height: 100px;
+    span{
+      &:first-child{text-indent:-45vw;}
+      &:last-child{text-indent:30vw;}}}}}
 // #brandBox
 
 // #storyBox

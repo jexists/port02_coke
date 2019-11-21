@@ -10,16 +10,32 @@
 // #contentBox
 // #adBox
 #slide_wrap{
-  div{
-   .Mimg_01 {
+  .slide.act{
+   .mBox {
     width: 50%; min-width: 250px; max-width: 450px; 
     height: 100%; max-height: 800px;}
     .tt{left: 30%; top: 28%; font-size: 1.5rem;}
     .td{left: 50%; top: 58%;
-      font-size: 7rem;
+      font-size: 8rem;
      span{
-       &:first-child{text-indent:-20vw;}
-       &:last-child{text-indent:40vw;}}}}}
+       &:first-child{margin-left: 0; text-indent:-20vw;}
+       &:last-child{transform: translateX(0); text-indent:40vw;}}}}}
+ #slide_wrap{
+  .ad_02.act{
+   .mBox{}
+   .tt{left: 15%; }
+   .td{
+    span{
+      &:first-child{text-indent:-35vw;}
+      &:last-child{text-indent:30vw;}}}}}
+ #slide_wrap{
+  .ad_03.act{
+   .mBox{}
+   .tt{left: 15%;  }
+   .td{line-height: 100px;
+    span{
+      &:first-child{text-indent:-45vw;}
+      &:last-child{text-indent:30vw;}}}}}
 // #brandBox
 #brandBox>p{width: 20%; height: auto;}
 // #storyBox
