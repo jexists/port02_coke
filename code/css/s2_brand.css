@@ -215,45 +215,31 @@ h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20
 
 .brLink a:hover { font-weight: bold; outline: none; }
 
-#mainBrand { width: 80%; height: auto; min-height: 500px; margin: auto; }
+.brandMk { width: 80%; height: auto; min-height: 500px; margin: auto; }
 
-#mainBrand ul { width: 100%; height: auto; }
+.brandMk ul { width: 100%; height: auto; }
 
-#mainBrand ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
+.brandMk ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
 
-#mainBrand ul li:nth-child(3n) { margin-right: 0; }
+.brandMk ul li:nth-child(3n) { margin-right: 0; }
 
-#mainBrand button { display: block; width: 100px; height: 30px; margin: 10px auto 61px; }
+.brandMk button { display: block; width: 100px; height: 30px; margin: 10px auto 61px; }
 
-#mainProd { display: none; width: 80%; height: auto; min-height: 500px; margin: auto; }
+#mainBrand a { display: block; width: 100%; height: 100%; }
 
-#mainProd ul { width: 100%; height: auto; }
+#mainBrand a dl { position: relative; width: 100%; height: 100%; }
 
-#mainProd ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
+#mainBrand a dl dt { width: 100%; height: 20%; background-size: 50% auto; background-repeat: no-repeat; background-position: 50% 40%; }
 
-#mainProd ul li:nth-child(3n) { margin-right: 0; }
+#mainBrand a dl .prod { width: 100%; height: 80%; background-size: 50% auto; background-repeat: no-repeat; background-position: 50% 00%; }
 
-#mainProd button { display: block; width: 100px; height: 30px; margin: 10px auto 61px; }
+#mainBrand a dl .text { display: none; position: absolute; bottom: 0; z-index: 5; width: 100%; height: 50px; text-align: center; line-height: 50px; background-color: rgba(51, 51, 51, 0.9); color: #fff; }
 
-#allProd { display: none; width: 80%; height: auto; min-height: 500px; margin: auto; }
+#mainBrand a.act { display: block; width: 100%; height: 100%; }
 
-#allProd ul { width: 100%; height: auto; }
+#mainBrand a.act dl .prod { background-size: 80% auto; }
 
-#allProd ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
-
-#allProd ul li:nth-child(3n) { margin-right: 0; }
-
-#allProd button { display: block; width: 100px; height: 30px; margin: 10px auto 61px; }
-
-#newProd { display: none; width: 80%; height: auto; min-height: 500px; margin: auto; }
-
-#newProd ul { width: 100%; height: auto; }
-
-#newProd ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
-
-#newProd ul li:nth-child(3n) { margin-right: 0; }
-
-#newProd button { display: block; width: 100px; height: 30px; margin: 10px auto 61px; }
+#mainBrand a.act dl .text { display: block; }
 
 /* TV 1920px~ =============== */
 /* media screen and (min-width: 1920px) h:900 */

@@ -4,7 +4,7 @@ let hrefData;
 (function($){
   $('body').append('<script src="../js/src/jquery/sub_common.js"></script>');
 
-  console.log('???');
+  // console.log('???');
 	const brLink = ['mainBrand', 'mainProd', 'allProd', 'newProd'];
 
 	const linkBtn = $('.brLink').find('li');
@@ -28,7 +28,7 @@ let hrefData;
     // let i = hrefData.indexOf('.html#');
     myview = hrefData.toString().split('?').pop();
     // console.log(i+6);
-    console.log(myview);
+    // console.log(myview);
     for(let k = 0 ; k < brLink.length; k++){
     	if(brLink[k] == myview){
     		myindex = k;

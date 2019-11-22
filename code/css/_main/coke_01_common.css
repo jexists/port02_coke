@@ -224,7 +224,7 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 .cs_wrap dl a:focus { border: 3px solid #f00; box-sizing: border-box; }
 
 /* 공통 // companyBox 회사정보&컴파니박스 ================== */
-#companyBox { position: relative; }
+#companyBox { position: relative; height: auto; }
 
 .conts_wrap { position: absolute; top: 60%; left: 0; right: 0; margin: auto; transform: translateY(-50%); width: 80%; height: auto; }
 

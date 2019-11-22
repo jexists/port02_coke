@@ -44,6 +44,7 @@ switch(beforeDevice){
 //break;
   case 'tv':
     ScriptAppend('nav_pc');
+    ScriptAppend('scrollM');
   break;
 }
   let browser = navigator.userAgent.toLowerCase();

@@ -3,7 +3,6 @@
 (function($) {
   // 화면로딩시 스크롤위치 처음으로 가도록 처리
   $('#wrap').animate({scrollTop:0},300);
-  console.log("dfsdfa")
 
   // 각각의 반복수행하는기능(화면상의 위치해야하는 요소선택)
   var box     = $('.box');
@@ -30,7 +29,7 @@
    });
   
 
-   // console.log(boxList); 
+   //console.log(boxList); 
 
  /**
  *01 마우스 휠기능 처리시 동작(firefox에서는 DOMMouseScroll이벤트로 수행해야함)
@@ -65,48 +64,16 @@
       go = false;
       // [0, 10, 50, undefined]  >> 내가 뉴스박스컨텐츠에서 그 이후로는 마우스휠기능을 안 주게 하려면 boxLen로..
       (j >= boxLen-1) ? j = boxLen : j+=1;
-      console.log('마우스를 내렸습니다.', j);
+      //console.log('마우스를 내렸습니다.', j);
     }else if(delta > 0 && go){
       go = false;
       (j <= 0) ? j = 0 : j-=1;
-      console.log('마우스를 올렸습니다.', j);
+      //console.log('마우스를 올렸습니다.', j);
     }
-    console.log(boxList[j]);
-    $('#wrap').stop().animate({ scrollTop:boxList[j] },function() {
+    //console.log(boxList[j]);
+    $('html, body').stop().animate({ scrollTop:boxList[j] },function() {
       go = true;
     });
   });
-
-  /**
-  *02 마우스 휠 기능뿐아니라, 스크롤처리시에 동작하는 기능까지 결합해 보자~~!!
-  */
-
-/*
-  $(window).on('scroll',function() {
-    var myTop = $(this).scrollTop();
-    console.log(myTop);
-    for(var k=0; k<boxList.length; k+=1){
-      if(myTop >= boxList[k] && myTop < boxList[k+1]){
-        $('html,body').stop().animate({scrollTop:boxList[k]});    
-      }
-    }
-  });
-*/
-
-$(window).on('keyup',function(e) {
-  e.preventDefault()
-  var myKey = e.key.toLowerCase();
-  // console.log(myKey);
-  if(myKey == 'home'){
-    j=0;
-  }else if(myKey == 'end'){
-    j=boxList.length-1;
-  }else if(myKey == 'pageup'){
-    j -= 1;
-  }else if(myKey == 'pagedown'){
-    j += 1;
-  }
-  $('html,body').stop().animate({scrollTop:boxList[j]});
-});
 
 })(jQuery);
