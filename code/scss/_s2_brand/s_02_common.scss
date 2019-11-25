@@ -1,6 +1,7 @@
 // s_02_common.scss
-#wrap{}
+// #wrap{}
 #contentBox{padding-top: 80px;}
+#contentBox a:hover, #contentBox a:focus {outline: none}
 h2{width: 200px; 
 	height: auto;
 	font-size: 35px; 
@@ -17,31 +18,37 @@ h2{width: 200px;
  &:last-child{margin-right: 0;
   &:after,&::after{display: none;}}}}
 .brLink a:hover{font-weight: bold; outline: none;}
+.brLink a:focus{font-weight: bold; outline: none; font-size: 1.2rem;}
 
 .brandMk{width: 80%; height: auto; min-height: 500px;
 	margin: auto; 
- ul{width: 100%; height: auto;
-  li{float:left; width: (100%-4)/3; height: 300px; 
-  	background-color: #fff; margin: 0 2% 20px 0;
-  	border: 1px solid #888; box-sizing:border-box; 
+ ul{width: 100%; max-width: 1600px; height: auto; margin: auto;
+  li{float:left; width: (100%-6)/3; height: 300px; 
+  	background-color: #fff; margin: 0 3% 20px 0;
+  	box-sizing:border-box; 
   	&:nth-child(3n){margin-right: 0;}}}
  button{display:block; width: 100px; height: 30px;
- 	margin: 10px auto 61px;}}
+ 	margin: 0 auto 60px; border-radius: 5px; @include mc(4);
+  &:hover{background-color: #f00;}
+  &:focus{background-color: #f50; outline: none;}}}
 
-#mainBrand a{display: block; width: 100%; height: 100%;
-  dl{position: relative; width: 100%; height: 100%;
+.brandMk a{display: block; width: 100%; height: 100%;
+  transition: all 1000ms ease;
+  dl{position: relative; width: 100%; height: 100%; overflow: hidden;
   dt{width: 100%; height: 20%; background-size: 50% auto;
-    background-repeat: no-repeat; background-position: 50% 40%;}
+    background-repeat: no-repeat; background-position: 50% 80%;}
   .prod{
-    width: 100%; height: 80%; background-size: 50% auto;
-    background-repeat: no-repeat; background-position: 50% 00%;}
-  .text{display: none; position:absolute; bottom: 0; z-index: 5;
-    width: 100%; height: 50px; text-align:center;
-    line-height: 50px;
+    width: 100%; height: 80%; background-size: 65% auto;
+    background-repeat: no-repeat; background-position: 50% 00%;
+    transition: all 1000ms ease;}
+  .text{display: none; overflow: hidden; position:absolute; bottom: 0; z-index: 5;
+    width: 100%; height: 50px; text-align:center; text-overflow: ellipsis; white-space: nowrap;
+    padding: 0 10px; box-sizing:border-box;
+    line-height: 50px; transition: all 1000ms ease;
     background-color: rgba(#333,0.9); color: #fff}}}
 
-#mainBrand a.act{display: block; width: 100%; height: 100%;
+.brandMk a.act{display: block; width: 100%; height: 100%;
   dl{
   dt{}
-  .prod{background-size: 80% auto;}
+  .prod{background-size: 80% auto; /* transform:scale(1.3) */}
   .text{display: block;}}}

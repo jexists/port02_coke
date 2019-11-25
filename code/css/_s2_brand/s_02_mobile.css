@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* 모바일 480px~767px (280) h:640 =============== */
+/* media screen and (max-width:767px) */
+@media screen and (max-width: 767px) { #mainBrand { width: 80%; height: auto; min-height: 500px; margin: auto; }
+  #mainBrand ul { width: 100%; height: auto; }
+  #mainBrand ul li { float: left; width: 17.6%; height: 320px; margin: 0 3% 20px 0; }
+  #mainBrand ul li:nth-child(3n) { margin-right: 3%; }
+  #mainBrand ul li:nth-child(5n) { margin-right: 0; }
+  #mainBrand button { display: block; width: 100px; height: 30px; margin: 10px auto 61px; } }

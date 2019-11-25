@@ -409,15 +409,15 @@ address > p:nth-of-type(3) a { color: inherit; }
   #slide_wrap .slide.act .mBox { width: 25%; min-width: 280px; max-width: 350px; height: 45%; min-height: 600px; max-height: 680px; }
   #slide_wrap .slide.act .tt { left: 23%; top: 30%; font-size: 1.2rem; }
   #slide_wrap .slide.act .td { left: 50%; top: 58%; font-size: 7rem; }
-  #slide_wrap .slide.act .td span:first-child { text-indent: -20vw; }
-  #slide_wrap .slide.act .td span:last-child { text-indent: 43vw; }
+  #slide_wrap .slide.act .td span:first-child { margin-left: 0; text-indent: -20vw; }
+  #slide_wrap .slide.act .td span:last-child { transform: translateX(0); text-indent: 43vw; }
   #slide_wrap .ad_02.act .tt { left: 10%; }
   #slide_wrap .ad_02.act .td span:first-child { margin-left: 0; text-indent: -50vw; }
   #slide_wrap .ad_02.act .td span:last-child { transform: translateX(0); text-indent: 25vw; }
   #slide_wrap .ad_03.act .tt { left: 10%; }
   #slide_wrap .ad_03.act .td { line-height: 100px; }
-  #slide_wrap .ad_03.act .td span:first-child { text-indent: -45vw; }
-  #slide_wrap .ad_03.act .td span:last-child { text-indent: 30vw; }
+  #slide_wrap .ad_03.act .td span:first-child { margin-left: 0; text-indent: -45vw; }
+  #slide_wrap .ad_03.act .td span:last-child { transform: translateX(0); text-indent: 30vw; }
   .story_link { width: 100%; height: auto; margin: 15px 0 30px; text-align: center; }
   .story_link li { display: inline-block; position: relative; width: auto; height: auto; margin-right: 20px; }
   .story_link li:after, .story_link li::after { content: " "; position: absolute; right: -12px; top: 0; bottom: 0; margin: auto; width: 0; height: 60%; border-left: 2px solid #333; }

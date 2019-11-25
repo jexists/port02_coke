@@ -114,7 +114,7 @@ $url: '../img/';
 /* 모바일 480px~767px (280) h:640 =============== */
 /* media screen and (max-width:767px) */
 @media screen and (max-width:767px) {
-#wrap{min-width: 150px; overflow: hidden;}
+#wrap{min-width: 150px; }
  .box_text{font-size: 16px; font-size: 1rem;}
  .navList{display: none;}
  .search_open{display: none;}

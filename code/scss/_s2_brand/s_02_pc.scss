@@ -1,0 +1,35 @@
+// s_02_pc.scss
+
+/* PC 1280px~1919px (1024) h:800=============== */
+/* media screen and (min-width: 1280px) */
+@media screen and (min-width: 1280px) and (max-width: 1919px){
+
+.brandMk{width: 80%; height: auto; min-height: 500px;
+  margin: auto; 
+ ul{width: 100%; height: auto;
+  li{float:left; width: (100%-8)/5; height: 280px; 
+    margin: 0 2% 20px 0;
+    &:nth-child(3n){margin-right: 2%;} 
+    &:nth-child(5n){margin-right: 0;}}}
+ button{display:block; width: 100px; height: 30px;
+ 	margin: 0 auto 60px; border-radius: 5px; @include mc(4);
+  &:hover{background-color: #f00;}
+  &:focus{background-color: #f50; outline: none;}}}
+
+.brandMk a{
+  dl{position: relative; width: 100%; height: 100%; overflow: hidden;
+  dt{width: 100%; height: 20%; background-size: 50% auto;
+    background-repeat: no-repeat; background-position: 50% 80%;}
+  .prod{
+    width: 100%; height: 80%; background-size: 65% auto;
+    background-repeat: no-repeat; background-position: 50% 00%;
+    transition: all 1000ms ease;}
+  .text{height: 35px; 
+    line-height: 35px; }}}
+
+.brandMk a.act{display: block; width: 100%; height: 100%;
+  dl{
+  dt{}
+  .prod{background-size: 80% auto; /* transform:scale(1.3) */}
+  .text{display: block;}}}
+}

@@ -14,7 +14,7 @@ const navMenu = [
 	// {subN:'브랜드',subLink:'./s2_brand.html?mainBrand'},
 	{subN:'대표제품',subLink:'./s2_brand.html?mainProd'},
 	{subN:'전체제품',subLink:'./s2_brand.html?allProd'},
-	{subN:'새제품',subLink:'./s2_brand.html?newProd'}]},
+	{subN:'신제품',subLink:'./s2_brand.html?newProd'}]},
  {title: '스토리', titleLink:'./s3_story.html', 
 	sub: [
 	// {subN:'전체',subLink:'./s3_story.html?allStory'},

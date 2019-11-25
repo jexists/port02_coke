@@ -41,6 +41,7 @@
   <header id="headBox">
   </header>
 <!-- //headBox=================== -->
+
   <main id="contentBox">
     <h2>스토리</h2>
     <ul class="stLink cf">
@@ -51,6 +52,32 @@
       <li><a href="#sporStory">올림픽 &amp; 월드컵</a></li>
       <li><a href="#pressStory">보도자료</a></li>
     </ul>
+
+    <div class="story_search">
+       <h3 class="hd">코카콜라 검색창</h3>
+      <form action="#" method="get" class="site">
+       <fieldset>
+        <legend class="hd">코카콜라 검색창입니다.</legend>
+        <label for="siteName" id="site" class="hd">
+          검색창 카테고리를 선택하세요
+        </label>
+        <select name="site" id="siteName">
+          <option value="전체">전체</option>
+          <option value="브랜드">브랜드</option>
+          <option value="제품">제품</option>
+          <option value="스토리">스토리</option>
+          <option value="이벤트">이벤트</option>
+        </select>
+         <label for="searchBar" class="hd">검색창</label>
+         <input type="search" id="searchBar" name="searchBar"
+          value="" placeholder="코카콜라 정보, 검색하세요!"/>
+       <button type="submit" class="search_icon">
+        <i class="fas fa-search"></i>
+       </button>
+       </fieldset>
+      </form>
+     </div>
+
     <section id="allStory">
       <ul class="cf">
         <li>전체</li>

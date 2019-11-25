@@ -107,7 +107,7 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 
 /* 모바일 480px~767px (280) h:640 =============== */
 /* media screen and (max-width:767px) */
-@media screen and (max-width: 767px) { #wrap { min-width: 150px; overflow: hidden; }
+@media screen and (max-width: 767px) { #wrap { min-width: 150px; }
   .box_text { font-size: 16px; font-size: 1rem; }
   .navList { display: none; }
   .search_open { display: none; }
@@ -199,6 +199,8 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 
 #contentBox { padding-top: 80px; }
 
+#contentBox a:hover, #contentBox a:focus { outline: none; }
+
 h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20px auto; }
 
 .brLink { width: 100%; height: auto; margin: 15px 0 30px; text-align: center; }
@@ -215,37 +217,95 @@ h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20
 
 .brLink a:hover { font-weight: bold; outline: none; }
 
+.brLink a:focus { font-weight: bold; outline: none; font-size: 1.2rem; }
+
 .brandMk { width: 80%; height: auto; min-height: 500px; margin: auto; }
 
-.brandMk ul { width: 100%; height: auto; }
+.brandMk ul { width: 100%; max-width: 1600px; height: auto; margin: auto; }
 
-.brandMk ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
+.brandMk ul li { float: left; width: 31.33333%; height: 300px; background-color: #fff; margin: 0 3% 20px 0; box-sizing: border-box; }
 
 .brandMk ul li:nth-child(3n) { margin-right: 0; }
 
-.brandMk button { display: block; width: 100px; height: 30px; margin: 10px auto 61px; }
+.brandMk button { display: block; width: 100px; height: 30px; margin: 0 auto 60px; border-radius: 5px; background-color: #333; }
 
-#mainBrand a { display: block; width: 100%; height: 100%; }
+.brandMk button:hover { background-color: #f00; }
 
-#mainBrand a dl { position: relative; width: 100%; height: 100%; }
+.brandMk button:focus { background-color: #f50; outline: none; }
 
-#mainBrand a dl dt { width: 100%; height: 20%; background-size: 50% auto; background-repeat: no-repeat; background-position: 50% 40%; }
+.brandMk a { display: block; width: 100%; height: 100%; transition: all 1000ms ease; }
 
-#mainBrand a dl .prod { width: 100%; height: 80%; background-size: 50% auto; background-repeat: no-repeat; background-position: 50% 00%; }
+.brandMk a dl { position: relative; width: 100%; height: 100%; overflow: hidden; }
 
-#mainBrand a dl .text { display: none; position: absolute; bottom: 0; z-index: 5; width: 100%; height: 50px; text-align: center; line-height: 50px; background-color: rgba(51, 51, 51, 0.9); color: #fff; }
+.brandMk a dl dt { width: 100%; height: 20%; background-size: 50% auto; background-repeat: no-repeat; background-position: 50% 80%; }
 
-#mainBrand a.act { display: block; width: 100%; height: 100%; }
+.brandMk a dl .prod { width: 100%; height: 80%; background-size: 65% auto; background-repeat: no-repeat; background-position: 50% 00%; transition: all 1000ms ease; }
 
-#mainBrand a.act dl .prod { background-size: 80% auto; }
+.brandMk a dl .text { display: none; overflow: hidden; position: absolute; bottom: 0; z-index: 5; width: 100%; height: 50px; text-align: center; text-overflow: ellipsis; white-space: nowrap; padding: 0 10px; box-sizing: border-box; line-height: 50px; transition: all 1000ms ease; background-color: rgba(51, 51, 51, 0.9); color: #fff; }
 
-#mainBrand a.act dl .text { display: block; }
+.brandMk a.act { display: block; width: 100%; height: 100%; }
+
+.brandMk a.act dl .prod { background-size: 80% auto; /* transform:scale(1.3) */ }
+
+.brandMk a.act dl .text { display: block; }
 
 /* TV 1920px~ =============== */
 /* media screen and (min-width: 1920px) h:900 */
-@media screen and (min-width: 1920px) { #mainBrand { width: 80%; height: auto; min-height: 500px; margin: auto; }
-  #mainBrand ul { width: 100%; height: auto; }
-  #mainBrand ul li { float: left; width: 18.4%; height: 350px; margin: 0 2% 20px 0; }
-  #mainBrand ul li:nth-child(3n) { margin-right: 2%; }
-  #mainBrand ul li:nth-child(5n) { margin-right: 0; }
-  #mainBrand button { display: block; width: 100px; height: 30px; margin: 10px auto 61px; } }
+@media screen and (min-width: 1920px) { .brandMk { width: 80%; height: auto; min-height: 500px; margin: auto; }
+  .brandMk ul { width: 100%; height: auto; }
+  .brandMk ul li { float: left; width: 18.4%; height: 350px; margin: 0 2% 20px 0; }
+  .brandMk ul li:nth-child(3n) { margin-right: 2%; }
+  .brandMk ul li:nth-child(5n) { margin-right: 0; }
+  .brandMk button { display: block; width: 100px; height: 30px; margin: 10px auto 61px; } }
+
+/* PC 1280px~1919px (1024) h:800=============== */
+/* media screen and (min-width: 1280px) */
+@media screen and (min-width: 1280px) and (max-width: 1919px) { .brandMk { width: 80%; height: auto; min-height: 500px; margin: auto; }
+  .brandMk ul { width: 100%; height: auto; }
+  .brandMk ul li { float: left; width: 18.4%; height: 280px; margin: 0 2% 20px 0; }
+  .brandMk ul li:nth-child(3n) { margin-right: 2%; }
+  .brandMk ul li:nth-child(5n) { margin-right: 0; }
+  .brandMk button { display: block; width: 100px; height: 30px; margin: 0 auto 60px; border-radius: 5px; background-color: #333; }
+  .brandMk button:hover { background-color: #f00; }
+  .brandMk button:focus { background-color: #f50; outline: none; }
+  .brandMk a dl { position: relative; width: 100%; height: 100%; overflow: hidden; }
+  .brandMk a dl dt { width: 100%; height: 20%; background-size: 50% auto; background-repeat: no-repeat; background-position: 50% 80%; }
+  .brandMk a dl .prod { width: 100%; height: 80%; background-size: 65% auto; background-repeat: no-repeat; background-position: 50% 00%; transition: all 1000ms ease; }
+  .brandMk a dl .text { height: 35px; line-height: 35px; }
+  .brandMk a.act { display: block; width: 100%; height: 100%; }
+  .brandMk a.act dl .prod { background-size: 80% auto; /* transform:scale(1.3) */ }
+  .brandMk a.act dl .text { display: block; } }
+
+/* 패드 768px~1279px  h:1024 =============== */
+/* media screen and (min-width: 768px) and (max-width:1279px) */
+@media screen and (min-width: 768px) and (max-width: 1279px) { .brandMk { width: 80%; height: auto; min-height: 500px; margin: auto; }
+  .brandMk ul { width: 100%; max-width: 1600px; height: auto; margin: auto; }
+  .brandMk ul li { float: left; width: 31.33333%; height: 280px; background-color: #fff; margin: 0 3% 20px 0; box-sizing: border-box; }
+  .brandMk ul li:nth-child(3n) { margin-right: 0; }
+  .brandMk button { display: block; width: 100px; height: 30px; margin: 0 auto 60px; border-radius: 5px; background-color: #333; }
+  .brandMk button:hover { background-color: #f00; }
+  .brandMk button:focus { background-color: #f50; outline: none; }
+  .brandMk a dl { position: relative; width: 100%; height: 100%; overflow: hidden; }
+  .brandMk a dl dt { width: 100%; height: 20%; background-size: 50% auto; background-repeat: no-repeat; background-position: 50% 80%; }
+  .brandMk a dl .prod { width: 100%; height: 80%; background-size: 65% auto; background-repeat: no-repeat; background-position: 50% 00%; transition: all 1000ms ease; }
+  .brandMk a dl .text { display: none; overflow: hidden; position: absolute; bottom: 0; z-index: 5; width: 100%; height: 35px; text-align: center; text-overflow: ellipsis; line-height: 35px; transition: all 1000ms ease; background-color: rgba(51, 51, 51, 0.9); color: #fff; }
+  .brandMk a.act { display: block; width: 100%; height: 100%; }
+  .brandMk a.act dl .prod { background-size: 80% auto; /* transform:scale(1.3) */ }
+  .brandMk a.act dl .text { display: block; } }
+
+/* 모바일 480px~767px (280) h:640 =============== */
+/* media screen and (max-width:767px) */
+@media screen and (max-width: 767px) { .brandMk { width: 80%; height: auto; min-height: 500px; margin: auto; }
+  .brandMk ul { width: 100%; max-width: 1600px; height: auto; margin: auto; }
+  .brandMk ul li { float: left; width: 31.33333%; height: 170px; background-color: #fff; margin: 0 3% 20px 0; box-sizing: border-box; }
+  .brandMk ul li:nth-child(3n) { margin-right: 0; }
+  .brandMk button { display: block; width: 100px; height: 30px; margin: 0 auto 60px; border-radius: 5px; background-color: #333; }
+  .brandMk button:hover { background-color: #f00; }
+  .brandMk button:focus { background-color: #f50; outline: none; }
+  .brandMk a dl { position: relative; width: 100%; height: 100%; overflow: hidden; }
+  .brandMk a dl dt { width: 100%; height: 20%; background-size: 50% auto; background-repeat: no-repeat; background-position: 50% 80%; }
+  .brandMk a dl .prod { width: 100%; height: 80%; background-size: 65% auto; background-repeat: no-repeat; background-position: 50% 00%; transition: all 1000ms ease; }
+  .brandMk a dl .text { height: 35px; font-size: 0.8rem; padding: 0 10px; box-sizing: border-box; line-height: 35px; transition: all 1000ms ease; background-color: rgba(51, 51, 51, 0.9); color: #fff; }
+  .brandMk a.act { display: block; width: 100%; height: 100%; }
+  .brandMk a.act dl .prod { background-size: 80% auto; /* transform:scale(1.3) */ }
+  .brandMk a.act dl .text { display: block; } }

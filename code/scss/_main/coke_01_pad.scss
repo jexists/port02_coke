@@ -20,8 +20,8 @@
     .td{left: 50%; top: 58%;
       font-size: 7rem;
      span{
-       &:first-child{text-indent:-20vw;}
-       &:last-child{text-indent:43vw;}}}}}
+       &:first-child{margin-left: 0; text-indent:-20vw;}
+       &:last-child{transform: translateX(0); text-indent:43vw;}}}}}
  #slide_wrap{
   .ad_02.act{
    .mBox{}
@@ -36,8 +36,8 @@
    .tt{left: 10%;  }
    .td{line-height: 100px;
     span{
-      &:first-child{text-indent:-45vw;}
-      &:last-child{text-indent:30vw;}}}}}
+      &:first-child{margin-left: 0; text-indent:-45vw;}
+      &:last-child{transform: translateX(0); text-indent:30vw;}}}}}
 // #brandBox
 
 // #storyBox

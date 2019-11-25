@@ -46,8 +46,7 @@ let hrefData;
     e.preventDefault();
 		let j = $(this).parent('li').index();
 		viewTheme(j);
-
 	});
 // ---------------------------------------------------------------------------
-
+  
 })(jQuery);

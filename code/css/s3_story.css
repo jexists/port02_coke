@@ -107,7 +107,7 @@ h1 > a:hover, h1 > a:focus { transform: scale(1.1); outline: none; }
 
 /* 모바일 480px~767px (280) h:640 =============== */
 /* media screen and (max-width:767px) */
-@media screen and (max-width: 767px) { #wrap { min-width: 150px; overflow: hidden; }
+@media screen and (max-width: 767px) { #wrap { min-width: 150px; }
   .box_text { font-size: 16px; font-size: 1rem; }
   .navList { display: none; }
   .search_open { display: none; }
@@ -214,6 +214,16 @@ h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20
 .stLink li:last-child:after, .stLink li:last-child::after { display: none; }
 
 .stLink a:hover { font-weight: bold; outline: none; }
+
+.story_search { width: 100%; height: 80px; margin: auto; padding: 20px; box-sizing: border-box; background-color: white; }
+
+.story_search fieldset { width: 60%; height: 40px; margin: auto; padding: 2px; /* box-sizing:border-box; */ background-color: #fff; }
+
+.story_search #siteName { float: left; width: 15%; height: 40px; margin-right: 2%; text-indent: 8px; font-size: 1.5rem; }
+
+.story_search #searchBar { float: left; width: 75%; height: 40px; font-size: 1.5rem; }
+
+.story_search .search_icon { float: right; width: 5%; height: 40px; background-color: transparent; color: #f00; font-size: 2.5rem; }
 
 #allStory { width: 80%; height: auto; min-height: 500px; margin: auto; }
 

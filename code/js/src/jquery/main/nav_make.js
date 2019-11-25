@@ -4,17 +4,17 @@
 const navMenu = [
  {title: '회사소개',titleLink:'./s1_company.html?cokeBox', 
 	sub: [
-	{subN:'코카콜라', subLink:'./s1_company.html?cokeBox'},
+	// {subN:'코카콜라', subLink:'./s1_company.html?cokeBox'},
 	{subN:'글로벌', subLink:'./s1_company.html?globBox'},
 	{subN:'코리아', subLink:'./s1_company.html?korBox'},
 	{subN:'히스토리', subLink:'./s1_company.html?histBox'},
 	{subN:'사회공헌', subLink:'./s1_company.html?sociBox'}]},
  {title: '제품소개', titleLink:'./s2_brand.html',  
 	sub: [
-	{subN:'브랜드',subLink:'./s2_brand.html?mainBrand'},
+	/*{subN:'브랜드',subLink:'./s2_brand.html?mainBrand'},*/
 	{subN:'대표제품',subLink:'./s2_brand.html?mainProd'},
 	{subN:'전체제품',subLink:'./s2_brand.html?allProd'},
-	{subN:'새제품',subLink:'./s2_brand.html?newProd'}]},
+	{subN:'신제품',subLink:'./s2_brand.html?newProd'}]},
  {title: '스토리', titleLink:'#', 
 	sub: [
 	// {subN:'전체',subLink:'./s3_story.html?allStory'},

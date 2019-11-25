@@ -1,0 +1,38 @@
+// coke_02_mobile.scss
+
+/* 모바일 480px~767px (280) h:640 =============== */
+/* media screen and (max-width:767px) */
+@media screen and (max-width:767px) {
+.brandMk{width: 80%; height: auto; min-height: 500px;
+	margin: auto; 
+ ul{width: 100%; max-width: 1600px; height: auto; margin: auto;
+  li{float:left; width: (100%-6)/3; height: 170px; 
+  	background-color: #fff; margin: 0 3% 20px 0;
+  	box-sizing:border-box; 
+  	&:nth-child(3n){margin-right: 0;}}}
+ button{display:block; width: 100px; height: 30px;
+ 	margin: 0 auto 60px; border-radius: 5px; @include mc(4);
+  &:hover{background-color: #f00;}
+  &:focus{background-color: #f50; outline: none;}}}
+
+.brandMk a{
+  dl{position: relative; width: 100%; height: 100%; overflow: hidden;
+  dt{width: 100%; height: 20%; background-size: 50% auto;
+    background-repeat: no-repeat; background-position: 50% 80%;}
+  .prod{
+    width: 100%; height: 80%; background-size: 65% auto;
+    background-repeat: no-repeat; background-position: 50% 00%;
+    transition: all 1000ms ease;}
+  .text{
+    height: 35px;
+    font-size: 0.8rem; padding: 0 10px; box-sizing:border-box;
+    line-height: 35px; transition: all 1000ms ease;
+    background-color: rgba(#333,0.9); color: #fff}}}
+
+.brandMk a.act{display: block; width: 100%; height: 100%;
+  dl{
+  dt{}
+  .prod{background-size: 80% auto; /* transform:scale(1.3) */}
+  .text{display: block;}}}
+
+}
