@@ -1,0 +1,196 @@
+	<h3 class="hd">고객센터</h3>
+		<form action="#" method="post"></form>
+		<fieldset>
+			<legend>고객센터 동의 체크여부 확인</legend>
+			<div class="check all_check">
+				<input type="checkbox" id="allCheck" name="allCheck" value="회원가입약관 모두 동의" />
+				<p><label for="allCheck">
+					<i class="fas fa-check-circle"></i>
+					개인정보 수집 및 이용,	프로모션 안내 메일 수신 &#40;선택&#41;에 모두 동의합니다.</label></p>
+			</div>
+			<div class="check require_check">
+				<input type="checkbox" name="cirti_01" id="req_cirti_01" value="개인정보 수집 이용 동의 체크" class="cb_sel" />
+				<dl>
+					<dt>
+							개인정보 수집 및 이용에 대한 안내 
+						<strong>&#40;필수&#41;</strong></dt>
+					<dd class="cont">
+						<p>한국 코카-콜라 유한회사 (이하 “회사”라 칭함)의 코카-콜라 저니 사이트(이하 “웹사이트”)에 오신 것을 환영합니다. 회사는 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 개인정보 보호법에 따라 회원의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 회원의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리 방침을 두고 있습니다. 회사는 개인정보취급방침을 개정하는 경우 웹사이트 공지사항을 통하여 공지할 것입니다. </p>	<br />
+						<ul>
+							<li>1. 수집하는 개인정보의 항목 및 이용목적</li>
+							<li>2. 쿠키에 의한 개인정보 수집</li>
+							<li>3. 만 14세 미만의 개인정보보호</li>
+							<li>4. 개인정보의 보유 및 이용기간</li>
+							<li>5. 개인정보의 파기절차 및 방법</li>
+							<li>6. 개인정보의 제3자에 대한 제공 및 공유 방침</li>
+							<li>7. 수집하는 개인정보의 위탁</li>
+							<li>8. 정보주체의 권리, 의무 및 그 행사방법</li>
+							<li>9. 개인정보의 안전성 확보 조치</li>
+							<li>10. 개인정보처리방침의 변경</li>
+							<li>11. 권리 침해 구제방법</li>
+							<li>12. 개인정보보호책임자 및 담당자</li>
+						</ul>
+					</dd>
+					<dd class="agree">
+						<label for="req_cirti_01">
+						<i class="far fa-check-circle"></i>
+							개인정보 수집 및 이용 약관에 동의합니다.</label></dt>
+					</dd>
+				</dl>
+			</div>
+			<div class="check select_check">
+				<input type="checkbox" name="cirti_02" id="req_cirti_02" value="이벤트 등 프로모션 알림 메일 수신" class="cb_sel" />
+				<dl class="send">
+					<dt>
+							이벤트 등 프로모션 알림 메일 수신 동의서
+						<em>&#40;선택&#41;</em></dt>
+					<dd class="cont">
+						<p>한국 코카-콜라 유한회사 (이하 “회사”라 칭함)의 코카-콜라 저니 사이트(이하 “웹사이트”)에 오신 것을 환영합니다.</p><br />
+						<p>동의를 거부할 수 있으며, 거부하시는 경우 불이익이 없습니다.</p>
+					</dd>
+					<dd class="agree">
+						<label for="req_cirti_02">
+						<i class="far fa-check-circle"></i>
+							이벤트 등 프로모션 알림 메일 수신에 동의합니다.</label></dt>
+					</dd>
+				</dl>
+			</div>
+		</fieldset>
+
+		<fieldset class="input_area">
+		 <legend>코카콜라 고객센터 문의</legend>
+		 <ul>
+		 	<li>
+		 		<dl>
+		 			<dt>
+		 				<label for="userName">
+							<i class="fas fa-user"></i>
+							<span>이름</span> 
+		 			</label>
+		 			</dt>
+		 			<dd>
+		 				<input type="text" name="userName" 
+		 				id="userName" value="" 
+		 				placeholder="이름" 
+		 				required="required" />
+		 			</dd>
+		 		</dl>
+		 		<span class="narr">이름을 정확히 입력하세요.</span>
+		 	</li>
+
+		 	<li>
+		 		<dl>
+		 			<dt>
+		 				<label for="userTel">
+							<i class="fas fa-mobile-alt"></i>
+		 				<span>연락처</span> 
+		 			</label>
+		 			</dt>
+		 			<dd>
+		 				<input type="tel" name="userTel" 
+		 				id="userTel" value="" 
+		 				placeholder="휴대폰 번호" 
+		 				required="required" />
+		 			</dd>
+		 		</dl>
+		 		<span class="narr">휴대폰 번호를 정확하게 입력하세요.</span>
+		 	</li>
+
+
+
+
+		 	<li>
+		 		<dl>
+		 			<dt>
+		 				<label for="userId">
+							<i class="fas fa-envelope"></i>
+		 				<span>이메일</span> 
+		 			</label>
+		 			</dt>
+		 			<dd>
+		 				<input type="email" name="userId" 
+		 				id="userId" value="" 
+		 				placeholder="아이디 &#40;이메일&#41;" 
+		 				required="required" />
+		 			</dd>
+		 		</dl>
+		 		<span class="narr">이메일을 입력하세요.</span>
+		 	</li>
+
+		 	<li>
+		 		<dl>
+		 			<dt>
+		 				<label for="title">
+							<i class="fas fa-envelope"></i>
+		 				<span>제목</span> 
+		 			</label>
+		 			</dt>
+		 			<dd>
+		 				<input type="text" name="title" 
+		 				id="title" value="" placeholder="제목" 
+		 				required="required" />
+		 			</dd>
+		 		</dl>
+		 		<span class="narr">제목을 입력하세요.</span>
+		 	</li>
+
+		 	<li class="cont">
+		 		<dl>
+		 			<dt>
+		 			<label for="contents">
+		 		<i class="fas fa-envelope"></i>
+		 				<span>내용</span>
+		 		</label>
+		 		</dt>
+		 		<dd>
+		 		<textarea name="contents" id="contents"></textarea>
+		 		</dd>
+		 		</dl>
+		 	</li>
+
+		 	<li>
+		 		<dl>
+		 			<dt>
+		 				<label for="userPw">
+							<i class="fas fa-lock"></i>
+		 				<span>비밀번호</span> 
+		 			</label>
+		 			</dt>
+		 			<dd>
+		 				<input type="password" name="userPw" 
+		 				id="userPw" value="" maxlength="15" 
+		 				placeholder="비밀번호	&#40;영문 숫자 특수문자 2가지 이상 6&#126;15자 이내&#41;" 
+		 				required="required" />
+		 			</dd>
+		 		</dl>
+		 		<span class="narr">비밀번호는 6&#126;15자 이내로 입력하셔야 합니다.</span>
+		 	</li>
+
+		 	<li>
+		 		<dl>
+		 			<dt>
+		 				<label for="userPwc"> 
+							<i class="fas fa-lock"></i>
+		 				<span>비밀번호 확인</span> 
+		 			</label>
+		 			</dt>
+		 			<dd>
+		 				<input type="password" name="userPwc" 
+		 				id="userPwc" value=""  maxlength="15"
+		 				placeholder="비밀번호 확인" 
+		 				required="required" />
+		 			</dd>
+		 		</dl>
+		 		<span class="narr">비밀번호가 일치하지 않습니다.</span>
+		 	</li>
+		 </ul>
+		</fieldset>
+
+
+		<fieldset>
+			<legend>동의서 확인 및 취소</legend>
+			<input type="reset" value="취소" />
+			<input type="submit" value="작성완료" />
+		</fieldset>
+
+		

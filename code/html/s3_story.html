@@ -53,32 +53,8 @@
       <li><a href="#pressStory">보도자료</a></li>
     </ul>
 
-    <div class="story_search">
-       <h3 class="hd">코카콜라 검색창</h3>
-      <form action="#" method="get" class="site">
-       <fieldset>
-        <legend class="hd">코카콜라 검색창입니다.</legend>
-        <label for="siteName" id="site" class="hd">
-          검색창 카테고리를 선택하세요
-        </label>
-        <select name="site" id="siteName">
-          <option value="전체">전체</option>
-          <option value="브랜드">브랜드</option>
-          <option value="제품">제품</option>
-          <option value="스토리">스토리</option>
-          <option value="이벤트">이벤트</option>
-        </select>
-         <label for="searchBar" class="hd">검색창</label>
-         <input type="search" id="searchBar" name="searchBar"
-          value="" placeholder="코카콜라 정보, 검색하세요!"/>
-       <button type="submit" class="search_icon">
-        <i class="fas fa-search"></i>
-       </button>
-       </fieldset>
-      </form>
-     </div>
-
-    <section id="allStory">
+    <section id="allStory" class="stbox">
+      <h3 class="hd">코카콜라 전체 스토리</h3>
       <ul class="cf">
         <li>전체</li>
         <li></li>
@@ -103,7 +79,8 @@
         <li><button type="button">10</button></li>
       </ol>
     </section>
-    <section id="cokeStory">
+    <section id="cokeStory" class="stbox">
+      <h3 class="hd">코카콜라 스토리</h3>
       <ul class="cf">
         <li>코크스토리</li>
         <li></li>
@@ -113,7 +90,8 @@
         <li><button type="button">02</button></li>
       </ol>
     </section>
-    <section id="globStory">
+    <section id="globStory" class="stbox">
+      <h3 class="hd">코카콜라 글로벌 스토리</h3>
       <ul class="cf">
         <li>글로벌스토리</li>
         <li></li>
@@ -125,7 +103,8 @@
         <li><button type="button">03</button></li>
       </ol>
     </section>
-    <section id="korStory">
+    <section id="korStory" class="stbox">
+      <h3 class="hd">코카콜라 코리아 스토리</h3>
       <ul class="cf">
         <li>코리아스토리</li>
         <li></li>
@@ -143,7 +122,8 @@
         <li><button type="button">03</button></li>
       </ol>
     </section>
-    <section id="sporStory">
+    <section id="sporStory" class="stbox">
+      <h3 class="hd">코카콜라 올림픽, 월드컵 스토리</h3>
       <ul class="cf">
         <li>올림픽</li>
         <li></li>
@@ -155,7 +135,8 @@
         <li><button type="button">03</button></li>
       </ol>
     </section>
-    <section id="pressStory">
+    <section id="pressStory" class="stbox">
+      <h3 class="hd">코카콜라 보도자료</h3>
       <ul class="cf">
         <li>보도자료</li>
         <li></li>
@@ -166,6 +147,28 @@
         <li><button type="button">03</button></li>
       </ol>
     </section>
+    <div class="story_search">
+       <h3 class="hd">코카콜라 검색창</h3>
+      <form action="#" method="get" class="site">
+       <fieldset>
+        <legend class="hd">코카콜라 스토리 검색창입니다.</legend>
+        <label for="siteName" id="site" class="hd">
+          검색창 카테고리를 선택하세요
+        </label>
+        <select name="site" id="siteName">
+          <option value="제목+내용">제목&#43;내용</option>
+          <option value="제목">제목</option>
+          <option value="내용">내용</option>
+        </select>
+         <label for="searchBar" class="hd">검색창</label>
+         <input type="search" id="searchBar" name="searchBar"
+          value="" placeholder="코카콜라 스토리, 검색하세요!"/>
+       <button type="submit" class="search_icon">
+        <i class="fas fa-search"></i>
+       </button>
+       </fieldset>
+      </form>
+     </div>
   </main>
 <!-- //mainBox=================== -->
   <footer id="footBox">

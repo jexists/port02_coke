@@ -35,4 +35,17 @@
   .prod{background-size: 80% auto; /* transform:scale(1.3) */}
   .text{display: block;}}}
 
+
+#newProd{width: 80%; height: auto; min-height: 500px;
+  margin: auto; 
+ .newbox{display: none;}
+  ul{width: 100%; max-width: 1600px; height: auto; margin: auto;
+  li{float:left; width: (100%-6)/3; height: 300px; 
+    background-color: #fff; margin: 0 3% 20px 0;
+    box-sizing:border-box; 
+    &:nth-child(3n){margin-right: 0;}}}
+ button{display:block; width: 100px; height: 30px;
+  margin: 0 auto 60px; border-radius: 5px; @include mc(4);
+  &:hover{background-color: #f00;}
+  &:focus{background-color: #f50; outline: none;}}}
 }

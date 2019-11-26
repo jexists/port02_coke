@@ -249,6 +249,39 @@ h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20
 
 .brandMk a.act dl .text { display: block; }
 
+#newProd { width: 80%; height: auto; min-height: 500px; margin: auto; }
+
+#newProd .newbox { float: left; width: 35%; height: 300px; background-color: #fed; }
+
+#newProd ul { float: right; width: 60%; max-width: 1600px; height: auto; margin: auto; }
+
+#newProd ul li { float: left; width: 31.33333%; height: 300px; background-color: #fff; margin: 0 3% 20px 0; box-sizing: border-box; }
+
+#newProd ul li:nth-child(3n) { margin-right: 0; }
+
+#newProd button { display: block; width: 100px; height: 30px; margin: 0 auto 60px; border-radius: 5px; background-color: #333; }
+
+#newProd button:hover { background-color: #f00; }
+
+#newProd button:focus { background-color: #f50; outline: none; }
+
+/* .newbox:before,.newbox::before{content: "추천제품"; display: block;  position:absolute; top:0; left:0;  width: 50px; height: 50px; } */
+.brandMk a { display: block; width: 100%; height: 100%; transition: all 1000ms ease; }
+
+.brandMk a dl { position: relative; width: 100%; height: 100%; overflow: hidden; }
+
+.brandMk a dl dt { width: 100%; height: 20%; background-size: 50% auto; background-repeat: no-repeat; background-position: 50% 80%; }
+
+.brandMk a dl .prod { width: 100%; height: 80%; background-size: 65% auto; background-repeat: no-repeat; background-position: 50% 00%; transition: all 1000ms ease; }
+
+.brandMk a dl .text { display: none; overflow: hidden; position: absolute; bottom: 0; z-index: 5; width: 100%; height: 50px; text-align: center; text-overflow: ellipsis; white-space: nowrap; padding: 0 10px; box-sizing: border-box; line-height: 50px; transition: all 1000ms ease; background-color: rgba(51, 51, 51, 0.9); color: #fff; }
+
+.brandMk a.act { display: block; width: 100%; height: 100%; }
+
+.brandMk a.act dl .prod { background-size: 80% auto; /* transform:scale(1.3) */ }
+
+.brandMk a.act dl .text { display: block; }
+
 /* TV 1920px~ =============== */
 /* media screen and (min-width: 1920px) h:900 */
 @media screen and (min-width: 1920px) { .brandMk { width: 80%; height: auto; min-height: 500px; margin: auto; }
@@ -308,4 +341,12 @@ h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20
   .brandMk a dl .text { height: 35px; font-size: 0.8rem; padding: 0 10px; box-sizing: border-box; line-height: 35px; transition: all 1000ms ease; background-color: rgba(51, 51, 51, 0.9); color: #fff; }
   .brandMk a.act { display: block; width: 100%; height: 100%; }
   .brandMk a.act dl .prod { background-size: 80% auto; /* transform:scale(1.3) */ }
-  .brandMk a.act dl .text { display: block; } }
+  .brandMk a.act dl .text { display: block; }
+  #newProd { width: 80%; height: auto; min-height: 500px; margin: auto; }
+  #newProd .newbox { display: none; }
+  #newProd ul { width: 100%; max-width: 1600px; height: auto; margin: auto; }
+  #newProd ul li { float: left; width: 31.33333%; height: 300px; background-color: #fff; margin: 0 3% 20px 0; box-sizing: border-box; }
+  #newProd ul li:nth-child(3n) { margin-right: 0; }
+  #newProd button { display: block; width: 100px; height: 30px; margin: 0 auto 60px; border-radius: 5px; background-color: #333; }
+  #newProd button:hover { background-color: #f00; }
+  #newProd button:focus { background-color: #f50; outline: none; } }

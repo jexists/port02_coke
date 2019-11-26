@@ -201,7 +201,7 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 
 h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20px auto; }
 
-.stLink { width: 100%; height: auto; margin: 15px 0 30px; text-align: center; }
+.stLink { width: 100%; height: auto; margin: 15px 0 40px; text-align: center; }
 
 .stLink li { display: inline-block; position: relative; width: auto; height: auto; margin-right: 20px; font-size: 1.1rem; }
 
@@ -215,111 +215,31 @@ h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20
 
 .stLink a:hover { font-weight: bold; outline: none; }
 
-.story_search { width: 100%; height: 80px; margin: auto; padding: 20px; box-sizing: border-box; background-color: white; }
+.story_search { width: 100%; height: 80px; margin: auto; margin-bottom: 50px; padding: 10px; box-sizing: border-box; background-color: white; }
 
-.story_search fieldset { width: 60%; height: 40px; margin: auto; padding: 2px; /* box-sizing:border-box; */ background-color: #fff; }
+.story_search fieldset { width: 30%; height: 30px; margin: auto; border-bottom: 1px dotted #777; /* border-radius: 10px; */ padding: 2px; /* box-sizing:border-box; */ background-color: #fff; }
 
-.story_search #siteName { float: left; width: 15%; height: 40px; margin-right: 2%; text-indent: 8px; font-size: 1.5rem; }
+.story_search #siteName { float: left; width: 25%; height: 30px; margin-right: 2%; text-indent: 8px; font-size: 1.2rem; }
 
-.story_search #searchBar { float: left; width: 75%; height: 40px; font-size: 1.5rem; }
+.story_search #searchBar { float: left; width: 65%; height: 30px; font-size: 1.2rem; }
 
-.story_search .search_icon { float: right; width: 5%; height: 40px; background-color: transparent; color: #f00; font-size: 2.5rem; }
+.story_search .search_icon { float: right; width: 5%; height: 30px; background-color: transparent; color: #f00; font-size: 1.8rem; }
 
-#allStory { width: 80%; height: auto; min-height: 500px; margin: auto; }
+.stbox { width: 80%; height: auto; min-height: 500px; margin: auto; }
 
-#allStory ul { width: 100%; height: auto; }
+.stbox ul { width: 100%; height: auto; }
 
-#allStory ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
+.stbox ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
 
-#allStory ul li:nth-child(3n) { margin-right: 0; }
+.stbox ul li:nth-child(3n) { margin-right: 0; }
 
-#allStory .numLink { width: 100%; height: 30px; margin: 10px auto 61px; text-align: center; }
+.stbox .numLink { width: 100%; height: 30px; margin: 10px auto 20px; text-align: center; }
 
-#allStory .numLink li { display: inline-block; width: 30px; height: 30px; margin-right: 5px; }
+.stbox .numLink li { display: inline-block; width: 30px; height: 30px; margin-right: 5px; }
 
-#allStory .numLink li:last-child { margin-right: 0; }
+.stbox .numLink li:last-child { margin-right: 0; }
 
-#allStory .numLink li button { width: 100%; height: 100%; border-radius: 5px; text-align: center; }
-
-#cokeStory { display: none; width: 80%; height: auto; min-height: 500px; margin: auto; }
-
-#cokeStory ul { width: 100%; height: auto; }
-
-#cokeStory ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
-
-#cokeStory ul li:nth-child(3n) { margin-right: 0; }
-
-#cokeStory .numLink { width: 100%; height: 30px; margin: 10px auto 61px; text-align: center; }
-
-#cokeStory .numLink li { display: inline-block; width: 30px; height: 30px; margin-right: 5px; }
-
-#cokeStory .numLink li:last-child { margin-right: 0; }
-
-#cokeStory .numLink li button { width: 100%; height: 100%; border-radius: 5px; text-align: center; }
-
-#globStory { display: none; width: 80%; height: auto; min-height: 500px; margin: auto; }
-
-#globStory ul { width: 100%; height: auto; }
-
-#globStory ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
-
-#globStory ul li:nth-child(3n) { margin-right: 0; }
-
-#globStory .numLink { width: 100%; height: 30px; margin: 10px auto 61px; text-align: center; }
-
-#globStory .numLink li { display: inline-block; width: 30px; height: 30px; margin-right: 5px; }
-
-#globStory .numLink li:last-child { margin-right: 0; }
-
-#globStory .numLink li button { width: 100%; height: 100%; border-radius: 5px; text-align: center; }
-
-#korStory { display: none; width: 80%; height: auto; min-height: 500px; margin: auto; }
-
-#korStory ul { width: 100%; height: auto; }
-
-#korStory ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
-
-#korStory ul li:nth-child(3n) { margin-right: 0; }
-
-#korStory .numLink { width: 100%; height: 30px; margin: 10px auto 61px; text-align: center; }
-
-#korStory .numLink li { display: inline-block; width: 30px; height: 30px; margin-right: 5px; }
-
-#korStory .numLink li:last-child { margin-right: 0; }
-
-#korStory .numLink li button { width: 100%; height: 100%; border-radius: 5px; text-align: center; }
-
-#sporStory { display: none; width: 80%; height: auto; min-height: 500px; margin: auto; }
-
-#sporStory ul { width: 100%; height: auto; }
-
-#sporStory ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
-
-#sporStory ul li:nth-child(3n) { margin-right: 0; }
-
-#sporStory .numLink { width: 100%; height: 30px; margin: 10px auto 61px; text-align: center; }
-
-#sporStory .numLink li { display: inline-block; width: 30px; height: 30px; margin-right: 5px; }
-
-#sporStory .numLink li:last-child { margin-right: 0; }
-
-#sporStory .numLink li button { width: 100%; height: 100%; border-radius: 5px; text-align: center; }
-
-#pressStory { display: none; width: 80%; height: auto; min-height: 500px; margin: auto; }
-
-#pressStory ul { width: 100%; height: auto; }
-
-#pressStory ul li { float: left; width: 32%; height: 300px; background-color: #fff; margin: 0 2% 20px 0; border: 1px solid #888; box-sizing: border-box; }
-
-#pressStory ul li:nth-child(3n) { margin-right: 0; }
-
-#pressStory .numLink { width: 100%; height: 30px; margin: 10px auto 61px; text-align: center; }
-
-#pressStory .numLink li { display: inline-block; width: 30px; height: 30px; margin-right: 5px; }
-
-#pressStory .numLink li:last-child { margin-right: 0; }
-
-#pressStory .numLink li button { width: 100%; height: 100%; border-radius: 5px; text-align: center; }
+.stbox .numLink li button { width: 100%; height: 100%; border-radius: 5px; text-align: center; }
 
 /* TV 1920px~ =============== */
 /* media screen and (min-width: 1920px) h:900 */

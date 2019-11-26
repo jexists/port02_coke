@@ -1,4 +1,4 @@
-#contentBox{padding-top: 80px;}
+#contentBox{padding-top: 80px;
 h2{width: 200px; 
 	height: auto;
 	font-size: 35px; 
@@ -29,3 +29,77 @@ h2{width: 200px;
 
 #servBox{display: none;}
 #mediaBox{display: none;}
+
+fieldset:nth-of-type(1){border-bottom: 1px solid #ddd;}
+
+#servBox{width: 80%; height: auto; margin: auto;
+form{width: 100%; height: auto;}
+.all_check{height: 30px; text-align: center;
+	font-size: 1.2rem; font-weight: bold; 
+	text-decoration: underline;}}
+
+.check{width: 100%; height: 240px; margin-bottom: 5
+	0px;
+ dl{width: 70%; height: 100%; margin: auto;
+	/* border-top: 2px solid #ddd; */}
+ dt{margin: auto; text-align: center; font-size: 1.2rem;
+	margin-bottom: 15px; font-weighst: bold;
+  strong{font-size: 1rem;}
+  em{font-style: normal; font-size: 1rem;}}
+ dd.cont{overflow-x:auto; 
+	width: 100%; height: 150px;
+	padding: 10px; box-sizing:border-box;
+	/* border-radius: 10px; */
+	border:1px solid #ddd; }}
+
+.select_check{height: 190px;}
+.require_check dl{border-bottom: 2px solid #ddd;}
+.check .send dd.cont{height: 100px;}
+.check dd.agree{width: 100%; height: 10px; margin: 10px 0;
+	text-align: right;}
+
+/* 각각의 동의 체크시 */
+.check i {font-size: 1.3rem; cursor: pointer;
+	color: #aaa;}
+.check>input:focus+dl i,
+.check>input:checked+p i{color: #333; }
+.check>input:checked+dl i,
+.check>input:checked+p i{color: #f00;}
+
+.check>input{overflow: hidden;
+	position: absolute; z-index: 0;
+	width: 0; height: 0; border: 0;}
+
+.input_area legend{position: static; 
+	width: auto; height: auto;
+	margin: 30px 0; padding-top: 30px;
+	text-align: center; font-size: 1.5rem;
+	font-weight: bold;}
+
+.input_area{width: 100%; height: auto; min-height: 200px;
+ ul{width: 50%; height: auto; margin: auto;
+  li{width: 100%; height: auto; margin-bottom: 10px;}}
+  dl{width: 100%; height: 46px; line-height: 46px;
+   dt{float: left; width: 30%; height: 100%;
+	box-sizing:border-box; text-indent: 2vw}
+   dd{ float: left; 
+   	border: 1px solid #ddd;
+   	box-sizing: border-box;
+	width:70%; height: 100%; 
+	input{width: 100%; height: 100%; border: 0; 
+	background-color:transparent;}}}}
+.input_area>ul>li.cont>dl{height: 300px;}
+textarea{display: block;
+	width: 100%; height: 100%; border: 1px solid #ddd;}
+
+li>span {display: none;}
+
+fieldset:last-of-type{width: 280px; height: auto; min-height: 50px;
+	padding: 30px 0 50px; margin: auto;
+ input{width: 130px; height: 40px; text-indent: -5px;
+	color: #fff; border: 0; font-size: 1.3rem;}}
+fieldset:last-of-type>input:hover{outline: 3px solid #333;
+	font-weight: bold;}
+fieldset:last-of-type>input:focus{background-color: #f00;}
+input[type="reset"] {float: right; background-color: #999;}
+input[type="submit"] {float: left; background-color: #333;}}

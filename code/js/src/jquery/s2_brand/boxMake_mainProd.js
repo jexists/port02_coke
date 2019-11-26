@@ -45,7 +45,7 @@ const moreBtn = $('#mainProd').find('button');
 
 let brLi = brandUl.children('li');
 let brLiLength = brLi.length;
-console.log(brLiLength);
+//console.log(brLiLength);
 
 brLi.hide()
 const show = function(l){

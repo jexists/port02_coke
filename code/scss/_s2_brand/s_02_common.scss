@@ -52,3 +52,42 @@ h2{width: 200px;
   dt{}
   .prod{background-size: 80% auto; /* transform:scale(1.3) */}
   .text{display: block;}}}
+
+// ============
+
+  #newProd{width: 80%; height: auto; min-height: 500px;
+  margin: auto; 
+ .newbox{float: left; width: 35%; height: 300px; background-color: #fed;}
+  ul{float: right; width: 60%; max-width: 1600px; height: auto; margin: auto;
+  li{float:left; width: (100%-6)/3; height: 300px; 
+    background-color: #fff; margin: 0 3% 20px 0;
+    box-sizing:border-box; 
+    &:nth-child(3n){margin-right: 0;}}}
+ button{display:block; width: 100px; height: 30px;
+  margin: 0 auto 60px; border-radius: 5px; @include mc(4);
+  &:hover{background-color: #f00;}
+  &:focus{background-color: #f50; outline: none;}}}
+
+/* .newbox:before,.newbox::before{content: "추천제품"; display: block; 
+  position:absolute; top:0; left:0;  width: 50px; height: 50px; } */
+
+.brandMk a{display: block; width: 100%; height: 100%;
+  transition: all 1000ms ease;
+  dl{position: relative; width: 100%; height: 100%; overflow: hidden;
+  dt{width: 100%; height: 20%; background-size: 50% auto;
+    background-repeat: no-repeat; background-position: 50% 80%;}
+  .prod{
+    width: 100%; height: 80%; background-size: 65% auto;
+    background-repeat: no-repeat; background-position: 50% 00%;
+    transition: all 1000ms ease;}
+  .text{display: none; overflow: hidden; position:absolute; bottom: 0; z-index: 5;
+    width: 100%; height: 50px; text-align:center; text-overflow: ellipsis; white-space: nowrap;
+    padding: 0 10px; box-sizing:border-box;
+    line-height: 50px; transition: all 1000ms ease;
+    background-color: rgba(#333,0.9); color: #fff}}}
+
+.brandMk a.act{display: block; width: 100%; height: 100%;
+  dl{
+  dt{}
+  .prod{background-size: 80% auto; /* transform:scale(1.3) */}
+  .text{display: block;}}}

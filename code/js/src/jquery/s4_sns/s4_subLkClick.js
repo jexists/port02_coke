@@ -2,9 +2,19 @@
 
 let hrefData;
 (function($){
-  $('body').append('<script src="../js/src/jquery/sub_common.js"></script>');
+  const body = $('body');
+  const wrap = $('#wrap');
+  body.append('<script src="../js/src/jquery/sub_common.js"></script>');
 
-  console.log('???');
+  const servBox = $('#servBox');
+  const JsLink = (temp) => {
+    return body.append(`<script src="../js/src/jquery/temp/${temp}.js"></script>`);
+  };
+
+  servBox.load('./src/service.html',function(){
+  });
+
+  //console.log('???');
 	const snsLink = ['eventBox', 'servBox', 'mediaBox'];
 
 	const linkBtn = $('.snsLink').find('li');
@@ -28,7 +38,7 @@ let hrefData;
     // let i = hrefData.indexOf('.html#');
     myview = hrefData.toString().split('?').pop();
     // console.log(i+6);
-    console.log(myview);
+    //console.log(myview);
     for(let k = 0 ; k < snsLink.length; k++){
     	if(snsLink[k] == myview){
     		myindex = k;

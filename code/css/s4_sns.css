@@ -197,36 +197,106 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 @media screen and (min-width: 1920px) { .head_area { max-width: 1280px; }
   .gnb_cp { display: none; } }
 
-#contentBox { padding-top: 80px; }
+#contentBox { padding-top: 80px; /* 각각의 동의 체크시 */ }
 
-h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20px auto; }
+#contentBox h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20px auto; }
 
-.snsLink { width: 100%; height: auto; margin: 15px 0 30px; text-align: center; }
+#contentBox .snsLink { width: 100%; height: auto; margin: 15px 0 30px; text-align: center; }
 
-.snsLink li { display: inline-block; position: relative; width: auto; height: auto; margin-right: 20px; font-size: 1.1rem; }
+#contentBox .snsLink li { display: inline-block; position: relative; width: auto; height: auto; margin-right: 20px; font-size: 1.1rem; }
 
-.snsLink li:after, .snsLink li::after { content: " "; position: absolute; right: -12px; top: 0; bottom: 0; margin: auto; width: 0; height: 60%; border-left: 2px solid #333; }
+#contentBox .snsLink li:after, #contentBox .snsLink li::after { content: " "; position: absolute; right: -12px; top: 0; bottom: 0; margin: auto; width: 0; height: 60%; border-left: 2px solid #333; }
 
-.snsLink li.action > a { color: #f00; font-weight: bold; font-size: 1.2rem; }
+#contentBox .snsLink li.action > a { color: #f00; font-weight: bold; font-size: 1.2rem; }
 
-.snsLink li:last-child { margin-right: 0; }
+#contentBox .snsLink li:last-child { margin-right: 0; }
 
-.snsLink li:last-child:after, .snsLink li:last-child::after { display: none; }
+#contentBox .snsLink li:last-child:after, #contentBox .snsLink li:last-child::after { display: none; }
 
-.stLink a:hover { font-weight: bold; outline: none; }
+#contentBox .stLink a:hover { font-weight: bold; outline: none; }
 
-#eventBox { width: 100%; height: auto; }
+#contentBox #eventBox { width: 100%; height: auto; }
 
-#eventBox .event_box { width: 100%; height: 70vh; padding: 50px 500px; box-sizing: border-box; }
+#contentBox #eventBox .event_box { width: 100%; height: 70vh; padding: 50px 500px; box-sizing: border-box; }
 
-#eventBox h4 { width: 240px; height: 40px; font-size: 1.5rem; }
+#contentBox #eventBox h4 { width: 240px; height: 40px; font-size: 1.5rem; }
 
-#event_ing { background-color: #fee; }
+#contentBox #event_ing { background-color: #fee; }
 
-#event_ing .slide_box { width: 100%; height: 80%; background-color: #efe; }
+#contentBox #event_ing .slide_box { width: 100%; height: 80%; background-color: #efe; }
 
-#event_end { background-color: #e8f; }
+#contentBox #event_end { background-color: #e8f; }
 
-#servBox { display: none; }
+#contentBox #servBox { display: none; }
 
-#mediaBox { display: none; }
+#contentBox #mediaBox { display: none; }
+
+#contentBox fieldset:nth-of-type(1) { border-bottom: 1px solid #ddd; }
+
+#contentBox #servBox { width: 80%; height: auto; margin: auto; }
+
+#contentBox #servBox form { width: 100%; height: auto; }
+
+#contentBox #servBox .all_check { height: 30px; text-align: center; font-size: 1.2rem; font-weight: bold; text-decoration: underline; }
+
+#contentBox .check { width: 100%; height: 240px; margin-bottom: 5 0px; }
+
+#contentBox .check dl { width: 70%; height: 100%; margin: auto; /* border-top: 2px solid #ddd; */ }
+
+#contentBox .check dt { margin: auto; text-align: center; font-size: 1.2rem; margin-bottom: 15px; font-weighst: bold; }
+
+#contentBox .check dt strong { font-size: 1rem; }
+
+#contentBox .check dt em { font-style: normal; font-size: 1rem; }
+
+#contentBox .check dd.cont { overflow-x: auto; width: 100%; height: 150px; padding: 10px; box-sizing: border-box; /* border-radius: 10px; */ border: 1px solid #ddd; }
+
+#contentBox .select_check { height: 190px; }
+
+#contentBox .require_check dl { border-bottom: 2px solid #ddd; }
+
+#contentBox .check .send dd.cont { height: 100px; }
+
+#contentBox .check dd.agree { width: 100%; height: 10px; margin: 10px 0; text-align: right; }
+
+#contentBox .check i { font-size: 1.3rem; cursor: pointer; color: #aaa; }
+
+#contentBox .check > input:focus + dl i, #contentBox .check > input:checked + p i { color: #333; }
+
+#contentBox .check > input:checked + dl i, #contentBox .check > input:checked + p i { color: #f00; }
+
+#contentBox .check > input { overflow: hidden; position: absolute; z-index: 0; width: 0; height: 0; border: 0; }
+
+#contentBox .input_area legend { position: static; width: auto; height: auto; margin: 30px 0; padding-top: 30px; text-align: center; font-size: 1.5rem; font-weight: bold; }
+
+#contentBox .input_area { width: 100%; height: auto; min-height: 200px; }
+
+#contentBox .input_area ul { width: 50%; height: auto; margin: auto; }
+
+#contentBox .input_area ul li { width: 100%; height: auto; margin-bottom: 10px; }
+
+#contentBox .input_area dl { width: 100%; height: 46px; line-height: 46px; }
+
+#contentBox .input_area dl dt { float: left; width: 30%; height: 100%; box-sizing: border-box; text-indent: 2vw; }
+
+#contentBox .input_area dl dd { float: left; border: 1px solid #ddd; box-sizing: border-box; width: 70%; height: 100%; }
+
+#contentBox .input_area dl dd input { width: 100%; height: 100%; border: 0; background-color: transparent; }
+
+#contentBox .input_area > ul > li.cont > dl { height: 300px; }
+
+#contentBox textarea { display: block; width: 100%; height: 100%; border: 1px solid #ddd; }
+
+#contentBox li > span { display: none; }
+
+#contentBox fieldset:last-of-type { width: 280px; height: auto; min-height: 50px; padding: 30px 0 50px; margin: auto; }
+
+#contentBox fieldset:last-of-type input { width: 130px; height: 40px; text-indent: -5px; color: #fff; border: 0; font-size: 1.3rem; }
+
+#contentBox fieldset:last-of-type > input:hover { outline: 3px solid #333; font-weight: bold; }
+
+#contentBox fieldset:last-of-type > input:focus { background-color: #f00; }
+
+#contentBox input[type="reset"] { float: right; background-color: #999; }
+
+#contentBox input[type="submit"] { float: left; background-color: #333; }
