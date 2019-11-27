@@ -1,0 +1,11 @@
+// coke_04_pad.scss
+
+/* 패드 768px~1279px  h:1024 =============== */
+/* media screen and (min-width: 768px) and (max-width:1279px) */
+@media screen and (min-width: 768px) and (max-width:1279px) {
+	
+#contentBox{
+.input_area{width: 100%; height: auto; min-height: 200px;
+ ul{width: 80%; height: auto; margin: auto;}}
+#events{padding: 30px 5%; box-sizing: border-box;}}
+}

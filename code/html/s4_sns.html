@@ -50,24 +50,56 @@
     </ul>
     <section id="eventBox">
     <h3 class="hd">이벤트</h3>
-    <article id="event_ing" class="event_box">
-    <h4>현재 진행중인 이벤트</h3>
+    <article id="eventIng" class="event_box">
+    <h4 class="ing"><span>현재 진행중인 이벤트</span></h4>
+      <div class="slide_wrap">
+
+        <div class="eventbtn">
+        <button type="button" class="next">
+          <i class="fas fa-angle-right"></i>
+        </button>
+        <button type="button" class="prev">
+          <i class="fas fa-angle-left"></i>
+        </button>
+      </div>
+      <div class="slide_cen">
+      <div class="slide_long">
       <div class="slide_box">
-        현재진행중 이벤트 1
+        <div class="img_area">
+          <span class="img"></span>
+          <span class="hd">슬이미지</span></div>
+        <div class="text_area">
+         <p>2019.12.11</p>
+         <dl>
+          <dt>현재 진행중인 이벤트 제목</dt>
+          <dd>현재 진행중인 이벤트 내용 Lorem ipsum dolor sit amet, onsectetur adipisicing elit. Ipsum, temporibus.</dd>
+         </dl>
+         <a href="#">자세히 더보기</a>
+        </div>
+      </div>
+      </div>
+      </div>
       </div>
     </article>
-    <article id="event_end" class="event_box">
-    <h4>종료된 이벤트</h3>
-      <ul>
-        <li>종료된이벤트1</li>
-        <li>종료된이벤트2</li>
-        <li>종료된이벤트3</li>
-        <li>종료된이벤트4</li>
+    <article id="events" class="event_box">
+    <h4 class="hd">이벤트 모음</h4>
+      <ul class="evnetlink">
+        <li class="action"><a href="#">전체이벤트<span>(1)</span></a></li>
+        <li><a href="#events">진행중 이벤트<span>(1)</span></a></li>
+        <li><a href="#events">종료된이벤트<span>(1)</span></a></li>
+      </ul>
+      <ul class="allevent">
+        <li>하하하</li>
+      </ul>
+      <ul class="ingevent">
+        
+      </ul>
+      <ul class="endevent">
+        
       </ul>
     </article>
     </section>
     <section id="servBox">
-      <h3>고객센터</h3>
       
     </section>
     <section id="mediaBox">
@@ -75,6 +107,10 @@
       
     </section>
   </main>
+
+<!--   버블
+<span class="move_bubble"></span> -->
+
 <!-- //mainBox=================== -->
   <footer id="footBox">
 
@@ -87,5 +123,6 @@
  <script src="../js/base/jquery-ui.min.js"></script>
  <!-- <script src="../js/src/jquery/sub_common.js"></script> -->
  <script src="../js/src/jquery/s4_sns/s4_subLkClick.js"></script>
+<!--  <script src="../js/src/jquery/main/main_bg.js"></script> -->
 </body>
 </html>

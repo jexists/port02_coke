@@ -1,0 +1,6 @@
+@charset "UTF-8";
+/* 모바일 480px~767px (280) h:640 =============== */
+/* media screen and (max-width:767px) */
+@media screen and (max-width: 767px) { #contentBox .input_area { width: 100%; height: auto; min-height: 200px; }
+  #contentBox .input_area ul { width: 100%; height: auto; margin: auto; }
+  #contentBox #events { padding: 30px 10px; box-sizing: border-box; } }

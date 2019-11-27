@@ -2,7 +2,9 @@
 
 (function($){
 const bubble_wrap = $('.move_bubble')
-const bubble = $('.bub')
+// const bubble = $('.bub')
+
+console.log('bg');
 
 i=0;
 for(let i=1; i<=100 ;i++){

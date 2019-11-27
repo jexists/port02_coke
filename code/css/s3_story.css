@@ -197,7 +197,7 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 @media screen and (min-width: 1920px) { .head_area { max-width: 1280px; }
   .gnb_cp { display: none; } }
 
-#contentBox { padding-top: 80px; }
+#contentBox { padding-top: 130px; }
 
 h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20px auto; }
 

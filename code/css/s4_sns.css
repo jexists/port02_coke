@@ -197,7 +197,7 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 @media screen and (min-width: 1920px) { .head_area { max-width: 1280px; }
   .gnb_cp { display: none; } }
 
-#contentBox { padding-top: 80px; /* 각각의 동의 체크시 */ }
+#contentBox { padding-top: 130px; /* 이벤트 ============*/ /* 고객센터 ============*/ /* 각각의 동의 체크시 */ }
 
 #contentBox h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20px auto; }
 
@@ -213,25 +213,71 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 
 #contentBox .snsLink li:last-child:after, #contentBox .snsLink li:last-child::after { display: none; }
 
-#contentBox .stLink a:hover { font-weight: bold; outline: none; }
+#contentBox .snsLink a:hover { font-weight: bold; outline: none; }
+
+#contentBox .snsLink a:focus { font-weight: bold; outline: none; font-size: 1.2rem; }
 
 #contentBox #eventBox { width: 100%; height: auto; }
 
-#contentBox #eventBox .event_box { width: 100%; height: 70vh; padding: 50px 500px; box-sizing: border-box; }
+#contentBox #eventBox .event_box { width: 100%; height: 500px; box-sizing: border-box; }
 
-#contentBox #eventBox h4 { width: 240px; height: 40px; font-size: 1.5rem; }
+#contentBox #eventBox h4.ing { width: 850px; height: 40px; margin: auto; /* margin-bottom: 10px; */ transform: rotate(-3deg); font-size: 1.3rem; line-height: 35px; }
 
-#contentBox #event_ing { background-color: #fee; }
+#contentBox #eventBox h4.ing span { display: block; width: 250px; height: 100%; text-align: center; border-radius: 5px; color: #fff; border: 2px dashed #fff; box-sizing: border-box; background-color: #333; }
 
-#contentBox #event_ing .slide_box { width: 100%; height: 80%; background-color: #efe; }
+#contentBox #eventIng .slide_wrap { position: relative; z-index: -1; width: 800px; height: 400px; margin: auto; }
 
-#contentBox #event_end { background-color: #e8f; }
+#contentBox #eventIng .slide_wrap .eventbtn { position: absolute; top: 0; bottom: 0; z-index: 10; margin: auto; width: 800px; height: 0; }
+
+#contentBox #eventIng .slide_wrap .eventbtn button { float: left; width: 50px; height: 50px; transform: translateY(-50%); border-radius: 30px; font-size: 3rem; text-indent: 3px; }
+
+#contentBox #eventIng .slide_wrap .eventbtn .next { float: right; margin-right: -25px; }
+
+#contentBox #eventIng .slide_wrap .eventbtn .prev { margin-left: -25px; text-indent: -2px; }
+
+#contentBox #eventIng .slide_cen { overflow: hidden; width: 100%; height: 100%; box-shadow: 0 0 5px #333; /* border: 5px solid #555; */ }
+
+#contentBox #eventIng .slide_box { overflow: hidden; width: 800px; height: 400px; /* border-radius: 0 12%; */ }
+
+#contentBox #eventIng .slide_box .img_area { float: left; width: 50%; height: 100%; padding: 10px; box-sizing: border-box; }
+
+#contentBox #eventIng .slide_box .img_area .img { display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; background-image: url("../img/event/event.png"); }
+
+#contentBox #eventIng .slide_box .text_area { float: left; width: 50%; height: 100%; padding: 30px 40px; box-sizing: border-box; }
+
+#contentBox #eventIng .slide_box .text_area p { width: 100%; height: 30px; margin-bottom: 30px; }
+
+#contentBox #eventIng .slide_box .text_area dl { width: 100%; height: 240px; }
+
+#contentBox #eventIng .slide_box .text_area dl dt { width: 100%; height: 50px; font-weight: bold; font-size: 1.2rem; }
+
+#contentBox #eventIng .slide_box .text_area a { display: block; float: right; padding: 2px 10px; border-radius: 5px; border: 2px solid #333; }
+
+#contentBox #events { padding: 30px 450px; box-sizing: border-box; }
+
+#contentBox .evnetlink { width: 100%; height: auto; margin: 15px 0 30px; text-align: left; }
+
+#contentBox .evnetlink li { display: inline-block; position: relative; width: auto; height: auto; margin-right: 20px; font-size: 1.1rem; }
+
+#contentBox .evnetlink li:after, #contentBox .evnetlink li::after { content: " "; position: absolute; right: -12px; top: 0; bottom: 0; margin: auto; width: 0; height: 60%; border-left: 2px solid #333; }
+
+#contentBox .evnetlink li.action > a { color: #f00; font-weight: bold; font-size: 1.2rem; }
+
+#contentBox .evnetlink li:last-child { margin-right: 0; }
+
+#contentBox .evnetlink li:last-child:after, #contentBox .evnetlink li:last-child::after { display: none; }
+
+#contentBox .evnetlink a:hover { font-weight: bold; outline: none; }
+
+#contentBox .evnetlink a:focus { font-weight: bold; outline: none; font-size: 1.2rem; }
 
 #contentBox #servBox { display: none; }
 
-#contentBox #mediaBox { display: none; }
+#contentBox .textbg { display: block; position: absolute; top: 150px; right: 300px; z-index: -1; width: 300px; height: 100px; background: url("../img/background/cs_01.png") no-repeat 50% 50%/cover; animation: bg 3s ease-in infinite alternate; opacity: 0.1; }
 
-#contentBox fieldset:nth-of-type(1) { border-bottom: 1px solid #ddd; }
+@keyframes bg { 100% { right: 320px; } }
+
+#contentBox fieldset:nth-of-type(1) { padding-bottom: 25px; border-bottom: 2px dashed #ddd; }
 
 #contentBox #servBox { width: 80%; height: auto; margin: auto; }
 
@@ -239,21 +285,21 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 
 #contentBox #servBox .all_check { height: 30px; text-align: center; font-size: 1.2rem; font-weight: bold; text-decoration: underline; }
 
-#contentBox .check { width: 100%; height: 240px; margin-bottom: 5 0px; }
+#contentBox .check { width: 100%; height: 260px; margin-bottom: 50px; }
 
 #contentBox .check dl { width: 70%; height: 100%; margin: auto; /* border-top: 2px solid #ddd; */ }
 
-#contentBox .check dt { margin: auto; text-align: center; font-size: 1.2rem; margin-bottom: 15px; font-weighst: bold; }
+#contentBox .check dt { margin: auto; text-align: center; font-size: 1.2rem; margin-bottom: 20px; margin-top: 30px; font-weight: bold; }
 
 #contentBox .check dt strong { font-size: 1rem; }
 
 #contentBox .check dt em { font-style: normal; font-size: 1rem; }
 
-#contentBox .check dd.cont { overflow-x: auto; width: 100%; height: 150px; padding: 10px; box-sizing: border-box; /* border-radius: 10px; */ border: 1px solid #ddd; }
+#contentBox .check dd.cont { overflow-x: auto; width: 100%; height: 150px; padding: 10px; box-sizing: border-box; border: 1px solid #ddd; background-color: #fff; }
 
 #contentBox .select_check { height: 190px; }
 
-#contentBox .require_check dl { border-bottom: 2px solid #ddd; }
+#contentBox .require_check dl { border-bottom: 2px dashed #ddd; }
 
 #contentBox .check .send dd.cont { height: 100px; }
 
@@ -281,7 +327,7 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 
 #contentBox .input_area dl dd { float: left; border: 1px solid #ddd; box-sizing: border-box; width: 70%; height: 100%; }
 
-#contentBox .input_area dl dd input { width: 100%; height: 100%; border: 0; background-color: transparent; }
+#contentBox .input_area dl dd input { width: 100%; height: 100%; border: 0; background-color: #fff; }
 
 #contentBox .input_area > ul > li.cont > dl { height: 300px; }
 
@@ -297,6 +343,57 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 
 #contentBox fieldset:last-of-type > input:focus { background-color: #f00; }
 
-#contentBox input[type="reset"] { float: right; background-color: #999; }
+#contentBox input[type="reset"] { float: left; background-color: #999; }
 
-#contentBox input[type="submit"] { float: left; background-color: #333; }
+#contentBox input[type="submit"] { float: right; background-color: #333; }
+
+/* 미디어 ============*/
+#mediaBox { display: none; }
+
+/* .move_bubble{position: fixed; width: 100%; height: 0; bottom:200px; z-index: -1; 
+  .bub{position:fixed; bottom:-100px; background-color: #f00; border-radius:100%;}
+}
+
+@keyframes bubble {
+  50%{transform:translateX(-40%) scale(0.6)}
+  80%{transform:translateX(20%) scale(0.4)}
+  100%{bottom:100%; transform:scale(0.2); opacity: 0.2;}
+} */
+/* 모바일 480px~767px (280) h:640 =============== */
+/* media screen and (max-width:767px) */
+@media screen and (max-width: 767px) { #contentBox .input_area { width: 100%; height: auto; min-height: 200px; }
+  #contentBox .input_area ul { width: 100%; height: auto; margin: auto; }
+  #contentBox #events { padding: 30px 10px; box-sizing: border-box; } }
+
+/* 패드 768px~1279px  h:1024 =============== */
+/* media screen and (min-width: 768px) and (max-width:1279px) */
+@media screen and (min-width: 768px) and (max-width: 1279px) { #contentBox .input_area { width: 100%; height: auto; min-height: 200px; }
+  #contentBox .input_area ul { width: 80%; height: auto; margin: auto; }
+  #contentBox #events { padding: 30px 5%; box-sizing: border-box; } }
+
+/* PC 1280px~1919px (1024) h:800=============== */
+/* media screen and (min-width: 1280px) */
+@media screen and (min-width: 1280px) and (max-width: 1919px) { #contentBox fieldset:nth-of-type(1) { /* position: relative; */ padding-bottom: 25px; border-bottom: 2px dashed #ddd; }
+  #contentBox #servBox { width: 80%; height: auto; margin: auto; }
+  #contentBox #servBox form { width: 100%; height: auto; }
+  #contentBox #servBox .all_check { /* position: absolute; bottom: -30px; */ width: 100%; height: 30px; text-align: center; font-size: 1.2rem; font-weight: bold; text-decoration: underline; }
+  #contentBox .check { float: left; width: 50%; height: 260px; margin-bottom: 10px; }
+  #contentBox .check dd.cont { overflow-x: auto; width: 100%; height: 150px; padding: 10px; box-sizing: border-box; /* border-radius: 10px; */ border: 1px solid #ddd; }
+  #contentBox .select_check { height: 190px; }
+  #contentBox .require_check dl { border-bottom: none; }
+  #contentBox .check .send dd.cont { height: 150px; }
+  #contentBox .check dd.agree { width: 100%; height: 10px; margin: 10px 0; text-align: right; }
+  #contentBox #events { padding: 30px 10%; box-sizing: border-box; } }
+
+/* TV 1920px~ =============== */
+/* media screen and (min-width: 1920px) h:900 */
+@media screen and (min-width: 1920px) { #contentBox fieldset:nth-of-type(1) { /* position: relative; */ padding-bottom: 25px; border-bottom: 2px dashed #ddd; }
+  #contentBox #servBox { width: 80%; height: auto; margin: auto; }
+  #contentBox #servBox form { width: 100%; height: auto; }
+  #contentBox #servBox .all_check { /* position: absolute; bottom: -30px; */ width: 100%; height: 30px; text-align: center; font-size: 1.2rem; font-weight: bold; text-decoration: underline; }
+  #contentBox .check { float: left; width: 50%; height: 260px; margin-bottom: 10px; }
+  #contentBox .check dd.cont { overflow-x: auto; width: 100%; height: 150px; padding: 10px; box-sizing: border-box; /* border-radius: 10px; */ border: 1px solid #ddd; }
+  #contentBox .select_check { height: 190px; }
+  #contentBox .require_check dl { border-bottom: none; }
+  #contentBox .check .send dd.cont { height: 150px; }
+  #contentBox .check dd.agree { width: 100%; height: 10px; margin: 10px 0; text-align: right; } }
