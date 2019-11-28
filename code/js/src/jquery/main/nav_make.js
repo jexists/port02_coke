@@ -2,7 +2,7 @@
 
 (function($){
 const navMenu = [
- {title: '회사소개',titleLink:'./s1_company.html?cokeBox', 
+ {title: '회사소개',titleLink:'./s1_company.html', 
 	sub: [
 	// {subN:'코카콜라', subLink:'./s1_company.html?cokeBox'},
 	{subN:'글로벌', subLink:'./s1_company.html?globBox'},
@@ -15,7 +15,7 @@ const navMenu = [
 	{subN:'대표제품',subLink:'./s2_brand.html?mainProd'},
 	{subN:'전체제품',subLink:'./s2_brand.html?allProd'},
 	{subN:'신제품',subLink:'./s2_brand.html?newProd'}]},
- {title: '스토리', titleLink:'#', 
+ {title: '스토리', titleLink:'./s3_story.html', 
 	sub: [
 	// {subN:'전체',subLink:'./s3_story.html?allStory'},
 	{subN:'코크스토리',subLink:'./s3_story.html?cokeStory'},

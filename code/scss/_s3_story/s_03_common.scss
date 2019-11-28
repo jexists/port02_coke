@@ -34,10 +34,11 @@ h2{width: 200px;
 
 .stbox{width: 80%; height: auto; min-height: 500px;
 	margin: auto;
- ul{width: 100%; height: auto;
+ ul{width: 100%; height: auto; min-height: 500px;
   li{float:left; width: (100%-4)/3; height: 300px; 
   	background-color: #fff; margin: 0 2% 20px 0;
-  	border: 1px solid #888; box-sizing:border-box; 
+  	/* border: 1px solid #888; box-sizing:border-box; */
+    box-shadow: 0 0 5px #999;
   	&:nth-child(3n){margin-right: 0;}}}
  .numLink{width: 100%; height: 30px;
  	margin: 10px auto 20px;
@@ -47,3 +48,24 @@ h2{width: 200px;
   &:last-child{margin-right: 0;}
     button{width: 100%; height: 100%;
     border-radius: 5px; text-align: center;}}}}  
+
+.stbox li a{display:block; width: 100%; height: 100%;
+  .img{width: 100%; height: 60%; padding: 6px 4px; box-sizing:border-box;
+    background-color: #fee; background-position: 50% 50%;
+    background-size: cover;background-repeat: no-repeat;
+   span{display:block; width: 60px; height: 25px;
+    background-color: rgba(60,110,180,0.8); text-align: center; line-height: 25px; 
+    border-radius: 10px; color: #fff;
+    transform:rotate(-5deg)}}
+  .text{width: 100%; height: 40%; padding: 10px 10px; box-sizing:border-box; 
+    
+   dt{overflow: hidden;
+    width: 100%; height: 28px; line-height: 28px; 
+    text-align: center; font-weight: bold; margin-bottom: 10px;
+    white-space: nowrap; text-overflow:ellipsis;
+    background-color: #fee;
+    }
+   dd{overflow: hidden;
+    width: 100%; height: 60px; line-height: 1; 
+    text-align: left; font-weight: bold; margin-bottom: 5px;
+    background-color: #fed;}}}
