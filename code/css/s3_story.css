@@ -215,7 +215,8 @@ h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20
 
 .stLink a:hover { font-weight: bold; outline: none; }
 
-.story_search { width: 100%; height: 80px; margin: auto; margin-bottom: 50px; padding: 10px; box-sizing: border-box; background-color: white; }
+/* 스토리 검색창 */
+.story_search { width: 100%; height: 80px; margin: auto; margin-top: 80px; margin-bottom: 50px; padding: 10px; box-sizing: border-box; background-color: white; }
 
 .story_search fieldset { width: 30%; height: 30px; margin: auto; border-bottom: 1px dotted #777; /* border-radius: 10px; */ padding: 2px; /* box-sizing:border-box; */ background-color: #fff; }
 
@@ -233,13 +234,16 @@ h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20
 
 .stbox ul li:nth-child(3n) { margin-right: 0; }
 
-.stbox .numLink { width: 100%; height: 30px; margin: 10px auto 20px; text-align: center; }
+/* 숫자버튼 */
+.numLink { position: absolute; left: 50%; transform: translateX(-50%); width: auto; height: 30px; margin: 10px auto 20px; text-align: center; }
 
-.stbox .numLink li { display: inline-block; width: 30px; height: 30px; margin-right: 5px; }
+.numLink li { float: left; width: 30px; height: 30px; margin-right: 5px; }
 
-.stbox .numLink li:last-child { margin-right: 0; }
+.numLink li:first-child { width: 35px; }
 
-.stbox .numLink li button { width: 100%; height: 100%; border-radius: 5px; text-align: center; }
+.numLink li:last-child { width: 35px; margin-right: 0; }
+
+.numLink li button { display: block; width: 100%; height: 100%; border-radius: 5px; text-align: center; }
 
 .stbox li a { display: block; width: 100%; height: 100%; }
 
@@ -253,10 +257,16 @@ h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20
 
 .stbox li a .text dd { overflow: hidden; width: 100%; height: 60px; line-height: 1; text-align: left; font-weight: bold; margin-bottom: 5px; background-color: #fed; }
 
+/* 모바일 480px~767px (280) h:640 =============== */
+/* media screen and (max-width:767px) */
+/* 패드 768px~1279px  h:1024 =============== */
+/* media screen and (min-width: 768px) and (max-width:1279px) */
+/* PC 1280px~1919px (1024) h:800=============== */
+/* media screen and (min-width: 1280px) */
+@media screen and (min-width: 1280px) and (max-width: 1919px) { .stbox ul li { height: 400px; } }
+
 /* TV 1920px~ =============== */
 /* media screen and (min-width: 1920px) h:900 */
-@media screen and (min-width: 1920px) { #allStory { width: 80%; height: auto; min-height: 500px; margin: auto; }
-  #allStory ul { width: 100%; height: auto; }
-  #allStory ul li { float: left; width: 18.4%; height: 350px; margin: 0 2% 20px 0; }
-  #allStory ul li:nth-child(3n) { margin-right: 2%; }
-  #allStory ul li:nth-child(5n) { margin-right: 0; } }
+@media screen and (min-width: 1920px) { .stbox ul li { width: 18.4%; height: 280px; margin: 0 2% 20px 0; }
+  .stbox ul li:nth-child(3n) { margin-right: 2%; }
+  .stbox ul li:nth-child(5n) { margin-right: 0; } }

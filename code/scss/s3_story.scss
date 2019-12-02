@@ -1,7 +1,10 @@
 /* s3_story.css */
 
-// @import "./src/coke_01_var";
+@import "./_base/coke_01_var";
 @import "./_temp/header"; 
 @import "./_temp/footer";
 @import "./_s3_story/s_03_common";
+@import "./_s3_story/s_03_mobile";
+@import "./_s3_story/s_03_pad";
+@import "./_s3_story/s_03_pc";
 @import "./_s3_story/s_03_tv";

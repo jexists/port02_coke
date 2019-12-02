@@ -221,13 +221,13 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 
 #contentBox #eventBox .event_box { width: 100%; height: 500px; box-sizing: border-box; }
 
-#contentBox #eventBox h4.ing { width: 850px; height: 40px; margin: auto; /* margin-bottom: 10px; */ transform: rotate(-3deg); font-size: 1.3rem; line-height: 35px; }
+#contentBox #eventBox h4.ing { position: relative; z-index: 300; width: 850px; height: 40px; margin: auto; /* margin-bottom: 10px; */ transform: rotate(-3deg); font-size: 1.3rem; line-height: 35px; }
 
 #contentBox #eventBox h4.ing span { display: block; width: 250px; height: 100%; text-align: center; border-radius: 5px; color: #fff; border: 2px dashed #fff; box-sizing: border-box; background-color: #333; }
 
-#contentBox #eventIng .slide_wrap { position: relative; z-index: -1; width: 800px; height: 400px; margin: auto; }
+#contentBox #eventIng .slide_wrap { position: relative; width: 800px; height: 400px; margin: auto; }
 
-#contentBox #eventIng .slide_wrap .eventbtn { position: absolute; top: 0; bottom: 0; z-index: 10; margin: auto; width: 800px; height: 0; }
+#contentBox #eventIng .slide_wrap .eventbtn { position: absolute; top: 0; bottom: 0; z-index: 100; margin: auto; width: 800px; height: 0; }
 
 #contentBox #eventIng .slide_wrap .eventbtn button { float: left; width: 50px; height: 50px; transform: translateY(-50%); border-radius: 30px; font-size: 3rem; text-indent: 3px; }
 
@@ -273,10 +273,6 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 
 #contentBox #servBox { display: none; }
 
-#contentBox .textbg { display: block; position: absolute; top: 150px; right: 300px; z-index: -1; width: 300px; height: 100px; background: url("../img/background/cs_01.png") no-repeat 50% 50%/cover; animation: bg 3s ease-in infinite alternate; opacity: 0.1; }
-
-@keyframes bg { 100% { right: 320px; } }
-
 #contentBox fieldset:nth-of-type(1) { padding-bottom: 25px; border-bottom: 2px dashed #ddd; }
 
 #contentBox #servBox { width: 80%; height: auto; margin: auto; }
@@ -287,7 +283,7 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 
 #contentBox .check { width: 100%; height: 260px; margin-bottom: 50px; }
 
-#contentBox .check dl { width: 70%; height: 100%; margin: auto; /* border-top: 2px solid #ddd; */ }
+#contentBox .check dl { width: 80%; height: 100%; margin: auto; /* border-top: 2px solid #ddd; */ }
 
 #contentBox .check dt { margin: auto; text-align: center; font-size: 1.2rem; margin-bottom: 20px; margin-top: 30px; font-weight: bold; }
 
@@ -329,15 +325,31 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 
 #contentBox .input_area dl dd input { width: 100%; height: 100%; border: 0; background-color: #fff; }
 
-#contentBox .input_area > ul > li.cont > dl { height: 300px; }
+#contentBox li.error dd input { outline: 2px solid #f00; }
 
-#contentBox textarea { display: block; width: 100%; height: 100%; border: 1px solid #ddd; }
+#contentBox li.error dd textarea { outline: 2px solid #f00; }
 
 #contentBox li > span { display: none; }
 
+#contentBox li.error > span { display: block; width: 70%; height: 25px; margin-left: 30%; margin-top: 5px; }
+
+#contentBox .input_area > ul > li.cont > dl { height: 300px; }
+
+#contentBox textarea { display: block; width: 100%; height: 100%; border: 1px solid #ddd; font-size: 1.3rem; text-indent: 8px; }
+
+#contentBox .input_area ul li:nth-child(2) dl dd { border: none; position: relative; }
+
+#contentBox .input_area ul li:nth-child(2) dl dd:before, #contentBox .input_area ul li:nth-child(2) dl dd::before { content: " "; position: absolute; left: 31.25%; top: 0; bottom: 0; margin: auto; width: 8px; height: 3px; background-color: #777; }
+
+#contentBox .input_area ul li:nth-child(2) dl dd:after, #contentBox .input_area ul li:nth-child(2) dl dd::after { content: " "; position: absolute; right: 31.25%; top: 0; bottom: 0; margin: auto; width: 8px; height: 3px; background-color: #999; }
+
+#contentBox .input_area ul li:nth-child(2) dl dd input { float: left; width: 30%; margin-right: 5%; border: 1px solid #ddd; }
+
+#contentBox .input_area ul li:nth-child(2) dl dd input:last-of-type { margin-right: 0; }
+
 #contentBox fieldset:last-of-type { width: 280px; height: auto; min-height: 50px; padding: 30px 0 50px; margin: auto; }
 
-#contentBox fieldset:last-of-type input { width: 130px; height: 40px; text-indent: -5px; color: #fff; border: 0; font-size: 1.3rem; }
+#contentBox fieldset:last-of-type input { width: 130px; height: 40px; text-indent: -2px; color: #fff; border: 0; font-size: 1.3rem; }
 
 #contentBox fieldset:last-of-type > input:hover { outline: 3px solid #333; font-weight: bold; }
 
@@ -348,7 +360,85 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 #contentBox input[type="submit"] { float: right; background-color: #333; }
 
 /* 미디어 ============*/
-#mediaBox { display: none; }
+#mediaBox { display: none; width: 80%; height: auto; margin: auto; }
+
+.md_area { width: 100%; height: 200px; margin-bottom: 50px; /* border-top: 2px solid #ddd; */ /* border-bottom: 2px solid #ddd;  */ box-sizing: border-box; }
+
+.md_area a { display: block; width: 100%; height: 100%; background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; }
+
+.ytbMd { margin-bottom: 80px; }
+
+#mediaBox h4 { position: relative; width: 95%; height: 40px; margin: auto; margin-bottom: 10px; line-height: 40px; font-weight: bold; font-size: 2rem; text-transform: uppercase; /* padding-bottom: 5px; */ /* border-bottom: 2px solid #ddd; */ }
+
+#mediaBox h4:first-letter { font-size: 2.8rem; color: #f00; }
+
+#mediaBox h4:nth-of-type(2n) { text-align: right; }
+
+#mediaBox h4 a { margin-left: 10px; margin-right: 20px; }
+
+#mediaBox h4 a:hover { font-size: 2.3rem; }
+
+#mediaBox h4 a:focus { outline: 0; font-size: 2.3rem; color: #f00; }
+
+.md_area .md_wrap { width: 100%; height: 100%; text-align: center; padding: 10px 0; border-top: 2px solid #ddd; }
+
+.md_area .md_wrap li { display: inline-block; width: 17%; max-width: 250px; height: 100%; margin-right: 2%; }
+
+.md_area .md_wrap li:last-child { margin-right: 0; }
+
+.md_area:nth-of-type(2n-1) .md_wrap { border-right: 2px solid #ddd; }
+
+.md_area:nth-of-type(2n) .md_wrap { border-left: 2px solid #ddd; }
+
+.picMd > ul > li:nth-child(1) a { background-image: url("../img/media/pic_01.jpg"); }
+
+.picMd > ul > li:nth-child(2) a { background-image: url("../img/media/pic_02.jpg"); }
+
+.picMd > ul > li:nth-child(3) a { background-image: url("../img/media/pic_03.jpg"); }
+
+.picMd > ul > li:nth-child(4) a { background-image: url("../img/media/pic_04.jpg"); }
+
+.picMd > ul > li:nth-child(5) a { background-image: url("../img/media/pic_05.jpg"); }
+
+.vdMd > ul > li:nth-child(1) a { background-image: url("../img/media/pic_06.jpg"); }
+
+.vdMd > ul > li:nth-child(2) a { background-image: url("../img/media/pic_07.jpg"); }
+
+.vdMd > ul > li:nth-child(3) a { background-image: url("../img/media/pic_08.jpg"); }
+
+.vdMd > ul > li:nth-child(4) a { background-image: url("../img/media/pic_09.jpg"); }
+
+.vdMd > ul > li:nth-child(5) a { background-image: url("../img/media/pic_10.jpg"); }
+
+.instaMd > ul > li:nth-child(1) a { background-image: url("../img/media/pic_11.jpg"); }
+
+.instaMd > ul > li:nth-child(2) a { background-image: url("../img/media/pic_12.jpg"); }
+
+.instaMd > ul > li:nth-child(3) a { background-image: url("../img/media/pic_13.jpg"); }
+
+.instaMd > ul > li:nth-child(4) a { background-image: url("../img/media/pic_14.jpg"); }
+
+.instaMd > ul > li:nth-child(5) a { background-image: url("../img/media/pic_15.jpg"); }
+
+.fbMd > ul > li:nth-child(1) a { background-image: url("../img/media/pic_16.jpg"); }
+
+.fbMd > ul > li:nth-child(2) a { background-image: url("../img/media/pic_17.jpg"); }
+
+.fbMd > ul > li:nth-child(3) a { background-image: url("../img/media/pic_18.jpg"); }
+
+.fbMd > ul > li:nth-child(4) a { background-image: url("../img/media/pic_19.jpg"); }
+
+.fbMd > ul > li:nth-child(5) a { background-image: url("../img/media/pic_20.jpg"); }
+
+.ytbMd > ul > li:nth-child(1) a { background-image: url("../img/media/pic_21.jpg"); }
+
+.ytbMd > ul > li:nth-child(2) a { background-image: url("../img/media/pic_22.jpg"); }
+
+.ytbMd > ul > li:nth-child(3) a { background-image: url("../img/media/pic_23.jpg"); }
+
+.ytbMd > ul > li:nth-child(4) a { background-image: url("../img/media/pic_24.jpg"); }
+
+.ytbMd > ul > li:nth-child(5) a { background-image: url("../img/media/pic_25.jpg"); }
 
 /* .move_bubble{position: fixed; width: 100%; height: 0; bottom:200px; z-index: -1; 
   .bub{position:fixed; bottom:-100px; background-color: #f00; border-radius:100%;}

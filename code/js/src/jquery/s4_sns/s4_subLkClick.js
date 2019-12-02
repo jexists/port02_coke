@@ -12,6 +12,7 @@ let hrefData;
   };
 
   servBox.load('./src/service.html',function(){
+    body.append('<script src="../js/src/jquery/s4_sns/s4_service.js"></script>');
   });
 
   //console.log('???');

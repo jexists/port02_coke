@@ -1,3 +1,4 @@
+<!-- service.html // s4_sns -->
 	<h3 class="hd">고객센터</h3>
 	<!-- <span class="textbg"></span> -->
 		<form action="#" method="post"></form>
@@ -60,7 +61,7 @@
 
 		<fieldset class="input_area">
 		 <legend>코카콜라 고객센터 문의</legend>
-		 <ul>
+		 <ul class="all_input">
 		 	<li>
 		 		<dl>
 		 			<dt>
@@ -71,7 +72,7 @@
 		 			</dt>
 		 			<dd>
 		 				<input type="text" name="userName" 
-		 				id="userName" value="" 
+		 				id="userName" value="" class="cs_input" 
 		 				placeholder="이름" 
 		 				required="required" />
 		 			</dd>
@@ -82,15 +83,25 @@
 		 	<li>
 		 		<dl>
 		 			<dt>
-		 				<label for="userTel">
+		 				<label for="userTel1">
 							<i class="fas fa-mobile-alt"></i>
 		 				<span>연락처</span> 
 		 			</label>
+		 			<label for="userTel2"></label>
+		 			<label for="userTel3"></label>
 		 			</dt>
 		 			<dd>
-		 				<input type="tel" name="userTel" 
-		 				id="userTel" value="" 
-		 				placeholder="휴대폰 번호" 
+		 				<input type="tel" name="userTel1" 
+		 				id="userTel1" value="" class="cs_input" 
+		 				placeholder="휴대폰 번호" maxlength="3" 
+		 				required="required" />
+		 				<input type="tel" name="userTel2" 
+		 				id="userTel2" value="" class="cs_input" 
+		 				placeholder="****" maxlength="4" 
+		 				required="required" />
+		 				<input type="tel" name="userTel3" 
+		 				id="userTel3" value="" class="cs_input" 
+		 				placeholder="****" maxlength="4" 
 		 				required="required" />
 		 			</dd>
 		 		</dl>
@@ -107,8 +118,8 @@
 		 			</dt>
 		 			<dd>
 		 				<input type="email" name="userId" 
-		 				id="userId" value="" 
-		 				placeholder="아이디 &#40;이메일&#41;" 
+		 				id="userId" value="" class="cs_input" 
+		 				placeholder="이메일 주소" 
 		 				required="required" />
 		 			</dd>
 		 		</dl>
@@ -124,7 +135,7 @@
 		 			</label>
 		 			</dt>
 		 			<dd>
-		 				<input type="text" name="title" 
+		 				<input type="text" name="title" class="cs_input" 
 		 				id="title" value="" placeholder="제목" 
 		 				required="required" />
 		 			</dd>
@@ -141,9 +152,10 @@
 		 		</label>
 		 		</dt>
 		 		<dd>
-		 		<textarea name="contents" id="contents" placeholder="내용을 입력해주세요" required="required"></textarea>
+		 		<textarea name="contents" id="contents" class="cs_input" placeholder="내용을 입력해주세요" required="required" value=""></textarea>
 		 		</dd>
 		 		</dl>
+		 		<span class="narr">내용을 입력하세요.</span>
 		 	</li>
 
 		 	<li>
@@ -155,7 +167,7 @@
 		 			</label>
 		 			</dt>
 		 			<dd>
-		 				<input type="password" name="userPw" 
+		 				<input type="password" name="userPw" class="cs_input" 
 		 				id="userPw" value="" maxlength="15" 
 		 				placeholder="비밀번호	&#40;영문 숫자 혼합, 6&#126;15자 이내&#41;" 
 		 				required="required" />
@@ -173,7 +185,7 @@
 		 			</label>
 		 			</dt>
 		 			<dd>
-		 				<input type="password" name="userPwc" 
+		 				<input type="password" name="userPwc" class="cs_input" 
 		 				id="userPwc" value=""  maxlength="15"
 		 				placeholder="비밀번호 확인" 
 		 				required="required" />
@@ -185,9 +197,9 @@
 		</fieldset>
 
 		<fieldset>
-			<legend>동의서 확인 및 취소</legend>
+			<legend>고객센터 메세지 보내기 및 취소</legend>
 			<input type="reset" value="취소" />
-			<input type="submit" value="작성완료" />
+			<input type="submit" value="작성완료" class="cs_submit" />
 		</fieldset>
 
 		

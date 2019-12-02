@@ -2,96 +2,22 @@
 
 (function($){
 	const imgUrl = '../img/event/';
-	const stBox = [
-		{class:'cokeSport', span:'스포츠', cc:'#fff', bg:'event.png', 
-		link:'#',	title:'제목1', 
-		contents:'내용1234'},
-		{class:'cokeSto', span:'스포츠', cc:'#fff', bg:'event.png', 
-		link:'#',	title:'제목2', 
-		contents:'내용1234'},
-		{class:'cokeGlob', span:'스포츠', cc:'#fff', bg:'event.png', 
-		link:'#',	title:'제목3', 
-		contents:'내용1234'},
-		{class:'cokeKor', span:'스포츠', cc:'#fff', bg:'event.png', 
-		link:'#',	title:'제목4', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event.png', 
-		link:'#',	title:'제목5', 
-		contents:'내용1234'},
-		{class:'cokeGlob', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목6', 
-		contents:'내용1234'},
-		{class:'cokeKor', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목7', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목8', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목9', 
-		contents:'내용1234'},
-		{class:'cokeGlob', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목10', 
-		contents:'내용1234'},
-		{class:'cokeKor', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목11', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목12', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목13', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목14', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목15', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목16', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목17', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목18', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목19', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목20', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목21', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목22', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목23', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목24', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목25', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목26', 
-		contents:'내용1234'},
-		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
-		link:'#',	title:'제목27', 
-		contents:'내용1234'}
-	];
+	let stBox;
+	$.ajax({
+		async:false,
+		type:'get',
+		url:'../data/stBox.json',
+		dataType:'json',
+		error:function(){console.log('data error');},
+		success:function(data){
+			stBox = data;
+			return stBox;}
+	});
 
  let stLen = stBox.length;
- console.log(stLen);
 	const stMake = '<a href="#"><div class="img"><span></span></div><dl class="text"><dt></dt><dd></dd></dl></a>';
  
  const allSt = $('#allStory');
- // const StLi = allSt.find('ul').children('li');
 
  for(let n=0; n<stLen; n++){
  	allSt.find('ul').append('<li></li>');
@@ -104,12 +30,12 @@
  	Lieq.find('.text').children('dt').text(stBox[n].title);
  	Lieq.find('.text').children('dd').text(stBox[n].contents);
  };
- 
+
+
+
  let stLi = allSt.find('ul').children('li');
  let stLiLen = stLi.length;
 	stLi.hide();
-
- const numBtn = allSt.find('.numLink');
 
 //=====================================================
  const win = $(window);
@@ -118,7 +44,7 @@
  let mobile = 767, pad = 1279, pc = 1919, tv = 1366;
  let nowDevice = null;
 
- let n = 3, mobN = 3, pcN = 10, myn = 0;
+ let n = 6, mobN = 6, pcN = 10, myn = 0;
 
  const stLiArr = []; // <====
 
@@ -133,10 +59,10 @@
   
 		switch(nowDevice){
 			  case 'mobile': //break;
-			  case 'pad':
-				   base = mobN;
+			  case 'pad': //break;
+			  case 'pc': 
+				  base = mobN;
 			  break;
-			  case 'pc': //break;
 			  case 'tv':
 				  base = pcN;
 			  break;
@@ -162,7 +88,7 @@ const MyLishow = function(j){
 		stLi.hide();
 		let prevN, nextN, nLn = stLiArr.length-1;
 
-		console.log(stLiArr);
+		//console.log(stLiArr);
 
 		if(l == 0 ){
 			 prevN = stLiArr[0];
@@ -182,19 +108,58 @@ const MyLishow = function(j){
 
 // ---------------------------------------------------------
 	MyLishow();
-
-	for(let b=0; b<((stLen/base)-1) ;b++){
+	const numBtn = allSt.find('.numLink');
+	for(let b=0; b<(stLen/base-1) ;b++){
  	numBtn.append('<li><button type="button">'+(b+1)+'</button></li>');
  }
- 	numBtn.prepend('<li><button type="button">처음</button></li>');
- 	numBtn.append('<li><button type="button">끝</button></li>');
+ 	numBtn.prepend('<li><button type="button"><i class="fas fa-angle-double-left"></i></button></li>');
+ 	numBtn.append('<li><button type="button"><i class="fas fa-angle-double-right"></i></button></li>');
 
- const stBtn = numBtn.find('button');
- stBtn.eq(0).hide();
+ const stBtnLi = numBtn.children('li');
+ const stBtn = stBtnLi.children('button');
+ const firstBtn = stBtnLi.eq(0).children();
+ 
+ firstBtn.hide();
+ stBtnLi.eq(5).nextUntil((stBtnLi.eq(-1))).hide();
+
  stBtn.on('click',function(e){
   	myn = $(this).parent().index();
   	MyLishow(myn);
-  	stBtn.eq(0).show();
-	});
+  	firstBtn.show();
+  	$(this).addClass('act');
+ });
+ 
+ stBtnLi.eq(1).children().on('click',function(e){
+  	firstBtn.hide();
+ });
+
+ let btnLeng = stBtnLi.length;
+ //console.log(btnLeng);
+
+ let t;
+ const btnNext = function(t,n){
+ 	stBtnLi.eq(n).nextUntil(t).hide();
+ 	t.hide();
+ 	t.nextUntil((stBtnLi.eq(n+11))).show();
+ }
+ const btnPrev = function(t,n){
+ 	t.nextUntil((stBtnLi.eq(-1))).hide();
+ 	t.hide();
+ 	t.prevUntil((stBtnLi.eq(n-6))).show();
+ }
+
+ for(let i=0; i<stBtnLi.length; i++){
+  if(i%5 == 0){
+  	stBtnLi.eq(i).on('click',function(e){
+ 	t = $(this);
+ 	btnNext(t,i-5);
+ });
+  }else if(i%5 == 1){
+  	stBtnLi.eq(i).on('click',function(e){
+ 	t = $(this);
+ 	btnPrev(t,i);
+ });
+  }
+ }
 
 })(jQuery);

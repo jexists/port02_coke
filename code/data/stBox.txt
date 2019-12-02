@@ -1,0 +1,68 @@
+
+const stBox = [
+		{class:'cokeSport', span:'스포츠', cc:'#fff', bg:'event.png', 
+		link:'#',	title:'제목1', 
+		contents:'내용1234'},
+		{class:'cokeSto', span:'스포츠', cc:'#fff', bg:'event.png', 
+		link:'#',	title:'제목2', 
+		contents:'내용1234'},
+		{class:'cokeGlob', span:'스포츠', cc:'#fff', bg:'event.png', 
+		link:'#',	title:'제목3', 
+		contents:'내용1234'},
+		{class:'cokeKor', span:'스포츠', cc:'#fff', bg:'event.png', 
+		link:'#',	title:'제목4', 
+		contents:'내용1234'},
+		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event.png', 
+		link:'#',	title:'제목5', 
+		contents:'내용1234'},
+		{class:'cokeGlob', span:'스포츠', cc:'#fff', bg:'event1.png', 
+		link:'#',	title:'제목6', 
+		contents:'내용1234'},
+		{class:'cokeKor', span:'스포츠', cc:'#fff', bg:'event1.png', 
+		link:'#',	title:'제목7', 
+		contents:'내용1234'},
+		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
+		link:'#',	title:'제목8', 
+		contents:'내용1234'},
+		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
+		link:'#',	title:'제목9', 
+		contents:'내용1234'},
+		{class:'cokeGlob', span:'스포츠', cc:'#fff', bg:'event1.png', 
+		link:'#',	title:'제목10', 
+		contents:'내용1234'},
+		{class:'cokeKor', span:'스포츠', cc:'#fff', bg:'event1.png', 
+		link:'#',	title:'제목11', 
+		contents:'내용1234'},
+		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
+		link:'#',	title:'제목12', 
+		contents:'내용1234'},
+		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
+		link:'#',	title:'제목13', 
+		contents:'내용1234'},
+		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
+		link:'#',	title:'제목14', 
+		contents:'내용1234'},
+		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
+		link:'#',	title:'제목15', 
+		contents:'내용1234'},
+		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
+		link:'#',	title:'제목16', 
+		contents:'내용1234'},
+		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
+		link:'#',	title:'제목16', 
+		contents:'내용1234'},
+		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
+		link:'#',	title:'제목16', 
+		contents:'내용1234'},
+		{class:'cokePres', span:'스포츠', cc:'#fff', bg:'event1.png', 
+		link:'#',	title:'제목16', 
+		contents:'내용1234'}
+	];
+
+	console.log(stBox);
+
+
+
+
+
+	
