@@ -197,6 +197,8 @@ address > p:nth-of-type(3) { margin-top: 20px; }
 @media screen and (min-width: 1920px) { .head_area { max-width: 1280px; }
   .gnb_cp { display: none; } }
 
+#wrap { width: 100%; height: 100%; margin: auto; }
+
 #contentBox { position: relative; padding-top: 130px; }
 
 h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20px auto; }
@@ -215,12 +217,61 @@ h2 { width: 200px; height: auto; font-size: 35px; text-align: center; margin: 20
 
 .bussLink a:hover { font-weight: bold; outline: none; }
 
-#cokeBox { display: block; width: 100%; height: 100%; min-height: 800px; background-color: #fed; }
+#cokeBox { display: block; width: 70%; height: 100%; min-height: 800px; margin: auto; padding-top: 30px; }
 
-#globBox { display: none; width: auto; height: auto; min-height: 800px; background-color: #efd; }
+#cokeBox .coke { width: 100%; height: auto; }
 
-#korBox { display: none; width: auto; height: auto; min-height: 800px; background-color: #ede; }
+#cokeBox .coke .coketext { float: left; width: 48%; height: auto; }
 
-#histBox { display: none; width: auto; height: auto; min-height: 800px; background-color: #eef; }
+#cokeBox .coke .coketext h3 { width: 300px; margin-bottom: 20px; font-size: 2rem; }
 
-#sociBox { display: none; width: auto; height: auto; min-height: 800px; background-color: #ae8; }
+#cokeBox .coke .coketext h3 strong { font-size: 4rem; line-height: 1; }
+
+#cokeBox .coke .coketext h3 strong:after { content: " "; display: block; width: 90%; height: 30px; margin-top: -25px; background-color: rgba(255, 0, 0, 0.5); }
+
+#cokeBox .coke .coketext p { word-break: keep-all; }
+
+#cokeBox .coke .coketext p::first-letter { font-size: 1.5rem; font-weight: bold; }
+
+#cokeBox .coke .cokeimg { float: right; width: 45%; height: 100%; background-color: #333; min-height: 500px; }
+
+#cokeBox .maintext { display: block; width: 100%; height: auto; margin: 100px 0; text-align: center; font-size: 2rem; }
+
+#cokeBox .maintext strong { font-size: 2.5rem; color: #f00; font-weight: bold; }
+
+#cokeBox .cokesum { width: 100%; height: 100%; margin: 50px 0; padding-bottom: 50px; }
+
+#cokeBox .cokesum li { float: left; width: 30%; height: 300px; background-color: #fe0; margin-right: 5%; margin-bottom: 50px; }
+
+#cokeBox .cokesum li:nth-child(3n) { margin-right: 0; }
+
+#globBox { display: none; width: 80%; height: auto; min-height: 800px; margin: auto; background-color: #efd; }
+
+#korBox { display: none; width: 80%; height: auto; min-height: 800px; margin: auto; background-color: #ede; }
+
+#histBox { display: none; width: 80%; height: auto; min-height: 800px; margin: auto; background-color: #eef; }
+
+#sociBox { display: none; width: 80%; height: auto; min-height: 800px; margin: auto; }
+
+#sociBox .social { width: 100%; height: 400px; }
+
+#sociBox .social li { float: left; width: 30%; height: 100%; margin-right: 5%; background-color: #fed; }
+
+#sociBox .social li:last-child { margin-right: 0; }
+
+#sociBox .social li dl { width: 100%; height: 100px; }
+
+#sociBox .social li dl dt { width: 200px; height: 200px; margin: auto; margin-bottom: 30px; border-radius: 100%; background-color: #fff; }
+
+#sociBox .social li dl dd { width: 80%; height: auto; margin: auto; }
+
+#sociBox .maintext { display: block; width: 100%; height: auto; margin: 80px 0 30px; text-align: center; font-size: 2rem; font-weight: bold; }
+
+/* 모바일 480px~767px (280) h:640 =============== */
+/* media screen and (max-width:767px) */
+/* 패드 768px~1279px  h:1024 =============== */
+/* media screen and (min-width: 768px) and (max-width:1279px) */
+/* PC 1280px~1919px (1024) h:800=============== */
+/* media screen and (min-width: 1280px) */
+/* TV 1920px~ =============== */
+/* media screen and (min-width: 1920px) h:900 */
