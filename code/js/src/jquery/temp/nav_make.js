@@ -29,6 +29,7 @@ const navMenu = [
 	{subN:'고객센터',subLink:'./s4_sns.html?servBox'},
 	{subN:'미디어',subLink:'./s4_sns.html?mediaBox'}]}];
 
+
 const gnb = $('#gnb');
 const navSite = $('.nav_site');
 const menuLen = navMenu.length;
@@ -64,5 +65,9 @@ for(let i = 0; i < menuLen; i++){
 let gnbContents = nav.contents().clone();
 		navSite.append('<ul class="btn_nav"></ul>');
 		navSite.children('ul').append(gnbContents);
+
+
+
+
 
 })(jQuery);

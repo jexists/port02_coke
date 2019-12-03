@@ -4,7 +4,7 @@ let hrefData;
 (function($){
   $('body').append('<script src="../js/src/jquery/sub_common.js"></script>');
 
-  console.log('???');
+  //console.log('???');
 	const bussLink = ['cokeBox', 'globBox', 'korBox', 'histBox', 'sociBox'];
 
 	const linkBtn = $('.bussLink').find('li');

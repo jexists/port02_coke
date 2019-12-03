@@ -1,6 +1,7 @@
 // brand_box.js
 
 (function($){
+/* 변수지정 */
 let imgUrl="../img/main_logo/";
 let brand=[
 {title: 'coke', titleLink:'#brandBox', img:'logo_01.jpg'},
@@ -17,11 +18,11 @@ let brand=[
 const brand_box = $('.brand_box');
 
 let brand_li ;
-// let button;
-// let icon;
+
+/* 메인 브랜드 박스 제작 */
 for (let i=0; i<brand.length; i++){
   brand_box.append('<li>');
-  // console.log(brand_box.children() );
+  // console.log(brand_box.children();
   brand_li = brand_box.children('li').last();
   brand_li.addClass(brand[i].title);
   brand_li.append('<a href="#"></a>');
@@ -31,11 +32,13 @@ for (let i=0; i<brand.length; i++){
   brand_li.css({backgroundImage:`url(${imgUrl}${brand[i].img})`})
 }
 
+/* 메인 브랜드 박스 위치 */
 brand_box.css({width: 240 * brand.length + 40 +'px'});
 let brLi = brand_box.find('li');
 let brLilenHarf = Math.floor(brLi.length / 2);
 brLi.removeClass('action');
 brLi.eq(brLilenHarf).addClass('action');
+
 //console.log(brLilenHarf);
 // brLi.eq(brLilenHarf).css({transform:'scale(1.3)', margin: '0 40px',opacity:1});
 // brLi.eq(brLilenHarf).children('a').css({transform:'scale(0.8)'});
