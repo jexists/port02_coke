@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/*css_reset.css*/
+
+/* css_reset ===================== */
+html, body {font-family: "Noto Sans KR", "myrial pro", "arial",
+	"돋움", "dotum", sans-serif;}
+	
+html, body, h1, h2, h3, h4, h5, h6, 
+ ol, ul, li, dt, dd, dl, 
+ table, thead, tbody, tfoot, tr, th, td, 
+ div, p, pre, form, textarea, button, select,
+ fieldset, legend, img, video, input,
+ a, abbr, address {margin: 0 ;padding: 0; border:0;}
+
+select, fieldset {width: 100%; height: 100%;}
+
+html, body {width: 100%; height: 100%}
+
+hr{margin:0; padding: 0;
+	border-bottom: 1px solid #777;}
+
+ol, ul, li, dl {list-style: none;}
+
+a, abbr {color: #333; text-decoration: none;}
+abbr{text-transform: uppercase;}
+address, caption, cite, code {font-style: normal; font-weight: normal;}
+
+a:hover {outline: 1px solid #fff;}
+
+table, thead, tbody, tfoot, tr, th, td 	{border-spacing: 0;
+	border-collapse: collapse; border:1px solid #777;}
+
+
+button{border:0; cursor:pointer;
+	background-color: transparent; 
+	border:1px solid #555;}
+button:hover {background-color: #444;}
+button:focus {outline:2px solid #333;}
+
+
+/* html5 =============================== */
+header, footer, aside, nav, section, article, main,
+ figure, figcaption {display: block;}
+
+/* form ================================ */
+input, select, button {font-size: inherit;}
+form, fieldset, legend {margin: 0; padding: 0; border: 0;}
+legend {position: absolute; width: 0; height: 0; overflow: hidden;}
+input {display:block; box-sizing: border-box; text-indent: 0.5rem; cursor: pointer;}
+button {border:0; background-color: #777; color: #fff; cursor: pointer; }
+select, text-area {box-sizing: border-box; }
+
+
+
