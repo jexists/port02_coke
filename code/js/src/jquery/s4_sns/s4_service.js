@@ -87,10 +87,10 @@ const arrCk = function(){
 
 /*고객센터 글작성========*/
 let checkPw = /^(?=.*[a-zA-Z])(?=.*^[a-zA-Z0-9].*[0-9]).{6,15}$/;
-let emailCheck = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/
-let numCk1 = /^(?=0)[0-9]{2,3}$/
-let numCk2 = /^[0-9]{3,4}$/
-let numCk3 = /^[0-9]{4}$/
+let emailCheck = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+let numCk1 = /^(?=0)[0-9]{2,3}$/;
+let numCk2 = /^[0-9]{3,4}$/;
+let numCk3 = /^[0-9]{4}$/;
 	
 	csInput.on('blur',function(){
 		let thisVal = $(this).val();
